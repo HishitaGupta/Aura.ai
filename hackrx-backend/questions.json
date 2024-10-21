@@ -1,0 +1,32 @@
+[
+    {
+        "question": "What is the toll-free number for Bajaj Allianz General Insurance?",
+        "options": [
+            "1800-209-0144",
+            "1800-209-5858",
+            "1800-209-0144 / 1800-209-5858",
+            "1800-209-1111"
+        ],
+        "answer": "1800-209-0144 / 1800-209-5858"
+    },
+    {
+        "question": "Which of the following is NOT covered under the Bajaj Allianz Two Wheeler Package Policy's 'Own Damage' section?",
+        "options": [
+            "Loss or damage caused by a fire",
+            "Loss or damage caused by theft",
+            "Loss or damage caused by an accident while in transit by air",
+            "Loss or damage caused by wear and tear"
+        ],
+        "answer": "Loss or damage caused by wear and tear"
+    },
+    {
+        "question": "What is the name of the optional extension that provides coverage for injuries to a paid driver or cleaner?",
+        "options": [
+            "Loss of Accessories",
+            "Legal Liability to Paid Driver, Cleaner or any Workman",
+            "Personal Accident Cover for the Occupants",
+            "None of the above"
+        ],
+        "answer": "Legal Liability to Paid Driver, Cleaner or any Workman"
+    }
+]

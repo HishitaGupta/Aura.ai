@@ -1,0 +1,12 @@
+.env
+node_modules
+hackrx-backend/__pycache__/main.cpython-39.pyc
+hackrx-backend/__pycache__/server.cpython-39.pyc
+main.cpython-39.pyc
+server.cpython-39.pyc
+aura_frontend
+test
+test-backend
+hackrx-backend/__pycache__/testmain.cpython-39.pyc
+hackrx-backend/__pycache__/testserver.cpython-39.pyc
+Drafts

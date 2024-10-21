@@ -1,0 +1,200 @@
+[
+    [
+        {
+            "keyword": "Expenses",
+            "visual_metaphor": "BillList"
+        },
+        {
+            "keyword": "Cover",
+            "visual_metaphor": "Shield"
+        },
+        {
+            "keyword": "Policy",
+            "visual_metaphor": "Document"
+        },
+        {
+            "keyword": "Support",
+            "visual_metaphor": "HelpingHands"
+        },
+        {
+            "keyword": "Expenses",
+            "visual_metaphor": "BillList"
+        },
+        {
+            "keyword": "Approval",
+            "visual_metaphor": "Checkmark"
+        }
+    ],
+    [
+        {
+            "keyword": "Rider",
+            "visual_metaphor": "AddOn"
+        },
+        {
+            "keyword": "Sum insured",
+            "visual_metaphor": "MoneyBag"
+        },
+        {
+            "keyword": "Costs",
+            "visual_metaphor": "Bills"
+        },
+        {
+            "keyword": "Illness",
+            "visual_metaphor": "Doctor"
+        },
+        {
+            "keyword": "Injury",
+            "visual_metaphor": "Bandage"
+        },
+        {
+            "keyword": "Approval",
+            "visual_metaphor": "Checkmark"
+        }
+    ],
+    [
+        {
+            "keyword": "travel",
+            "visual_metaphor": "AirplaneTicket"
+        },
+        {
+            "keyword": "costs",
+            "visual_metaphor": "DollarSign"
+        },
+        {
+            "keyword": "treatment",
+            "visual_metaphor": "DoctorStethoscope"
+        },
+        {
+            "keyword": "accommodation",
+            "visual_metaphor": "HotelBed"
+        },
+        {
+            "keyword": "expenses",
+            "visual_metaphor": "Wallet"
+        },
+        {
+            "keyword": "hospitalization",
+            "visual_metaphor": "HospitalBed"
+        },
+        {
+            "keyword": "cost",
+            "visual_metaphor": "DollarSign"
+        },
+        {
+            "keyword": "hiring",
+            "visual_metaphor": "Handshake"
+        },
+        {
+            "keyword": "caregiver",
+            "visual_metaphor": "Nurse"
+        },
+        {
+            "keyword": "recovering",
+            "visual_metaphor": "HealingHand"
+        }
+    ],
+    [
+        {
+            "keyword": "Limit",
+            "visual_metaphor": "NumberLine"
+        },
+        {
+            "keyword": "Expenses",
+            "visual_metaphor": "DollarBills"
+        },
+        {
+            "keyword": "Provider",
+            "visual_metaphor": "HandShake"
+        },
+        {
+            "keyword": "Plan",
+            "visual_metaphor": "PaperSheet"
+        },
+        {
+            "keyword": "Insurance",
+            "visual_metaphor": "Shield"
+        },
+        {
+            "keyword": "Approval",
+            "visual_metaphor": "Checkmark"
+        },
+        {
+            "keyword": "IRDA",
+            "visual_metaphor": "Building"
+        },
+        {
+            "keyword": "Change",
+            "visual_metaphor": "Arrows"
+        }
+    ],
+    [
+        {
+            "keyword": "Premium",
+            "visual_metaphor": "GoldCoins"
+        },
+        {
+            "keyword": "Renewal",
+            "visual_metaphor": "RotatingClock"
+        },
+        {
+            "keyword": "Bajaj Allianz",
+            "visual_metaphor": "CompanyLogo"
+        },
+        {
+            "keyword": "Change",
+            "visual_metaphor": "CircularArrows"
+        },
+        {
+            "keyword": "Approval",
+            "visual_metaphor": "GreenCheckmark"
+        },
+        {
+            "keyword": "IRDA",
+            "visual_metaphor": "CorporateBuilding"
+        }
+    ],
+    [
+        {
+            "keyword": "coverage",
+            "visual_metaphor": "Umbrella"
+        },
+        {
+            "keyword": "expenses",
+            "visual_metaphor": "Receipt"
+        },
+        {
+            "keyword": "assistance",
+            "visual_metaphor": "HelpingHand"
+        },
+        {
+            "keyword": "times",
+            "visual_metaphor": "ClockHands"
+        }
+    ],
+    [
+        {
+            "keyword": "rider",
+            "visual_metaphor": "InsuranceCard"
+        },
+        {
+            "keyword": "protection",
+            "visual_metaphor": "SafetyShield"
+        },
+        {
+            "keyword": "burden",
+            "visual_metaphor": "HeavyWeight"
+        },
+        {
+            "keyword": "costs",
+            "visual_metaphor": "MoneyStack"
+        },
+        {
+            "keyword": "recovery",
+            "visual_metaphor": "HealingHand"
+        },
+        {
+            "keyword": "expenses",
+            "visual_metaphor": "BillPile"
+        }
+    ]
+]
