@@ -20,7 +20,7 @@ AURA.ai is a cutting-edge AI driven platform designed to **automate video creati
    Automatically generate quizzes after videos to assess user comprehension.
 
 - **Analytics Dashboard**  
-   In-depth user engagement tracking with viewership data, quiz scores, and performance heatmaps.
+   In-depth user engagement tracking with viewership data, quiz scores, and performance heatmaps and much more.
 
 - **Multilingual Support**  
    Generate videos in **over 10 languages**, making your content globally accessible.
