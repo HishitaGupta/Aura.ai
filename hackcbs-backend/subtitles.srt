@@ -1,0 +1,44 @@
+1
+00:00:00,000 --> 00:00:05,934
+Happy Yadav is a Data Analytics Intern at Hunar.ai. He has worked with
+
+2
+00:00:05,934 --> 00:00:11,869
+20+ clients managing over 100,000 data entries. He is passionate about transforming high-volume
+
+3
+00:00:11,869 --> 00:00:17,803
+hiring through AI. Coding Ninjas CUIET February 2024 - Present. Responsible for managing
+
+4
+00:00:17,803 --> 00:00:23,738
+all technical projects, coordinating coding initiatives, and providing team support through code reviews
+
+5
+00:00:23,738 --> 00:00:29,672
+and guidance. Manage the Coding Ninja website built on Firebase and Next.js ensuring
+
+6
+00:00:29,672 --> 00:00:35,607
+optimal performance and maintenance. FinTrack is a finance management application that allows users
+
+7
+00:00:35,607 --> 00:00:41,541
+to track, edit, and visualize income and expenses. Leveraged a tech stack of
+
+8
+00:00:41,541 --> 00:00:47,476
+React, Chart.js, and Tailwind CSS for the frontend, with an Express backend deployed
+
+9
+00:00:47,476 --> 00:00:53,410
+on Railway and hosted on Vercel. Programming Languages: Python, C++, C, JavaScript, SQL,
+
+10
+00:00:53,410 --> 00:00:59,345
+HTML, CSS, TypeScript. Libraries and Tools: React, Tailwind, Firebase , Git, Docker, PowerBI,
+
+11
+00:00:59,345 --> 00:01:05,280
+MySql, Retool.
+

@@ -1,32 +1,32 @@
 [
     {
-        "question": "What is the toll-free number for Bajaj Allianz General Insurance?",
+        "question": "What is the maximum Sum Insured available under the Arogya Sanjeevani Policy for Hospitalization?",
         "options": [
-            "1800-209-0144",
-            "1800-209-5858",
-            "1800-209-0144 / 1800-209-5858",
-            "1800-209-1111"
+            "INR 50,000",
+            "INR 25,00,000",
+            "INR 5,00,000",
+            "INR 10,00,000"
         ],
-        "answer": "1800-209-0144 / 1800-209-5858"
+        "answer": "INR 25,00,000"
     },
     {
-        "question": "Which of the following is NOT covered under the Bajaj Allianz Two Wheeler Package Policy's 'Own Damage' section?",
+        "question": "What is the entry age limit for a dependent child to be covered under the Arogya Sanjeevani Policy?",
         "options": [
-            "Loss or damage caused by a fire",
-            "Loss or damage caused by theft",
-            "Loss or damage caused by an accident while in transit by air",
-            "Loss or damage caused by wear and tear"
+            "3 months to 18 years",
+            "3 months to 25 years",
+            "0 to 25 years",
+            "18 to 25 years"
         ],
-        "answer": "Loss or damage caused by wear and tear"
+        "answer": "3 months to 25 years"
     },
     {
-        "question": "What is the name of the optional extension that provides coverage for injuries to a paid driver or cleaner?",
+        "question": "What is the waiting period for expenses related to the treatment of a pre-existing disease under the Arogya Sanjeevani Policy?",
         "options": [
-            "Loss of Accessories",
-            "Legal Liability to Paid Driver, Cleaner or any Workman",
-            "Personal Accident Cover for the Occupants",
-            "None of the above"
+            "12 months",
+            "24 months",
+            "36 months",
+            "48 months"
         ],
-        "answer": "Legal Liability to Paid Driver, Cleaner or any Workman"
+        "answer": "36 months"
     }
 ]

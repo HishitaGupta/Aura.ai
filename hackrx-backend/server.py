@@ -1,10 +1,15 @@
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, File, UploadFile, HTTPException
+from pydantic import BaseModel
 import os
 from main import *
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
+import json
 
 app = FastAPI()
+
+class QuestionRequest(BaseModel):
+    question: str
 
 app.add_middleware(
     CORSMiddleware,
@@ -102,6 +107,84 @@ async def upload_file(file: UploadFile = File(...)):
         # Step 15: Clean up the temporary file after processing is complete
         if os.path.exists(temp_file_path):
             os.remove(temp_file_path)
+
+@app.get("/video/{filename}")
+async def get_video(filename):
+    file_path = "final_slideshow.mp4"
+    return FileResponse(file_path)
+
+@app.post("/ask-question")
+async def ask_question(question_request: QuestionRequest):
+    try:
+        txt_file_path = "extracted_text.txt"  # Path to the extracted text file
+        answer = ask_aura_question(question_request.question, txt_file_path)
+
+        if answer.startswith("Error"):
+            raise HTTPException(status_code=500, detail=answer)
+
+        # Prepare payload for Sarvam TTS
+        payload = {
+            "inputs": [answer],  # The bot's response text goes here
+            "target_language_code": "hi-IN",  # Set the desired language code
+            "speaker": "meera",
+            "pitch": 0,
+            "pace": 1.65,
+            "loudness": 1.5,
+            "speech_sample_rate": 8000,
+            "enable_preprocessing": True,
+            "model": "bulbul:v1"
+        }
+
+        headers = {
+            "Content-Type": "application/json",
+            'API-Subscription-Key': '32338cf8-5952-403c-851d-c7409c520316'
+        }
+
+        # Make the request to Sarvam TTS API
+        # tts_response = requests.post(SARVAM_TTS_API_URL, json=payload, headers=headers)
+        
+        # Check the response status
+    #     if tts_response.status_code == 200:
+    #         tts_data = tts_response.json()
+    #         audio_url = tts_data.get('audio_url')
+
+    #         return {
+    #             "answer": answer,
+    #             "audioUrl": audio_url
+    #         }
+    #     else:
+    #         raise HTTPException(status_code=500, detail="Sarvam TTS API Error: " + tts_response.text)
+
+    except Exception as e:
+        print(f"Error in ask_question: {str(e)}")  # Print error to console for debugging
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/get-images")
+async def list_images():
+    try:
+        images = os.listdir("pictures")
+        return {"images": images}
+    except Exception as e:
+        return {"error": str(e)}
+
+@app.get("/get-videos")
+async def list_videos():
+    try:
+        videos = os.listdir("videos")
+        return {"videos": videos}
+    except Exception as e:
+        return {"error": str(e)}
+
+@app.get("/get-images/{filename}")
+async def get_image(filename: str):
+    file_path = os.path.join("pictures", filename)
+    return FileResponse(file_path)
+
+# Serve individual video files
+@app.get("/get-videos/{filename}")
+async def get_video(filename: str):
+    file_path = os.path.join("videos", filename)
+    return FileResponse(file_path)
 
 @app.get("/video/{filename}")
 async def get_video(filename):

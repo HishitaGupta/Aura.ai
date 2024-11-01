@@ -191,9 +191,6 @@ def generate_keywords_from_summary(summary, srt_file_path):
         "keywords": keywords,
     }
 
-
-
-
 # Subtitle part
 
 def generate_subtitles_from_speech(speech_text, audio_duration, output_srt_path, chunk_duration=5):

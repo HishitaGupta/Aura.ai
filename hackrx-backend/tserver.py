@@ -83,11 +83,11 @@ async def upload_pdf(file: UploadFile = File(...)):
         # audio_length = AudioFileClip(audio_output_speedup_path).duration
         # srt_file_path = "subtitles.srt"
         # generate_subtitles_from_speech(speeches, audio_length, srt_file_path)
-        selected_language = 'hindi'
+        selected_language = 'english'
         if selected_language in language_map:
             language_code = language_map[selected_language]
         else:
-            language_code = 'hi'
+            language_code = 'en'
 
         speeches = translate_speech(summary, language_code)
 

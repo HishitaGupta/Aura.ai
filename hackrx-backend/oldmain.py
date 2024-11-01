@@ -65,7 +65,7 @@ def summarize_text(text):
     text_chunks = [text[i:i + max_chunk] for i in range(0, len(text), max_chunk)]
     summary = ""
     for chunk in text_chunks:
-        summary += summarizer(chunk, max_length=130, min_length=30, do_sample=False)[0]['summary_text'] + " "
+        summary += summarizer(chunk)[0]['summary_text'] + " "
     return summary.strip()
 
 def extract_images_from_pdf(pdf_path, output_folder):
@@ -156,7 +156,7 @@ def generate_keywords_from_summary(summary, srt_file_path):
 
     # Generate speech from summary
     try:
-        inp = model.generate_content(f"Write a minimum exact 250 and maximum exact 300 words more accurate summary based on the previous summary in paragraph format and it should be plain text with no bullet points, no '/n' and no bold stuff, i am using it as input for my tts: {summary}")
+        inp = model.generate_content(f"Write a minimum exact 350 and maximum exact 400 words more accurate summary based on the previous summary in paragraph format and it should be plain text with no bullet points, no '/n' and no bold stuff, i am using it as input for my tts: {summary}")
         speeches = inp.text
     except Exception as e:
         print(f"Error generating speech: {e}")
@@ -421,8 +421,8 @@ def generate_image_from_prompt(prompt, images_folder, image_index):
 
     data = {
         "prompt": prompt,
+        "output_format": "png",
         "aspect_ratio": "16:9",
-        "output_format": "png"
     }
     print("data: ", data['prompt'])
 
@@ -434,9 +434,10 @@ def generate_image_from_prompt(prompt, images_folder, image_index):
     try:
         print("Sending prompt:", prompt)
         response = requests.post(
-            "https://api.stability.ai/v2beta/stable-image/generate/core",
+            "https://api.stability.ai/v2beta/stable-image/generate/",
             headers=headers,
-            files=files  # Sending as multipart/form-data
+            files=files,  # Sending as multipart/form-data
+            data=data
         )
 
         # Check the response status
@@ -538,7 +539,7 @@ def clean_up_videos(folder_path, max_duration=7):
 
 
 
-def create_slideshow_with_audio(images_folder, videos_folder, output_video_path, audio_path, overlay_video_path, srt_file_path, image_duration=2, fade_duration=1):
+def create_slideshow_with_audio(images_folder, videos_folder, output_video_path, audio_path, srt_file_path, image_duration=2, fade_duration=1):
     image_clips=[]
     video_clips = []
 
@@ -596,18 +597,18 @@ def create_slideshow_with_audio(images_folder, videos_folder, output_video_path,
     final_clip = concatenate_videoclips(clips, method="compose")
 
     # Load the overlay video
-    overlay_video = VideoFileClip(overlay_video_path).resize(height=150).set_fps(frame_rate)
+    # overlay_video = VideoFileClip(overlay_video_path).resize(height=150).set_fps(frame_rate)
 
     # Apply any color corrections if needed
-    overlay_video = overlay_video.fx(vfx.colorx, 1.0)  # Adjust colors if needed (1.0 means no change)
+    # overlay_video = overlay_video.fx(vfx.colorx, 1.0)  # Adjust colors if needed (1.0 means no change)
 
     # Create a circular mask using NumPy
-    radius = overlay_video.h // 2
-    circle_mask = np.zeros((overlay_video.h, overlay_video.w), dtype=np.uint8)
-    y, x = np.ogrid[:overlay_video.h, :overlay_video.w]
-    mask_center = (overlay_video.w // 2, overlay_video.h // 2)
-    mask_area = (x - mask_center[0])**2 + (y - mask_center[1])**2 <= radius**2
-    circle_mask[mask_area] = 255
+    # radius = overlay_video.h // 2
+    # circle_mask = np.zeros((overlay_video.h, overlay_video.w), dtype=np.uint8)
+    # y, x = np.ogrid[:overlay_video.h, :overlay_video.w]
+    # mask_center = (overlay_video.w // 2, overlay_video.h // 2)
+    # mask_area = (x - mask_center[0])**2 + (y - mask_center[1])**2 <= radius**2
+    # circle_mask[mask_area] = 255
 
     # Apply the circular mask to the overlay video
     # overlay_video = overlay_video.set_mask(ImageClip(circle_mask, ismask=True).set_duration(overlay_video.duration))
@@ -631,10 +632,10 @@ def create_slideshow_with_audio(images_folder, videos_folder, output_video_path,
         srt_file_path, 
         lambda txt: TextClip(
             txt, 
-            fontsize=10,        # Larger font size
+            fontsize=12,        # Larger font size
             color='white',      # White text color
-            bg_color='black',   # Black background color
-            size=(final_composite.w*0.7, None)  # Width matching the video
+            bg_color='yellow',   # Black background color
+            size=(final_composite.w*0.9, None)  # Width matching the video
         )
     )
 

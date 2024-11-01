@@ -147,8 +147,22 @@ def generate_keywords_from_summary(summary, srt_file_path):
 
     # Generate speech from summary
     try:
-        inp = model.generate_content(f"Write a minimum exact 250 and maximum exact 300 words more accurate summary based on the previous summary in paragraph format and it should be plain text with no bullet points, no '/n' and no bold stuff, i am using it as input for my tts: {summary}")
+        inp = model.generate_content(f"""
+        Based on the {summary} now Perform the following steps to generate a monologue script from the summary:
+        <prompt>
+            <step1>Extract the key information from the document and identify the main points that need to be discussed.</step1>
+            <step2>Break down these main points into smaller subtopics that can be explained sequentially.</step2>
+            <step3>For each subtopic, construct a simple and engaging explanation that fits naturally into a continuous narrative.</step3>
+            <step4>Ensure that each subtopic flows logically into the next, maintaining coherence and a clear structure.</step4>
+            <step5>Use simple and concise language, keeping the audience's attention with relatable examples or anecdotes where necessary.</step5>
+            <step6>Review the entire monologue to make sure it includes all the important information from the original document.</step6>
+            <step7>Don't include anything related to QR code or any link</step7>
+            <step8>Return the script only. The response should start with the script and end with it</step8>
+            <step9>Response should not contain anything like Script: </step9>
+        </prompt>
+        """)
         speeches = inp.text
+        print(speeches)
     except Exception as e:
         print(f"Error generating speech: {e}")
 
@@ -207,7 +221,7 @@ def generate_keywords_from_summary(summary, srt_file_path):
 
 # Subtitle part
 
-def generate_subtitles_from_speech(speech_text, audio_duration, output_srt_path, chunk_duration=5):
+def generate_subtitles_from_speech(speech_text, audio_duration, output_srt_path, chunk_duration=3):
     # Split speech into chunks
     words = speech_text.split()
     chunk_size = int(audio_duration // chunk_duration)
@@ -311,7 +325,51 @@ def save_prompts_to_json(prompts, output_file):
 def generate_quiz(text):
     quiz_string = ""
     try:
-        inp = model.generate_content(f"Generate quiz which contains 10 questions with unique answers in MCQ format containing 'question', 'options', 'answer' in JSON list format based on the text: {text}")
+        inp = model.generate_content(f"""
+        You are provided with the following text: 
+
+        {text}
+
+    Based on this text, generate pool of 20 questions that include a variety of question types:
+    - Multiple-choice (MCQ)
+    - True/false
+    - Fill in the blanks (with options)
+
+    For each question, output the response in the following JSON format:
+
+    [
+    {{
+        question: "Question 1 text here?",
+        options: ["Option 1", "Option 2", "Option 3", "Option 4"],
+        correctAnswer: "Correct option here",
+        explanation: "Explanation for the answer here",
+        type: "mcq" or "true-false" or "fill-in-the-blank",
+        difficulty: "Easy" or "Medium" or "Hard"
+        use:"normal"
+    }},
+    {{
+        question: "Question 2 text here?",
+        options: ["Option 1", "Option 2", "Option 3", "Option 4"],
+        correctAnswer: "Correct option here",
+        explanation: "Explanation for the answer here",
+        type: "mcq" or "true-false" or "fill-in-the-blank",
+        difficulty: "Easy" or "Medium" or "Hard"
+        use:"substitute"
+    }},
+    ...
+    ]
+
+    Ensure:
+    - The correct answers are accurate and based on the provided text.
+    - The questions are a mix of different types (multiple-choice, true/false, fill-in-the-blanks).
+    - Each question is labeled with the appropriate difficulty level: "Easy," "Medium," or "Hard". 
+    - In total there must be 20 questions. All type true-false, MCQ's and Fill in the blanks(with 3 options) must be present.
+    - I need 10 questions for the quiz and 10 subsitutes of only easy and medium type. 
+    - Provide a detailed explanations for each correct answer.
+    
+
+    Reply with just the JSON response and nothing else.
+                        """)
         print(inp.text)
         quiz_string = inp.text
     except Exception as e:
@@ -333,6 +391,38 @@ def clean_text(text):
     text = re.sub(r'\s+', ' ', text)
     text = re.sub(r'[^a-zA-Z0-9\s.,]', '', text)
     return text.strip()
+
+def get_text_from_txt(file_path):
+    try:
+        with open(file_path, "r", encoding="utf-8") as text_file:
+            text = text_file.read()
+        return text
+    except FileNotFoundError:
+        print(f"The file {file_path} does not exist.")
+        return None
+    except Exception as e:
+        print(f"An error occurred while reading the file: {e}")
+        return None
+
+def ask_aura_question(user_question, txt_file_path):
+    answer = ""
+    try:
+        # Get the extracted text from the txt file
+        extracted_text = get_text_from_txt(txt_file_path)
+        
+        if not extracted_text:
+            return "Error: Could not retrieve text from file."
+
+        # Use the extracted text and the user's question to prompt Gemini AI
+        prompt = f"Answer the following question based on this text: '{extracted_text}'.\nQuestion: {user_question}"
+        response = model.generate_content(prompt)
+        print("Answer response: ", response.text)  # Debug print for checking the response
+        answer = response.text
+    except Exception as e:
+        print(f"Error while asking Gemini AI: {e}")
+        return f"Error: {e}"
+    
+    return answer
 
 def save_image_from_url(image_url, save_directory, image_index):
     os.makedirs(save_directory, exist_ok=True)

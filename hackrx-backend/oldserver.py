@@ -142,7 +142,7 @@ async def upload_pdf(file: UploadFile = File(...)):
         audio_length = AudioFileClip(audio_output_speedup_path).duration
         generate_subtitles_from_speech(speeches, audio_length, srt_file_path)
 
-        create_slideshow_with_audio(pictures_folder, videos_folder, output_video_path, audio_output_speedup_path, r"C:\Users\Happy yadav\Desktop\Technology\hack\hackrx-backend\ai_generated_images\Lydia.mp4", srt_file_path)
+        create_slideshow_with_audio(pictures_folder, videos_folder, output_video_path, audio_output_speedup_path, srt_file_path)
 
         # Return the summary as part of the response
         return {

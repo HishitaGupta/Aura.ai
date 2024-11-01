@@ -1,0 +1,32 @@
+[
+    {
+        "question": "What is Happy Yadav's current role at Coding Ninjas CUIET?",
+        "options": [
+            "Data Analytics Intern",
+            "Founder\u2019s Office Intern",
+            "Technical Director",
+            "Project Manager"
+        ],
+        "answer": "Technical Director"
+    },
+    {
+        "question": "Which AI platform did Happy Yadav develop that automates video creation from text inputs?",
+        "options": [
+            "NewsMania",
+            "FinTrack",
+            "AURA.ai",
+            "Hunar.ai"
+        ],
+        "answer": "AURA.ai"
+    },
+    {
+        "question": "Which programming language is NOT mentioned in Happy Yadav's technical skills?",
+        "options": [
+            "Java",
+            "Python",
+            "C++",
+            "JavaScript"
+        ],
+        "answer": "Java"
+    }
+]

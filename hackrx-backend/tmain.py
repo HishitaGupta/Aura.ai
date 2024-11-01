@@ -436,9 +436,10 @@ def generate_image_from_prompt(prompt, images_folder, image_index):
     try:
         print("Sending prompt:", prompt)
         response = requests.post(
-            "https://api.stability.ai/v2beta/stable-image/generate/core",
+            "https://api.stability.ai/v2beta/stable-image/generate/",
             headers=headers,
-            files=files  # Sending as multipart/form-data
+            files=files, # Sending as multipart/form-data
+            data=data
         )
 
         # Check the response status

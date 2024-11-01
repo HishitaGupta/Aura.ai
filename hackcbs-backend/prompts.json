@@ -1,0 +1,53 @@
+[
+    [
+        {
+            "description": "A young man named Happy Yadav, wearing a casual outfit, stands in front of a laptop with the Hunar.ai logo displayed on the screen. He has a friendly smile and appears focused on the data analysis displayed on the screen. He is surrounded by colorful charts and graphs, showcasing his work as a Data Analytics Intern."
+        }
+    ],
+    [
+        {
+            "description": "A businessman, with a confident smile, standing in front of a massive data center. He is surrounded by glowing screens displaying complex graphs and numbers. The scene is vibrant and futuristic, highlighting the transformative power of data management. The businessman is holding a tablet with a bright, modern design, symbolizing his passion for innovation."
+        }
+    ],
+    [
+        {
+            "description": "A futuristic cityscape with towering skyscrapers and flying cars. In the foreground, a large screen displays the words 'Hiring Through AI' with the Coding Ninjas logo prominently displayed. A diverse group of people stand in front of the screen, representing the different roles and skills being recruited for. One person is holding a phone with the words 'CUIET February 2024 - Present' on the screen, signifying the time frame of the hiring process. In the background, robots are handing out resumes and conducting interviews."
+        }
+    ],
+    [
+        {
+            "description": "A diverse team of developers huddled around a whiteboard, brainstorming code solutions. The whiteboard is filled with diagrams, code snippets, and project milestones. There's a sense of collaboration and excitement in the air. The scene is lit by the warm glow of laptops, creating a vibrant, tech-driven atmosphere."
+        }
+    ],
+    [
+        {
+            "description": "A futuristic coding ninja character standing confidently in front of a website built on Firebase and Next.js, with glowing code snippets and a vibrant background of digital landscapes. The character is wearing a black suit with a red sash, and their face is masked by a futuristic helmet. They hold a glowing katana sword in one hand and a laptop in the other.",
+            "guidance": "Focus on creating a visually engaging and dynamic image that conveys the power and efficiency of using Firebase and Next.js for web development. The coding ninja should appear both skilled and approachable, representing the accessibility of these technologies."
+        }
+    ],
+    [
+        {
+            "description": "A modern, sleek interface for FinTrack, a finance management application.  Show a dashboard with a focus on optimal performance and maintenance.  The screen should display clear visualizations of user spending, income, and savings, as well as  alerts and notifications for maintenance tasks, such as updating software or backing up data."
+        }
+    ],
+    [
+        {
+            "description": "A futuristic dashboard displaying financial data with interactive charts, graphs, and tables, showcasing income and expenses in real-time. The interface should be clean, modern, and user-friendly, emphasizing data visualization and intuitive controls for tracking and editing financial information."
+        }
+    ],
+    [
+        {
+            "description": "A modern, clean website interface with a dashboard using React, Chart.js, and Tailwind CSS. The dashboard displays interactive charts showcasing real-time data, with a sleek, minimalist aesthetic. The website is connected to an Express backend deployed on a server, which manages the data flow and API requests."
+        }
+    ],
+    [
+        {
+            "description": "A modern, minimalist website design showcasing a developer's portfolio using React, Tailwind CSS, and TypeScript. The website should include sections for projects, skills, experience, and contact information.  The aesthetic should reflect the clean, efficient look of a well-organized codebase. The website should be responsive and optimized for mobile devices. "
+        }
+    ],
+    [
+        {
+            "description": "A modern, minimalist dashboard built with Retool, showcasing real-time data visualizations from a MySQL database. The dashboard should have a clean, intuitive design with interactive charts and graphs displaying key metrics like user engagement, product usage, and revenue. The background should be a subtle gradient of blue and grey, with a sleek, modern font for the titles and labels. The overall aesthetic should be professional and user-friendly, highlighting the power of Retool for creating dynamic data dashboards."
+        }
+    ]
+]
