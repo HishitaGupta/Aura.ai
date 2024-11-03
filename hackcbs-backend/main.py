@@ -1,4 +1,3 @@
-
 import requests
 import pdfplumber
 import fitz  # PyMuPDF
@@ -59,6 +58,7 @@ pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tessera
 common_resolution = (1280, 720)
 frame_rate = 24
 
+#ignored
 def summarize_text(text):
     print("summarize_text TRIGGERED")
     summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
@@ -145,7 +145,8 @@ def extract_text_from_file(file_path):
         return extract_text_from_pptx(file_path)
     else:
         raise ValueError("Unsupported file format")
-
+    
+#ignored
 def extract_chunks_from_srt(srt_file_path):
     subs = pysrt.open(srt_file_path)
     chunks = [sub.text for sub in subs]
