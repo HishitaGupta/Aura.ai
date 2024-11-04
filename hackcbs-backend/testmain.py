@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import requests
 import pdfplumber
 import fitz  # PyMuPDF
@@ -42,7 +43,7 @@ os.makedirs(videos_folder, exist_ok=True)
 os.makedirs(output_folder, exist_ok=True)
 
 #initialize sarvam api key
-sarvam_api = os.getenv("SARVAM_API_KEY")
+sarvam_api_key = os.getenv("SARVAM_API_KEY")
 
 # Initialize Gemini API
 api_key = os.getenv("API_KEY")
@@ -191,10 +192,9 @@ def clean_extracted_text(input_file, output_file):
     with open(output_file, 'w', encoding='utf-8') as file:
         file.write(cleaned_text)
     
-    print(f"Cleaned text saved to {output_file}")
+    print(f"Cleaned text saved to '{output_file}'")
 
 # save the cleaned text to a new file
-cleaned_text_path=r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\cleaned.txt"
 clean_extracted_text(output_text_path, cleaned_text_path)
 
 #if numerical data is present in the text, we can remove it using the below function
@@ -243,9 +243,273 @@ def generate_script(cleaned_txt_path, video_length, language, llm_prompt_path):
     return response.text
 
 video_length = 60  # Example: 120 seconds for a 2-minute video
-language = "English"  # Specify the language, e.g., "English", "Spanish", etc.
+language = "Hindi"  # Specify the language, e.g., "English", "Spanish", etc.
 llm_prompt_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\llm_prompt.txt"
 
 # Call the function and get the generated script
 script_text = generate_script(cleaned_text_path, video_length, language, llm_prompt_path)
+
+# Questions generation from the text
+def generate_quiz_from_text(cleaned_text):
+    quiz_string = ""
+    try:
+        # Define the prompt to generate quiz questions with different types, difficulties, and explanations
+        llm_prompt = f"""
+        You are provided with the following text: 
+
+        {cleaned_text}
+
+        Based on this text, generate a pool of 10 questions that include a variety of question types:
+        - Multiple-choice (MCQ)
+        - True/false
+        - Fill in the blanks (with options)
+
+        For each question, output the response in the following JSON format:
+
+        [
+            {{
+            "question": "Question 1 text here?",
+            "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
+            "correctAnswer": "Correct option here",
+            "explanation": "Explanation for the answer here",
+            "type": "mcq" or "true-false" or "fill-in-the-blank",
+            "difficulty": "Easy" or "Medium" or "Hard",
+            "use": "normal"
+            }},
+            {{
+            "question": "Question 2 text here?",
+            "options": ["Option 1", "Option 2", "Option 3", "Option 4"],
+            "correctAnswer": "Correct option here",
+            "explanation": "Explanation for the answer here",
+            "type": "mcq" or "true-false" or "fill-in-the-blank",
+            "difficulty": "Easy" or "Medium" or "Hard",
+            "use": "substitute"
+            }},
+            ...
+        ]
+
+        Ensure:
+        - The correct answers are accurate and based on the provided text.
+        - The questions are a mix of different types (multiple-choice, true/false, fill-in-the-blanks).
+        - Each question is labeled with the appropriate difficulty level: "Easy," "Medium," or "Hard". 
+        - In total, there must be 20 questions. All types: true-false, MCQs, and fill-in-the-blanks (with 3 options) must be present.
+        - I need 5 questions for the quiz and 5 substitutes of only easy and medium type. 
+        - Provide detailed explanations for each correct answer.
+
+        Reply with just the JSON response and nothing else.
+        """
+
+        # Generate content using the model
+        response = model.generate_content([llm_prompt])
+        quiz_string = response.text
+    except Exception as e:
+        print(f"Error generating quiz: {e}")
+    
+    return quiz_string
+
+def save_quiz_to_json(quiz_string, output_file):
+    # Clean up any code block formatting from the response
+    cleaned_string = quiz_string.replace('```json', '').replace('```', '').strip()
+
+    try:
+        # Parse the cleaned string as JSON
+        quiz_json = json.loads(cleaned_string)
+        
+        # Save to specified output file
+        with open(output_file, 'w', encoding='utf-8') as json_file:
+            json.dump(quiz_json, json_file, indent=4)
+        
+        print(f"Quiz data saved successfully to '{questions_file_path}'")
+    except json.JSONDecodeError as e:
+        print(f"Failed to decode JSON: {e}")
+
+questions_file_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\questions.json"
+
+
+# Load cleaned text
+with open(llm_prompt_path, "r", encoding="utf-8") as file:
+    cleaned_text = file.read()
+
+# Generate quiz questions and save to JSON
+quiz_string = generate_quiz_from_text(cleaned_text)
+save_quiz_to_json(quiz_string, questions_file_path)
+
+def chunk_text(text, max_length=500):
+    """Splits text into chunks of a maximum length."""
+    words = text.split()
+    chunks = []
+    current_chunk = ""
+    
+    for word in words:
+        if len(current_chunk) + len(word) + 1 <= max_length:
+            current_chunk += (word + " ")
+        else:
+            chunks.append(current_chunk.strip())
+            current_chunk = word + " "
+    if current_chunk:
+        chunks.append(current_chunk.strip())
+    
+    return chunks
+
+def generate_audio_with_background(llm_prompt_path, output_audio_path, background_music_path, final_output_path, language_code="hi-IN", speaker="meera", pitch=0.1, pace=1, loudness=1, music_volume=-20):
+    try:
+        # Read text from llm_prompt_path
+        with open(llm_prompt_path, "r", encoding="utf-8") as file:
+            text_content = file.read()
+        
+        # Split text into chunks within the 500 character limit
+        text_chunks = chunk_text(text_content)
+        
+        # List to hold audio segments
+        audio_segments = []
+
+        # Process each chunk with the Sarvam API
+        url = "https://api.sarvam.ai/text-to-speech"
+        headers = {
+            "api-subscription-key": sarvam_api_key,
+            "Content-Type": "application/json"
+        }
+        
+        for chunk in text_chunks:
+            payload = {
+                "target_language_code": language_code,
+                "speaker": speaker,
+                "pitch": pitch,
+                "pace": pace,
+                "loudness": loudness,
+                "enable_preprocessing": True,
+                "model": "bulbul:v1",
+                "inputs": [chunk]
+            }
+            
+            response = requests.post(url, json=payload, headers=headers)
+            
+            # Check if the response is successful
+            if response.status_code == 200:
+                audio_data = response.json().get('audios')[0]
+                audio_bytes = base64.b64decode(audio_data)
+                
+                # Load audio segment and append to list
+                with open("temp_chunk.wav", "wb") as audio_file:
+                    audio_file.write(audio_bytes)
+                
+                audio_segment = AudioSegment.from_file("temp_chunk.wav")
+                audio_segments.append(audio_segment)
+                os.remove("temp_chunk.wav")  # Clean up temp file
+            else:
+                print(f"Error processing chunk: {response.status_code} - {response.text}")
+                return
+        
+        # Concatenate all audio segments
+        main_audio = sum(audio_segments)
+        main_audio.export(output_audio_path, format="wav")
+        print(f"Concatenated audio saved to {output_audio_path}")
+
+        # Process and mix audio with background music
+        # Load the main audio
+        main_audio = AudioSegment.from_file(output_audio_path)
+        
+        # Load the background music and adjust volume
+        background_music = AudioSegment.from_file(background_music_path)
+        background_music = background_music - abs(music_volume)  # Lower the volume
+
+        # Loop background music to match the length of the main audio
+        if len(background_music) < len(main_audio):
+            loop_count = len(main_audio) // len(background_music) + 1
+            background_music = background_music * loop_count
+        background_music = background_music[:len(main_audio)]
+        
+        # Overlay main audio on background music
+        final_audio = main_audio.overlay(background_music)
+
+        # Export the final mixed audio
+        final_audio.export(final_output_path, format="mp3")
+        print(f"Final audio with background music saved to {final_output_path}")
+
+        # Delete the intermediate audio file
+        os.remove(output_audio_path)
+        print(f"Intermediate file '{output_audio_path}' deleted successfully.")
+
+    except Exception as e:
+        print(f"Error generating audio with background music: {e}")
+
+# Static Paths for the function
+output_audio_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\sarvam_generated_audio.wav"
+background_music_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\background.mp3"
+final_output_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\sarvam_output_audio_music.mp3"
+
+generate_audio_with_background(
+    llm_prompt_path=llm_prompt_path,
+    output_audio_path=output_audio_path,
+    background_music_path=background_music_path,
+    final_output_path=final_output_path,
+    language_code="hi-IN",
+    speaker="meera",
+    pitch=0.1,
+    pace=1,
+    loudness=1,
+    music_volume=-20  # Adjust background music volume
+)
+
+
+
+def get_text_from_txt(file_path):
+    """Reads text from a given file path."""
+    try:
+        with open(file_path, "r", encoding="utf-8") as text_file:
+            text = text_file.read()
+        return text
+    except FileNotFoundError:
+        print(f"The file {file_path} does not exist.")
+        return None
+    except Exception as e:
+        print(f"An error occurred while reading the file: {e}")
+        return None
+
+def ask_aura_question(user_question, txt_file_path, model):
+    """Answers the user's question using text from cleaned.txt or provides a general response."""
+    answer = ""
+    try:
+        # Retrieve the extracted text from the txt file
+        extracted_text = get_text_from_txt(txt_file_path)
+        
+        if not extracted_text:
+            return "Error: Could not retrieve text from file."
+        
+        # Create a prompt asking Gemini to answer based on `cleaned.txt`
+        prompt = f"Based on the following text, try to answer the question:\n\n'{extracted_text}'\n\nQuestion: {user_question}"
+        response = model.generate_content(prompt)
+        print("Initial answer response: ", response.text)  # Debug print for checking response
+        answer = response.text
+
+        # Check if the answer is relevant to the knowledge base
+        if "I don't know" in answer or "I'm not sure" in answer or len(answer.strip()) < 5:
+            # Provide a fallback response from Gemini's general knowledge if the response is inadequate
+            fallback_prompt = f"I don't have specific knowledge about this part of your query based on the provided text, but I can answer from general knowledge.\n\nQuestion: {user_question}"
+            fallback_response = model.generate_content(fallback_prompt)
+            print("Fallback answer response: ", fallback_response.text)  # Debug print for checking fallback response
+            answer = "I don’t have detailed information from the provided knowledge base, but here’s what I can tell you: " + fallback_response.text
+    except Exception as e:
+        print(f"Error while asking Gemini AI: {e}")
+        return f"Error: {e}"
+    
+    return answer
+
+# Main code to test the function
+if __name__ == "__main__":
+    # cleaned_text_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\cleaned.txt"
+    
+    while True:
+        # Take user input for the question
+        user_query = input("Enter your question (or type 'exit' to quit): ")
+        if user_query.lower() == 'exit':
+            break
+        
+        # Assume 'model' is your Gemini API client or instance capable of generating responses
+        # Example usage:
+        response = ask_aura_question(user_query, cleaned_text_path, model)
+        print("Answer:", response)
+
+
+
 

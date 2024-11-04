@@ -1,32 +1,132 @@
 [
     {
-        "question": "What is Happy Yadav's current role at Coding Ninjas CUIET?",
+        "question": "What is the name of the health insurance policy mentioned in the text?",
         "options": [
-            "Data Analytics Intern",
-            "Founder\u2019s Office Intern",
-            "Technical Director",
-            "Project Manager"
+            "Bajaj Allianz Health Infinity",
+            "Bajaj Health Shield",
+            "Allianz Health Protect",
+            "Bajaj Health Plus"
         ],
-        "answer": "Technical Director"
+        "correctAnswer": "Bajaj Allianz Health Infinity",
+        "explanation": "The text explicitly states that the policy is called \"Bajaj Allianz Health Infinity\".",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "normal"
     },
     {
-        "question": "Which AI platform did Happy Yadav develop that automates video creation from text inputs?",
+        "question": "Does the policy cover pre-existing diseases?",
         "options": [
-            "NewsMania",
-            "FinTrack",
-            "AURA.ai",
-            "Hunar.ai"
+            "Yes, immediately upon policy activation",
+            "Yes, after 36 months",
+            "No, pre-existing diseases are not covered",
+            "Yes, but only for specific diseases"
         ],
-        "answer": "AURA.ai"
+        "correctAnswer": "Yes, after 36 months",
+        "explanation": "The text states that pre-existing diseases are covered after 36 months.",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "normal"
     },
     {
-        "question": "Which programming language is NOT mentioned in Happy Yadav's technical skills?",
+        "question": "Which of the following is NOT a benefit of the Bajaj Allianz Health Infinity policy?",
         "options": [
-            "Java",
-            "Python",
-            "C++",
-            "JavaScript"
+            "Dental treatment",
+            "Pre-hospitalization expenses",
+            "Road ambulance cover",
+            "Preventive health check-ups every 3 years"
         ],
-        "answer": "Java"
+        "correctAnswer": "Dental treatment",
+        "explanation": "The text lists dental treatment as an exclusion, meaning it is not a benefit of the policy.",
+        "type": "mcq",
+        "difficulty": "Medium",
+        "use": "normal"
+    },
+    {
+        "question": "What is the maximum age limit for pre-policy medical tests to be waived?",
+        "options": [
+            "35 years",
+            "40 years",
+            "45 years",
+            "50 years"
+        ],
+        "correctAnswer": "45 years",
+        "explanation": "The text states that pre-policy medical tests are waived for individuals up to 45 years of age.",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "normal"
+    },
+    {
+        "question": "True or False: The policy premium can be paid on a monthly basis.",
+        "options": [],
+        "correctAnswer": "True",
+        "explanation": "The text states that the premium can be paid annually, semi-annually, quarterly, or monthly.",
+        "type": "true-false",
+        "difficulty": "Easy",
+        "use": "normal"
+    },
+    {
+        "question": "What is the minimum policy duration available?",
+        "options": [
+            "1 year",
+            "2 years",
+            "3 years",
+            "5 years"
+        ],
+        "correctAnswer": "1 year",
+        "explanation": "The text mentions that the policy duration can be 1, 2, or 3 years, making 1 year the minimum duration.",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "The Bajaj Allianz Health Infinity policy covers _____.",
+        "options": [
+            "Only the policyholder",
+            "The policyholder and their spouse",
+            "The policyholder, their spouse, and children",
+            "The policyholder, their spouse, children, and parents"
+        ],
+        "correctAnswer": "The policyholder, their spouse, children, and parents",
+        "explanation": "The text mentions that the policy can cover the policyholder, their spouse, children, and parents.",
+        "type": "fill-in-the-blank",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "Does the Bajaj Allianz Health Infinity policy offer a tax benefit on the premium paid?",
+        "options": [],
+        "correctAnswer": "True",
+        "explanation": "The text states that there is a tax benefit on the premium paid.",
+        "type": "true-false",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "What is the maximum policy duration available?",
+        "options": [
+            "1 year",
+            "2 years",
+            "3 years",
+            "5 years"
+        ],
+        "correctAnswer": "3 years",
+        "explanation": "The text mentions that the policy duration can be 1, 2, or 3 years, making 3 years the maximum duration.",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "The policy covers expenses related to ______, besides hospitalization.",
+        "options": [
+            "Pre-hospitalization only",
+            "Post-hospitalization only",
+            "Both pre and post-hospitalization",
+            "None of the above"
+        ],
+        "correctAnswer": "Both pre and post-hospitalization",
+        "explanation": "The text mentions coverage for pre-hospitalization and post-hospitalization expenses.",
+        "type": "fill-in-the-blank",
+        "difficulty": "Medium",
+        "use": "substitute"
     }
 ]
