@@ -1,131 +1,133 @@
 [
     {
-        "question": "What is the name of the health insurance policy mentioned in the text?",
+        "question": "What is the main purpose of Bajaj Allianz's Health Infinity policy?",
         "options": [
-            "Bajaj Allianz Health Infinity",
-            "Bajaj Health Shield",
-            "Allianz Health Protect",
-            "Bajaj Health Plus"
+            "To provide financial protection against medical expenses",
+            "To offer discounts on healthcare services",
+            "To provide free health checkups",
+            "To help people find the best doctors"
         ],
-        "correctAnswer": "Bajaj Allianz Health Infinity",
-        "explanation": "The text explicitly states that the policy is called \"Bajaj Allianz Health Infinity\".",
+        "correctAnswer": "To provide financial protection against medical expenses",
+        "explanation": "The text states that the policy is designed to protect individuals and families from the financial burden of medical expenses.",
         "type": "mcq",
         "difficulty": "Easy",
         "use": "normal"
     },
     {
-        "question": "Does the policy cover pre-existing diseases?",
+        "question": "Does Bajaj Allianz's Health Infinity policy have a limit on the amount you can claim?",
         "options": [
-            "Yes, immediately upon policy activation",
-            "Yes, after 36 months",
-            "No, pre-existing diseases are not covered",
-            "Yes, but only for specific diseases"
+            "Yes, there's a maximum amount you can claim.",
+            "No, there's no limit on the amount you can claim."
         ],
-        "correctAnswer": "Yes, after 36 months",
-        "explanation": "The text states that pre-existing diseases are covered after 36 months.",
-        "type": "mcq",
+        "correctAnswer": "No, there's no limit on the amount you can claim.",
+        "explanation": "The text mentions that the policy offers unlimited sum insured, implying no limit on claim amounts.",
+        "type": "true-false",
         "difficulty": "Easy",
         "use": "normal"
     },
     {
-        "question": "Which of the following is NOT a benefit of the Bajaj Allianz Health Infinity policy?",
+        "question": "What feature of Health Infinity allows you to customize your coverage based on your needs and budget?",
         "options": [
-            "Dental treatment",
-            "Pre-hospitalization expenses",
-            "Road ambulance cover",
-            "Preventive health check-ups every 3 years"
+            "Unlimited sum insured",
+            "Pre-hospitalization coverage",
+            "Choosing your preferred room rent",
+            "Preventive health check-ups"
         ],
-        "correctAnswer": "Dental treatment",
-        "explanation": "The text lists dental treatment as an exclusion, meaning it is not a benefit of the policy.",
+        "correctAnswer": "Choosing your preferred room rent",
+        "explanation": "The text explicitly states that the policy lets you choose your preferred room rent, providing customization based on individual requirements.",
         "type": "mcq",
         "difficulty": "Medium",
         "use": "normal"
     },
     {
-        "question": "What is the maximum age limit for pre-policy medical tests to be waived?",
+        "question": "How long does the post-hospitalization coverage last after discharge?",
         "options": [
-            "35 years",
-            "40 years",
-            "45 years",
-            "50 years"
+            "30 days",
+            "60 days",
+            "90 days"
         ],
-        "correctAnswer": "45 years",
-        "explanation": "The text states that pre-policy medical tests are waived for individuals up to 45 years of age.",
-        "type": "mcq",
-        "difficulty": "Easy",
-        "use": "normal"
-    },
-    {
-        "question": "True or False: The policy premium can be paid on a monthly basis.",
-        "options": [],
-        "correctAnswer": "True",
-        "explanation": "The text states that the premium can be paid annually, semi-annually, quarterly, or monthly.",
-        "type": "true-false",
-        "difficulty": "Easy",
-        "use": "normal"
-    },
-    {
-        "question": "What is the minimum policy duration available?",
-        "options": [
-            "1 year",
-            "2 years",
-            "3 years",
-            "5 years"
-        ],
-        "correctAnswer": "1 year",
-        "explanation": "The text mentions that the policy duration can be 1, 2, or 3 years, making 1 year the minimum duration.",
-        "type": "mcq",
-        "difficulty": "Easy",
-        "use": "substitute"
-    },
-    {
-        "question": "The Bajaj Allianz Health Infinity policy covers _____.",
-        "options": [
-            "Only the policyholder",
-            "The policyholder and their spouse",
-            "The policyholder, their spouse, and children",
-            "The policyholder, their spouse, children, and parents"
-        ],
-        "correctAnswer": "The policyholder, their spouse, children, and parents",
-        "explanation": "The text mentions that the policy can cover the policyholder, their spouse, children, and parents.",
+        "correctAnswer": "90 days",
+        "explanation": "The text states that the policy offers post-hospitalization coverage for 90 days after discharge.",
         "type": "fill-in-the-blank",
         "difficulty": "Easy",
+        "use": "normal"
+    },
+    {
+        "question": "What type of procedures are covered under the day-care coverage of Health Infinity?",
+        "options": [
+            "Only major surgeries requiring overnight stays",
+            "Surgeries that do not require overnight hospital stays",
+            "All medical procedures, regardless of duration"
+        ],
+        "correctAnswer": "Surgeries that do not require overnight hospital stays",
+        "explanation": "The text specifically mentions that day-care coverage applies to surgeries that do not require overnight hospital stays.",
+        "type": "mcq",
+        "difficulty": "Medium",
+        "use": "normal"
+    },
+    {
+        "question": "What is the main benefit of Bajaj Allianz's Health Infinity policy?",
+        "options": [
+            "It provides financial protection against medical expenses.",
+            "It offers free health checkups.",
+            "It helps people find the best doctors.",
+            "It provides discounts on healthcare services."
+        ],
+        "correctAnswer": "It provides financial protection against medical expenses.",
+        "explanation": "The text highlights that the policy is designed to protect individuals and families from the financial burden of medical expenses.",
+        "type": "mcq",
+        "difficulty": "Easy",
         "use": "substitute"
     },
     {
-        "question": "Does the Bajaj Allianz Health Infinity policy offer a tax benefit on the premium paid?",
-        "options": [],
+        "question": "True or False: Bajaj Allianz's Health Infinity policy allows you to choose your preferred room rent.",
+        "options": [
+            "True",
+            "False"
+        ],
         "correctAnswer": "True",
-        "explanation": "The text states that there is a tax benefit on the premium paid.",
+        "explanation": "The text states that the policy lets you choose your preferred room rent, confirming this feature.",
         "type": "true-false",
         "difficulty": "Easy",
         "use": "substitute"
     },
     {
-        "question": "What is the maximum policy duration available?",
+        "question": "How often does Health Infinity provide a preventive health check-up?",
         "options": [
-            "1 year",
-            "2 years",
-            "3 years",
-            "5 years"
+            "Every year",
+            "Every two years",
+            "Every three years"
         ],
-        "correctAnswer": "3 years",
-        "explanation": "The text mentions that the policy duration can be 1, 2, or 3 years, making 3 years the maximum duration.",
-        "type": "mcq",
+        "correctAnswer": "Every three years",
+        "explanation": "The text explicitly mentions that Health Infinity provides a preventive health check-up every three years.",
+        "type": "fill-in-the-blank",
         "difficulty": "Easy",
         "use": "substitute"
     },
     {
-        "question": "The policy covers expenses related to ______, besides hospitalization.",
+        "question": "What is the duration of pre-hospitalization coverage offered by Health Infinity?",
         "options": [
-            "Pre-hospitalization only",
-            "Post-hospitalization only",
-            "Both pre and post-hospitalization",
-            "None of the above"
+            "30 days",
+            "60 days",
+            "90 days"
         ],
-        "correctAnswer": "Both pre and post-hospitalization",
-        "explanation": "The text mentions coverage for pre-hospitalization and post-hospitalization expenses.",
+        "correctAnswer": "60 days",
+        "explanation": "The text states that the policy provides pre-hospitalization coverage for 60 days before hospitalization.",
         "type": "fill-in-the-blank",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "Which of the following is NOT a feature of Bajaj Allianz's Health Infinity policy?",
+        "options": [
+            "Unlimited sum insured",
+            "Pre-hospitalization coverage",
+            "Guaranteed claim approval",
+            "Day-care procedure coverage"
+        ],
+        "correctAnswer": "Guaranteed claim approval",
+        "explanation": "While the policy offers comprehensive coverage, it doesn't guarantee claim approval. Claim approval is subject to policy terms and conditions.",
+        "type": "mcq",
         "difficulty": "Medium",
         "use": "substitute"
     }

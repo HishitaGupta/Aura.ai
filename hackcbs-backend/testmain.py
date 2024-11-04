@@ -24,6 +24,7 @@ from moviepy.video.tools.subtitles import SubtitlesClip
 import base64
 from docx import Document
 from pptx import Presentation
+import time
 
 # Load environment variables
 load_dotenv()
@@ -242,8 +243,8 @@ def generate_script(cleaned_txt_path, video_length, language, llm_prompt_path):
     
     return response.text
 
-video_length = 60  # Example: 120 seconds for a 2-minute video
-language = "Hindi"  # Specify the language, e.g., "English", "Spanish", etc.
+video_length = 40  # Example: 120 seconds for a 2-minute video
+language = "English"  # Specify the language, e.g., "English", "Spanish", etc.
 llm_prompt_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\llm_prompt.txt"
 
 # Call the function and get the generated script
@@ -351,7 +352,7 @@ def chunk_text(text, max_length=500):
     
     return chunks
 
-def generate_audio_with_background(llm_prompt_path, output_audio_path, background_music_path, final_output_path, language_code="hi-IN", speaker="meera", pitch=0.1, pace=1, loudness=1, music_volume=-20):
+def generate_audio_with_background(llm_prompt_path, output_audio_path, background_music_path, final_output_path, language_code="hi-IN", speaker="meera", pitch=0.1, pace=1, loudness=1, music_volume=-15):
     try:
         # Read text from llm_prompt_path
         with open(llm_prompt_path, "r", encoding="utf-8") as file:
@@ -438,6 +439,7 @@ output_audio_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\sarva
 background_music_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\background.mp3"
 final_output_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\sarvam_output_audio_music.mp3"
 
+# Call the function to generate audio with background music using sarvam api
 generate_audio_with_background(
     llm_prompt_path=llm_prompt_path,
     output_audio_path=output_audio_path,
@@ -448,11 +450,10 @@ generate_audio_with_background(
     pitch=0.1,
     pace=1,
     loudness=1,
-    music_volume=-20  # Adjust background music volume
+    music_volume=-15  # Adjust background music volume
 )
 
-
-
+# Funtion for Aura bot to answer the questions
 def get_text_from_txt(file_path):
     """Reads text from a given file path."""
     try:
@@ -466,6 +467,7 @@ def get_text_from_txt(file_path):
         print(f"An error occurred while reading the file: {e}")
         return None
 
+# Function to ask a question to the Gemini AI model based on the llm_prompt file as knowledge base
 def ask_aura_question(user_question, txt_file_path, model):
     """Answers the user's question using text from cleaned.txt or provides a general response."""
     answer = ""
@@ -495,20 +497,211 @@ def ask_aura_question(user_question, txt_file_path, model):
     
     return answer
 
-# Main code to test the function
-if __name__ == "__main__":
-    # cleaned_text_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\cleaned.txt"
+response = ask_aura_question("What is the name of the policy ?", cleaned_text_path, model)
+print("Answer:", response)
+
+# Function to generate a script JSON file with timed subtitles
+def generate_script_json(audio_path, llm_prompt_path, output_script_path, max_words_per_line=8):
+    # Load the audio file to get the duration
+    audio = AudioFileClip(audio_path)
+    audio_duration = audio.duration  # in seconds
+
+    # Read subtitle text from llm_prompt_path
+    try:
+        with open(llm_prompt_path, "r", encoding="utf-8") as file:
+            subtitle_text = file.read()
+    except FileNotFoundError:
+        print(f"Error: The file {llm_prompt_path} does not exist.")
+        return
+    except Exception as e:
+        print(f"An error occurred while reading the file: {e}")
+        return
+
+    # Split subtitle text into chunks
+    words = subtitle_text.split()
+    subtitle_chunks = []
+    current_chunk = ""
     
-    while True:
-        # Take user input for the question
-        user_query = input("Enter your question (or type 'exit' to quit): ")
-        if user_query.lower() == 'exit':
-            break
+    for word in words:
+        # Account for max words per line in each chunk
+        if len(current_chunk.split()) < max_words_per_line:
+            current_chunk += f"{word} "
+        else:
+            subtitle_chunks.append(current_chunk.strip())
+            current_chunk = f"{word} "
+    subtitle_chunks.append(current_chunk.strip())  # Add the last chunk
+
+    # Calculate duration for each chunk, taking small pauses for commas
+    chunk_durations = []
+    remaining_duration = audio_duration
+    for chunk in subtitle_chunks:
+        # Give a small additional pause if commas are present
+        comma_pause = chunk.count(",") * 0.03  # 0.05s pause for each comma
+        duration = (audio_duration / len(subtitle_chunks)) + comma_pause
+        chunk_durations.append(min(duration, remaining_duration))
+        remaining_duration -= duration
+    
+    # Calculate start and end times for each chunk
+    start_time = 0.0
+    script_data = []
+
+    for i, (chunk, duration) in enumerate(zip(subtitle_chunks, chunk_durations)):
+        end_time = start_time + duration
+        script_data.append({
+            "id": i + 1,
+            "start_time": round(start_time, 2),
+            "end_time": round(end_time, 2),
+            "chunk": chunk
+        })
+        start_time = end_time  # Set start time for next chunk
+    
+    # Save the script data to a JSON file
+    with open(output_script_path, "w", encoding="utf-8") as script_file:
+        json.dump(script_data, script_file, indent=4, ensure_ascii=False)
+    print(f"Script JSON file saved as {output_script_path}")
+
+# Usage example
+output_script_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\script.json"
+
+generate_script_json(final_output_path, llm_prompt_path, output_script_path)
+
+# def generate_single_keyword(text: str):
+
+#     llm_prompt = """
+#     <prompt>
+#         Given the chunk, provide the most general and straightforward keyword in the form of a phrase of maximum 5-6 words that captures the core visual theme or concept of that part of the chunk.The keyword should avoid ambiguous or complex terms and focus on general, easily interpretable visuals for example-(man in hospital, car accident). I basically want simplest and general words only. Output the keyword as a single string.There shouldn't be any abstract thing in the prompt.. just ensure it has nouns and physical things all the time.
+#     </prompt>
+#     """
+#     response = model.generate_content(llm_prompt + text)
+    
+#     # Extract the single keyword from the response
+#     keyword = response.text.strip()  # Remove any leading/trailing whitespace
+#     return keyword
+
+# def update_script_json(script_file_path):
+#     # Load the existing script.json
+#     with open(script_file_path, 'r') as f:
+#         script_data = json.load(f)
+
+#     for chunk in script_data:
+#         # Generate a keyword for each chunk
+#         chunk_text = chunk['chunk']
+#         chunk['keyword'] = generate_single_keyword(chunk_text)
+
+#     # Write the updated data back to script.json
+#     with open(script_file_path, 'w') as f:
+#         json.dump(script_data, f, indent=4)
+
+# update_script_json(output_script_path)
+
+def generate_keywords_batch(text_chunks: list) -> list:
+    # Create the batched prompt
+    llm_prompt = """
+    <prompt>
+        For each chunk provided, generate a single concise keyword phrase of 5-6 words maximum that captures the main theme. The keyword should avoid ambiguous terms and focus on easily interpretable, general visuals related to health insurance concepts. Only return the keyword as a single phrase without any bullet points, explanations, or formatting. The output should simply be one keyword per line.
+    </prompt>
+    """
+    
+    # Combine the individual prompts for each chunk in a single request
+    batch_prompt = llm_prompt + "\n".join([f"Chunk {i+1}: {chunk}" for i, chunk in enumerate(text_chunks)])
+    response = model.generate_content(batch_prompt)
+    
+    # Parse response to get one concise keyword per line
+    keywords = [line.strip() for line in response.text.splitlines() if line.strip()]
+    
+    return keywords
+
+def update_script_json_batch(script_file_path):
+    """
+    Updates script.json with keywords using batch processing for efficiency.
+    """
+    # Load the existing script.json
+    with open(script_file_path, 'r') as f:
+        script_data = json.load(f)
+    
+    # Process chunks in batches of 8 to reduce API calls
+    batch_size = 8
+    for i in range(0, len(script_data), batch_size):
+        batch = script_data[i:i+batch_size]
+        batch_texts = [chunk['chunk'] for chunk in batch]
+
+        # Generate keywords for the batch
+        keywords = generate_keywords_batch(batch_texts)
         
-        # Assume 'model' is your Gemini API client or instance capable of generating responses
-        # Example usage:
-        response = ask_aura_question(user_query, cleaned_text_path, model)
-        print("Answer:", response)
+        # Update each chunk in the batch with the generated keyword
+        for chunk, keyword in zip(batch, keywords):
+            chunk['keyword'] = keyword
+
+        # Sleep briefly to respect rate limits if necessary
+        time.sleep(1)
+
+    # Write the updated data back to script.json
+    with open(script_file_path, 'w') as f:
+        json.dump(script_data, f, indent=4)
+
+# Example call to update_script_json_batch
+update_script_json_batch(output_script_path)
+
+
+#final function to generate video with timed subtitles
+# def generate_video_with_timed_subtitles(audio_path, script_json_path, output_video_path, font_size=18):
+#     # Load the audio file
+#     audio = AudioFileClip(audio_path)
+#     audio_duration = audio.duration
+
+#     # Define the video resolution and background color
+#     video_width, video_height = 1280, 720
+#     subtitle_bg_color = (255, 255, 0)  # Yellow background for subtitles
+#     font_color = 'black'  # Black font color for subtitles
+
+#     # Initialize video background
+#     video_bg = ColorClip(size=(video_width, video_height), color=(255, 255, 255)).set_duration(audio_duration)
+
+#     # Load subtitle timing data from script.json
+#     try:
+#         with open(script_json_path, "r", encoding="utf-8") as json_file:
+#             script_data = json.load(json_file)
+#     except FileNotFoundError:
+#         print(f"Error: The file {script_json_path} does not exist.")
+#         return
+#     except Exception as e:
+#         print(f"An error occurred while reading the JSON file: {e}")
+#         return
+
+#     # Create subtitle clips based on start and end times in script.json
+#     subtitle_clips = []
+#     for entry in script_data:
+#         start_time = entry["start_time"]
+#         end_time = entry["end_time"]
+#         text = entry["chunk"]
+
+#         # Create the subtitle text clip
+#         subtitle = TextClip(text, fontsize=font_size, color=font_color, font="Arial", size=(video_width - 40, None), method="caption")
+
+#         # Create a background for the subtitle text
+#         subtitle_bg = ColorClip(size=(subtitle.w + 10, subtitle.h + 10), color=subtitle_bg_color)
+
+#         # Overlay text on background and set timing
+#         subtitle_with_bg = CompositeVideoClip([subtitle_bg.set_position(("center", "bottom")),
+#                                             subtitle.set_position(("center", "bottom"))],
+#                                             size=(video_width, video_height)).set_start(start_time).set_end(end_time)
+
+#         subtitle_clips.append(subtitle_with_bg)
+
+#     # Composite the final video with background, audio, and timed subtitles
+#     final_video = CompositeVideoClip([video_bg, *subtitle_clips]).set_audio(audio)
+    
+#     # Export the video
+#     final_video.write_videofile(output_video_path, fps=24, codec="libx264", audio_codec="aac")
+#     print(f"Video with subtitles saved to {output_video_path}")
+
+# # Usage example
+# output_video_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\output_with_subtitles.mp4"
+
+# generate_video_with_timed_subtitles(final_output_path, output_script_path, output_video_path)
+
+
+
 
 
 
