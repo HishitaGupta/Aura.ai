@@ -594,56 +594,227 @@ generate_script_json(final_output_path, llm_prompt_path, output_script_path)
 
 # update_script_json(output_script_path)
 
+# def generate_keywords_batch(text_chunks: list) -> list:
+#     # Create the batched prompt
+#     llm_prompt = """
+#     <prompt>
+#         For each chunk provided, generate a single concise keyword phrase of 5-6 words maximum that captures the main theme. The keyword should avoid ambiguous terms and focus on easily interpretable, general visuals related to health insurance concepts. Only return the keyword as a single phrase without any bullet points, explanations, or formatting. The output should simply be one keyword per line.
+#     </prompt>
+#     """
+    
+#     # Combine the individual prompts for each chunk in a single request
+#     batch_prompt = llm_prompt + "\n".join([f"Chunk {i+1}: {chunk}" for i, chunk in enumerate(text_chunks)])
+#     response = model.generate_content(batch_prompt)
+    
+#     # Parse response to get one concise keyword per line
+#     keywords = [line.strip() for line in response.text.splitlines() if line.strip()]
+    
+#     return keywords
+
+# def update_script_json_batch(script_file_path):
+#     """
+#     Updates script.json with keywords using batch processing for efficiency.
+#     """
+#     # Load the existing script.json
+#     with open(script_file_path, 'r') as f:
+#         script_data = json.load(f)
+    
+#     # Process chunks in batches of 8 to reduce API calls
+#     batch_size = 8
+#     for i in range(0, len(script_data), batch_size):
+#         batch = script_data[i:i+batch_size]
+#         batch_texts = [chunk['chunk'] for chunk in batch]
+
+#         # Generate keywords for the batch
+#         keywords = generate_keywords_batch(batch_texts)
+        
+#         # Update each chunk in the batch with the generated keyword
+#         for chunk, keyword in zip(batch, keywords):
+#             chunk['keyword'] = keyword
+
+#         # Sleep briefly to respect rate limits if necessary
+#         time.sleep(1)
+
+#     # Write the updated data back to script.json
+#     with open(script_file_path, 'w') as f:
+#         json.dump(script_data, f, indent=4)
+
+# # Example call to update_script_json_batch
+# update_script_json_batch(output_script_path)
+
+# Assume this function uses the Gemini API to generate content from a provided prompt
 def generate_keywords_batch(text_chunks: list) -> list:
-    # Create the batched prompt
+    # Define the batch prompt
     llm_prompt = """
     <prompt>
-        For each chunk provided, generate a single concise keyword phrase of 5-6 words maximum that captures the main theme. The keyword should avoid ambiguous terms and focus on easily interpretable, general visuals related to health insurance concepts. Only return the keyword as a single phrase without any bullet points, explanations, or formatting. The output should simply be one keyword per line.
+        For each chunk provided, generate a single concise keyword phrase of 5-6 words maximum that captures the main theme. The keyword should avoid ambiguous terms and focus on easily interpretable, general visuals related to the content in that chunk. Only return the keyword as a single phrase without any bullet points, explanations, or formatting. The output should simply be one keyword per line.
     </prompt>
     """
     
-    # Combine the individual prompts for each chunk in a single request
+    # Combine all chunks for batch processing
     batch_prompt = llm_prompt + "\n".join([f"Chunk {i+1}: {chunk}" for i, chunk in enumerate(text_chunks)])
     response = model.generate_content(batch_prompt)
     
-    # Parse response to get one concise keyword per line
+    # Parse response to extract keywords
     keywords = [line.strip() for line in response.text.splitlines() if line.strip()]
     
     return keywords
 
-def update_script_json_batch(script_file_path):
+# Secondary function to generate keywords based on a single prompt from llm_prompt_path content
+def generate_missing_keywords(prompt_path: str, num_keywords: int) -> list:
+    # Read the content of the prompt file
+    with open(prompt_path, 'r') as f:
+        prompt_content = f.read()
+    
+    # Create a prompt for missing keywords
+    missing_prompt = f"""
+    <prompt>
+        Generate {num_keywords} unique keyword phrases, each 5-6 words, capturing themes within this content. The keyword should avoid ambiguous terms and focus on easily interpretable, general visuals related to the content in that content. Only return the keyword as a single phrase without any bullet points, explanations, or formatting. The output should simply be one keyword per line.
+    </prompt>
     """
-    Updates script.json with keywords using batch processing for efficiency.
+    response = model.generate_content(missing_prompt + prompt_content)
+    
+    # Parse the generated keywords
+    missing_keywords = [line.strip() for line in response.text.splitlines() if line.strip()]
+    
+    return missing_keywords
+
+# Main function to update script.json with keywords, ensuring no keywords are missing
+def update_script_json_batch(script_file_path, llm_prompt_path):
+    """
+    Updates script.json with keywords using batch processing, checking for any missing keywords,
+    and filling missing positions using a single Gemini API request based on llm_prompt_path content.
     """
     # Load the existing script.json
     with open(script_file_path, 'r') as f:
         script_data = json.load(f)
     
-    # Process chunks in batches of 8 to reduce API calls
-    batch_size = 8
+    # Process chunks in batches for efficiency
+    batch_size = 10
     for i in range(0, len(script_data), batch_size):
         batch = script_data[i:i+batch_size]
         batch_texts = [chunk['chunk'] for chunk in batch]
 
-        # Generate keywords for the batch
+        # Generate initial keywords for the batch
         keywords = generate_keywords_batch(batch_texts)
         
-        # Update each chunk in the batch with the generated keyword
+        # Assign keywords to each chunk in the batch
         for chunk, keyword in zip(batch, keywords):
             chunk['keyword'] = keyword
 
-        # Sleep briefly to respect rate limits if necessary
+        # Sleep briefly to respect rate limits, if needed
         time.sleep(1)
+
+    # Check for missing keywords in the updated script_data
+    missing_indices = [i for i, chunk in enumerate(script_data) if not chunk.get('keyword')]
+    num_missing_keywords = len(missing_indices)
+    print(f"Number of missing keywords Found: {num_missing_keywords}")
+    # If there are missing keywords, use llm_prompt_path content to generate them
+    if num_missing_keywords > 0:
+        # Generate missing keywords using Gemini API and llm_prompt_path content
+        missing_keywords = generate_missing_keywords(llm_prompt_path, num_missing_keywords)
+        
+        # Place generated keywords in missing positions
+        for i, missing_index in enumerate(missing_indices):
+            script_data[missing_index]['keyword'] = missing_keywords[i]
 
     # Write the updated data back to script.json
     with open(script_file_path, 'w') as f:
         json.dump(script_data, f, indent=4)
+    print("Script.json Ready!!")
 
 # Example call to update_script_json_batch
-update_script_json_batch(output_script_path)
+update_script_json_batch(output_script_path, llm_prompt_path)
 
 
-#final function to generate video with timed subtitles
+# Set your Pixabay API key and output folder path
+pixabay_api_key = "41610740-2e3b4e3089898192b13673058"
+video_output_folder = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\chunk_videos"
+
+# Ensure the video output folder exists
+if not os.path.exists(video_output_folder):
+    os.makedirs(video_output_folder)
+
+def fetch_video_from_pixabay(keyword):
+    """Fetches a video URL from Pixabay based on the keyword."""
+    url = f"https://pixabay.com/api/videos/?key={pixabay_api_key}&q={keyword}"
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        if data["hits"]:
+            return data["hits"][0]["videos"]["medium"]["url"]  # Medium quality video URL
+    return None
+
+def download_video(video_url, file_path):
+    """Downloads the video from the provided URL and saves it with the specified filename."""
+    video_response = requests.get(video_url)
+    if video_response.status_code == 200:
+        with open(file_path, "wb") as f:
+            f.write(video_response.content)
+        return file_path
+    return None
+
+def trim_video(input_path, output_path, start_time, end_time):
+    """
+    Trims the video to match the specified start_time and end_time.
+    If start_time or end_time exceeds the video's duration, it trims up to the end of the video.
+    """
+    with VideoFileClip(input_path) as clip:
+        actual_duration = clip.duration
+        
+        # Adjust start and end times based on the actual video duration
+        adjusted_start_time = min(start_time, actual_duration - 0.1)  # Ensure start is within bounds
+        adjusted_end_time = min(end_time, actual_duration)
+        
+        # Trim based on adjusted times
+        trimmed_clip = clip.subclip(adjusted_start_time, adjusted_end_time)
+        trimmed_clip.write_videofile(output_path, codec="libx264", audio_codec="aac")
+    
+    os.remove(input_path)  # Delete the original untrimmed video file
+
+def fetch_and_process_videos(script_file_path, video_output_folder):
+    """
+    Fetches, trims, and saves videos based on keywords in script.json, updating the file with video paths.
+    """
+    # Load the script JSON data
+    with open(script_file_path, 'r') as f:
+        script_data = json.load(f)
+
+    for chunk in script_data:
+        keyword = chunk["keyword"]
+
+        # Fetch the video URL from Pixabay
+        video_url = fetch_video_from_pixabay(keyword)
+        
+        if video_url:
+            # Define the file paths for the downloaded and trimmed videos
+            original_video_path = os.path.join(video_output_folder, f"chunk{chunk['id']}_original.mp4")
+            trimmed_video_path = os.path.join(video_output_folder, f"chunk{chunk['id']}_video.mp4")
+            
+            # Download the video
+            if download_video(video_url, original_video_path):
+                # Trim the video to match chunk duration and save it
+                trim_video(original_video_path, trimmed_video_path, chunk["start_time"], chunk["end_time"])
+                
+                # Update the script JSON data with the trimmed video path
+                chunk["video"] = trimmed_video_path
+            else:
+                print(f"Failed to download video for keyword: {keyword}")
+        else:
+            print(f"No video found for keyword: {keyword}")
+
+    # Save the updated script.json with the video paths included
+    with open(script_file_path, 'w') as f:
+        json.dump(script_data, f, indent=4)
+    print("Video paths updated in script.json")
+
+# Run the function to fetch and process videos
+fetch_and_process_videos(output_script_path, video_output_folder)
+
+
+
+
+# final function to generate video with timed subtitles
 # def generate_video_with_timed_subtitles(audio_path, script_json_path, output_video_path, font_size=18):
 #     # Load the audio file
 #     audio = AudioFileClip(audio_path)

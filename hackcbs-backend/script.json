@@ -2,131 +2,295 @@
     {
         "id": 1,
         "start_time": 0.0,
-        "end_time": 3.39,
-        "chunk": "Bajaj Allianz's Health Infinity policy is a comprehensive",
+        "end_time": 3.41,
+        "chunk": "Bajaj Allianz's Health Infinity Policy is a comprehensive",
         "keyword": "Comprehensive Health Insurance Coverage"
     },
     {
         "id": 2,
-        "start_time": 3.39,
-        "end_time": 6.78,
+        "start_time": 3.41,
+        "end_time": 6.82,
         "chunk": "health insurance plan designed to protect you and",
-        "keyword": "Unlimited Coverage and Financial Protection"
+        "keyword": "Financial Protection from Medical Costs"
     },
     {
         "id": 3,
-        "start_time": 6.78,
-        "end_time": 10.17,
+        "start_time": 6.82,
+        "end_time": 10.23,
         "chunk": "your family from the financial burden of medical",
-        "keyword": "Personalized Room Rent Choice"
+        "keyword": "Peace of Mind with Unlimited Coverage"
     },
     {
         "id": 4,
-        "start_time": 10.17,
-        "end_time": 13.59,
-        "chunk": "expenses. This policy comes with unlimited sum insured,"
+        "start_time": 10.23,
+        "end_time": 13.67,
+        "chunk": "expenses. It offers a range of features, making",
+        "keyword": "Flexible Daily Room Rent Options"
     },
     {
         "id": 5,
-        "start_time": 13.59,
-        "end_time": 16.98,
-        "chunk": "meaning there's no limit on the amount you"
+        "start_time": 13.67,
+        "end_time": 17.08,
+        "chunk": "it a perfect choice for those seeking peace",
+        "keyword": "Tailored Health Insurance Plan"
     },
     {
         "id": 6,
-        "start_time": 16.98,
-        "end_time": 20.4,
-        "chunk": "can claim, giving you peace of mind. One"
-    },
-    {
-        "id": 7,
-        "start_time": 20.4,
-        "end_time": 23.79,
-        "chunk": "of the unique features of Health Infinity is"
-    },
-    {
-        "id": 8,
-        "start_time": 23.79,
-        "end_time": 27.18,
-        "chunk": "the concept of choosing your preferred room rent."
-    },
-    {
-        "id": 9,
-        "start_time": 27.18,
-        "end_time": 30.57,
-        "chunk": "This lets you customize your coverage based on",
-        "keyword": "Customizable Health Insurance Coverage"
-    },
-    {
-        "id": 10,
-        "start_time": 30.57,
-        "end_time": 33.96,
-        "chunk": "your needs and budget. The policy also offers",
-        "keyword": "Pre- and Post-Hospitalization Coverage"
-    },
-    {
-        "id": 11,
-        "start_time": 33.96,
-        "end_time": 37.34,
-        "chunk": "pre-hospitalization coverage for 60 days before hospitalization and",
-        "keyword": "Day-Care Procedure Coverage"
-    },
-    {
-        "id": 12,
-        "start_time": 37.34,
-        "end_time": 40.73,
-        "chunk": "post-hospitalization coverage for 90 days after discharge. Another",
-        "keyword": "Health & Wellness Support"
-    },
-    {
-        "id": 13,
-        "start_time": 40.73,
-        "end_time": 44.12,
-        "chunk": "important aspect of this policy is the coverage"
-    },
-    {
-        "id": 14,
-        "start_time": 44.12,
-        "end_time": 47.51,
-        "chunk": "for day-care procedures. This means you're protected even"
-    },
-    {
-        "id": 15,
-        "start_time": 47.51,
-        "end_time": 50.9,
-        "chunk": "for surgeries that don't require overnight hospital stays."
-    },
-    {
-        "id": 16,
-        "start_time": 50.9,
-        "end_time": 54.32,
-        "chunk": "And to keep you healthy, Health Infinity provides"
-    },
-    {
-        "id": 17,
-        "start_time": 54.32,
-        "end_time": 57.71,
-        "chunk": "a preventive health check-up every three years. With",
-        "keyword": "Preventive Health Check-Ups"
-    },
-    {
-        "id": 18,
-        "start_time": 57.71,
-        "end_time": 61.19,
-        "chunk": "its comprehensive coverage, competitive premiums, and flexible features,",
+        "start_time": 17.08,
+        "end_time": 20.49,
+        "chunk": "of mind. One of the key highlights is",
         "keyword": "Comprehensive Health Insurance Coverage"
     },
     {
+        "id": 7,
+        "start_time": 20.49,
+        "end_time": 23.93,
+        "chunk": "the unlimited sum insured, meaning you can claim",
+        "keyword": "Unlimited Sum Insured Health Plan"
+    },
+    {
+        "id": 8,
+        "start_time": 23.93,
+        "end_time": 27.37,
+        "chunk": "as much as you need, without any limits.",
+        "keyword": "Tailored Health Insurance Policy"
+    },
+    {
+        "id": 9,
+        "start_time": 27.37,
+        "end_time": 30.78,
+        "chunk": "It also introduces the flexibility of choosing your",
+        "keyword": "Family Health Insurance Benefits"
+    },
+    {
+        "id": 10,
+        "start_time": 30.78,
+        "end_time": 34.22,
+        "chunk": "preferred daily room rent, allowing you to tailor",
+        "keyword": "Medical Expense Coverage"
+    },
+    {
+        "id": 11,
+        "start_time": 34.22,
+        "end_time": 37.62,
+        "chunk": "the policy to your budget. The policy provides",
+        "keyword": "Comprehensive Health Insurance Coverage"
+    },
+    {
+        "id": 12,
+        "start_time": 37.62,
+        "end_time": 41.06,
+        "chunk": "coverage for a wide range of medical expenses,",
+        "keyword": "Hospitalization and Medical Expenses"
+    },
+    {
+        "id": 13,
+        "start_time": 41.06,
+        "end_time": 44.59,
+        "chunk": "including inpatient hospitalization, pre-hospitalization, post-hospitalization, road ambulance, day-care",
+        "keyword": "Preventative Care and Wellness"
+    },
+    {
+        "id": 14,
+        "start_time": 44.59,
+        "end_time": 48.03,
+        "chunk": "procedures, and preventive health check-ups. You'll also receive",
+        "keyword": "Income Tax Benefits"
+    },
+    {
+        "id": 15,
+        "start_time": 48.03,
+        "end_time": 51.44,
+        "chunk": "income tax benefits on the premiums you pay.",
+        "keyword": "Premium Discounts and Wellness"
+    },
+    {
+        "id": 16,
+        "start_time": 51.44,
+        "end_time": 54.88,
+        "chunk": "Beyond these core benefits, the policy includes a",
+        "keyword": "Preventive Health Check-ups"
+    },
+    {
+        "id": 17,
+        "start_time": 54.88,
+        "end_time": 58.32,
+        "chunk": "valuable wellness discount, offering a 5% reduction in",
+        "keyword": "Wellness Discounts & Rewards"
+    },
+    {
+        "id": 18,
+        "start_time": 58.32,
+        "end_time": 61.73,
+        "chunk": "your premium at every renewal if you maintain",
+        "keyword": "Online Health Insurance Purchase"
+    },
+    {
         "id": 19,
-        "start_time": 61.19,
-        "end_time": 64.58,
-        "chunk": "Bajaj Allianz's Health Infinity policy offers a secure",
-        "keyword": "Affordable Family Healthcare Solution"
+        "start_time": 61.73,
+        "end_time": 65.14,
+        "chunk": "a healthy lifestyle and provide specific medical test",
+        "keyword": "Health Insurance Portability Feature"
     },
     {
         "id": 20,
-        "start_time": 64.58,
-        "end_time": 67.79,
-        "chunk": "and affordable solution for your family's healthcare needs."
+        "start_time": 65.14,
+        "end_time": 68.58,
+        "chunk": "reports. Additionally, there are various discounts available for",
+        "keyword": "Cashless & Reimbursement Claims"
+    },
+    {
+        "id": 21,
+        "start_time": 68.58,
+        "end_time": 72.05,
+        "chunk": "families, long-term policies, and employees of Bajaj Allianz.",
+        "keyword": "Bajaj Allianz Health Insurance Benefits"
+    },
+    {
+        "id": 22,
+        "start_time": 72.05,
+        "end_time": 75.49,
+        "chunk": "If you purchase the policy online, you can",
+        "keyword": "Online Purchase Discount"
+    },
+    {
+        "id": 23,
+        "start_time": 75.49,
+        "end_time": 78.9,
+        "chunk": "avail of a special 5% discount. For those",
+        "keyword": "Policy Portability Feature"
+    },
+    {
+        "id": 24,
+        "start_time": 78.9,
+        "end_time": 82.34,
+        "chunk": "looking to switch from another health insurance policy,",
+        "keyword": "Coverage Exclusions and Waiting Periods"
+    },
+    {
+        "id": 25,
+        "start_time": 82.34,
+        "end_time": 85.75,
+        "chunk": "Health Infinity offers a portability feature that allows",
+        "keyword": "Review Policy Documents"
+    },
+    {
+        "id": 26,
+        "start_time": 85.75,
+        "end_time": 89.16,
+        "chunk": "you to bring your existing coverage with you.",
+        "keyword": "Bajaj Allianz Health Insurance"
+    },
+    {
+        "id": 27,
+        "start_time": 89.16,
+        "end_time": 92.6,
+        "chunk": "Remember, it's crucial to understand the policy's exclusions",
+        "keyword": "Secure Family Wellbeing"
+    },
+    {
+        "id": 28,
+        "start_time": 92.6,
+        "end_time": 96.01,
+        "chunk": "and waiting periods. Certain medical conditions or procedures",
+        "keyword": "Financial Protection from Medical Costs"
+    },
+    {
+        "id": 29,
+        "start_time": 96.01,
+        "end_time": 99.45,
+        "chunk": "may have a waiting period before they're covered,",
+        "keyword": "Peace of Mind Health Insurance"
+    },
+    {
+        "id": 30,
+        "start_time": 99.45,
+        "end_time": 102.86,
+        "chunk": "so it's important to review the policy documents",
+        "keyword": "Health Insurance Policy Exclusions"
+    },
+    {
+        "id": 31,
+        "start_time": 102.86,
+        "end_time": 106.27,
+        "chunk": "carefully. Health Infinity offers two claim settlement options:",
+        "keyword": "Health Insurance Options"
+    },
+    {
+        "id": 32,
+        "start_time": 106.27,
+        "end_time": 109.67,
+        "chunk": "cashless and reimbursement. Cashless treatment is available at",
+        "keyword": "Cashless vs. Reimbursement Claims"
+    },
+    {
+        "id": 33,
+        "start_time": 109.67,
+        "end_time": 113.11,
+        "chunk": "network hospitals, while reimbursement claims require you to",
+        "keyword": "Network Hospitals"
+    },
+    {
+        "id": 34,
+        "start_time": 113.11,
+        "end_time": 116.52,
+        "chunk": "pay for the medical expenses upfront and then",
+        "keyword": "Claim Reimbursement Process"
+    },
+    {
+        "id": 35,
+        "start_time": 116.52,
+        "end_time": 119.93,
+        "chunk": "claim the amount back from Bajaj Allianz. To",
+        "keyword": "Policy Purchase Options"
+    },
+    {
+        "id": 36,
+        "start_time": 119.93,
+        "end_time": 123.37,
+        "chunk": "buy this policy, contact your insurance advisor or",
+        "keyword": "Contact Insurance Advisor"
+    },
+    {
+        "id": 37,
+        "start_time": 123.37,
+        "end_time": 126.78,
+        "chunk": "visit Bajaj Allianz's website. Make sure to ask",
+        "keyword": "Understand Charges & Exclusions"
+    },
+    {
+        "id": 38,
+        "start_time": 126.78,
+        "end_time": 130.19,
+        "chunk": "about the charges and exclusions before filling the",
+        "keyword": "Comprehensive Health Insurance"
+    },
+    {
+        "id": 39,
+        "start_time": 130.19,
+        "end_time": 133.66,
+        "chunk": "proposal form. With its comprehensive coverage, attractive discounts,",
+        "keyword": "Bajaj Allianz Health Infinity"
+    },
+    {
+        "id": 40,
+        "start_time": 133.66,
+        "end_time": 137.1,
+        "chunk": "and convenient claim process, Bajaj Allianz's Health Infinity",
+        "keyword": "Health Insurance Waiting Periods"
+    },
+    {
+        "id": 41,
+        "start_time": 137.1,
+        "end_time": 140.51,
+        "chunk": "Policy provides a strong foundation for securing the",
+        "keyword": "Family Security Policy"
+    },
+    {
+        "id": 42,
+        "start_time": 140.51,
+        "end_time": 143.2,
+        "chunk": "well-being of your family.",
+        "keyword": "Financial Well-being"
     }
 ]

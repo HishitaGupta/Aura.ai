@@ -1,132 +1,130 @@
 [
     {
-        "question": "What is the main purpose of Bajaj Allianz's Health Infinity policy?",
+        "question": "What is the main purpose of Bajaj Allianz's Health Infinity Policy?",
         "options": [
             "To provide financial protection against medical expenses",
-            "To offer discounts on healthcare services",
-            "To provide free health checkups",
-            "To help people find the best doctors"
+            "To offer a discount on hospital room rent",
+            "To provide a free health checkup every year",
+            "To cover only pre-hospitalization expenses"
         ],
         "correctAnswer": "To provide financial protection against medical expenses",
-        "explanation": "The text states that the policy is designed to protect individuals and families from the financial burden of medical expenses.",
+        "explanation": "The text states that the policy is designed to protect you and your family from the financial burden of medical expenses.",
         "type": "mcq",
         "difficulty": "Easy",
         "use": "normal"
     },
     {
-        "question": "Does Bajaj Allianz's Health Infinity policy have a limit on the amount you can claim?",
+        "question": "What is the key benefit of the unlimited sum insured feature?",
         "options": [
-            "Yes, there's a maximum amount you can claim.",
-            "No, there's no limit on the amount you can claim."
+            "You can claim as much as you need, without any limits",
+            "You can claim a fixed amount, regardless of your medical expenses",
+            "You can claim up to a certain limit, depending on your age",
+            "You can claim up to a certain limit, depending on your income"
         ],
-        "correctAnswer": "No, there's no limit on the amount you can claim.",
-        "explanation": "The text mentions that the policy offers unlimited sum insured, implying no limit on claim amounts.",
-        "type": "true-false",
-        "difficulty": "Easy",
-        "use": "normal"
-    },
-    {
-        "question": "What feature of Health Infinity allows you to customize your coverage based on your needs and budget?",
-        "options": [
-            "Unlimited sum insured",
-            "Pre-hospitalization coverage",
-            "Choosing your preferred room rent",
-            "Preventive health check-ups"
-        ],
-        "correctAnswer": "Choosing your preferred room rent",
-        "explanation": "The text explicitly states that the policy lets you choose your preferred room rent, providing customization based on individual requirements.",
+        "correctAnswer": "You can claim as much as you need, without any limits",
+        "explanation": "The text explicitly states that the policy offers unlimited sum insured, meaning you can claim as much as needed without any limits.",
         "type": "mcq",
-        "difficulty": "Medium",
-        "use": "normal"
-    },
-    {
-        "question": "How long does the post-hospitalization coverage last after discharge?",
-        "options": [
-            "30 days",
-            "60 days",
-            "90 days"
-        ],
-        "correctAnswer": "90 days",
-        "explanation": "The text states that the policy offers post-hospitalization coverage for 90 days after discharge.",
-        "type": "fill-in-the-blank",
         "difficulty": "Easy",
         "use": "normal"
     },
     {
-        "question": "What type of procedures are covered under the day-care coverage of Health Infinity?",
+        "question": "Which of the following is NOT covered by the Health Infinity Policy?",
         "options": [
-            "Only major surgeries requiring overnight stays",
-            "Surgeries that do not require overnight hospital stays",
-            "All medical procedures, regardless of duration"
+            "Inpatient hospitalization",
+            "Pre-hospitalization expenses",
+            "Post-hospitalization expenses",
+            "Home-based nursing care"
         ],
-        "correctAnswer": "Surgeries that do not require overnight hospital stays",
-        "explanation": "The text specifically mentions that day-care coverage applies to surgeries that do not require overnight hospital stays.",
+        "correctAnswer": "Home-based nursing care",
+        "explanation": "The text mentions coverage for inpatient hospitalization, pre-hospitalization, post-hospitalization, road ambulance, day-care procedures, and preventive health check-ups. Home-based nursing care is not explicitly mentioned.",
         "type": "mcq",
         "difficulty": "Medium",
         "use": "normal"
     },
     {
-        "question": "What is the main benefit of Bajaj Allianz's Health Infinity policy?",
-        "options": [
-            "It provides financial protection against medical expenses.",
-            "It offers free health checkups.",
-            "It helps people find the best doctors.",
-            "It provides discounts on healthcare services."
-        ],
-        "correctAnswer": "It provides financial protection against medical expenses.",
-        "explanation": "The text highlights that the policy is designed to protect individuals and families from the financial burden of medical expenses.",
-        "type": "mcq",
-        "difficulty": "Easy",
-        "use": "substitute"
-    },
-    {
-        "question": "True or False: Bajaj Allianz's Health Infinity policy allows you to choose your preferred room rent.",
-        "options": [
-            "True",
-            "False"
-        ],
+        "question": "True or False: The Health Infinity Policy provides a 5% discount on premiums for every year you maintain a healthy lifestyle.",
+        "options": [],
         "correctAnswer": "True",
-        "explanation": "The text states that the policy lets you choose your preferred room rent, confirming this feature.",
+        "explanation": "The text mentions a wellness discount of 5% at every renewal if you maintain a healthy lifestyle and provide specific medical test reports.",
+        "type": "true-false",
+        "difficulty": "Easy",
+        "use": "normal"
+    },
+    {
+        "question": "What are the two claim settlement options offered by Health Infinity?",
+        "options": [
+            "Cashless and reimbursement",
+            "Direct payment and reimbursement",
+            "Online claim and offline claim",
+            "Pre-paid and post-paid"
+        ],
+        "correctAnswer": "Cashless and reimbursement",
+        "explanation": "The text states that Health Infinity offers two claim settlement options: cashless and reimbursement.",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "normal"
+    },
+    {
+        "question": "The Bajaj Allianz's Health Infinity Policy is designed to protect you and your ____ from the financial burden of medical expenses.",
+        "options": [
+            "friends",
+            "neighbors",
+            "family",
+            "colleagues"
+        ],
+        "correctAnswer": "family",
+        "explanation": "The text mentions the policy is designed to protect you and your family from medical expenses.",
+        "type": "fill-in-the-blank",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "The Health Infinity Policy allows you to choose your preferred ______ room rent.",
+        "options": [
+            "daily",
+            "weekly",
+            "monthly",
+            "annual"
+        ],
+        "correctAnswer": "daily",
+        "explanation": "The text states that the policy allows you to choose your preferred daily room rent.",
+        "type": "fill-in-the-blank",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "True or False: The Health Infinity Policy covers only inpatient hospitalization expenses.",
+        "options": [],
+        "correctAnswer": "False",
+        "explanation": "The text mentions that the policy covers a wide range of medical expenses, including inpatient hospitalization, pre-hospitalization, post-hospitalization, road ambulance, day-care procedures, and preventive health check-ups.",
         "type": "true-false",
         "difficulty": "Easy",
         "use": "substitute"
     },
     {
-        "question": "How often does Health Infinity provide a preventive health check-up?",
+        "question": "What is the discount offered for purchasing the Health Infinity Policy online?",
         "options": [
-            "Every year",
-            "Every two years",
-            "Every three years"
+            "2.5%",
+            "5%",
+            "10%",
+            "15%"
         ],
-        "correctAnswer": "Every three years",
-        "explanation": "The text explicitly mentions that Health Infinity provides a preventive health check-up every three years.",
-        "type": "fill-in-the-blank",
+        "correctAnswer": "5%",
+        "explanation": "The text mentions a special 5% discount for purchasing the policy online.",
+        "type": "mcq",
         "difficulty": "Easy",
         "use": "substitute"
     },
     {
-        "question": "What is the duration of pre-hospitalization coverage offered by Health Infinity?",
+        "question": "Which feature allows you to transfer your existing health insurance coverage to Health Infinity?",
         "options": [
-            "30 days",
-            "60 days",
-            "90 days"
+            "Wellness discount",
+            "Portability",
+            "Cashless claim",
+            "Reimbursement claim"
         ],
-        "correctAnswer": "60 days",
-        "explanation": "The text states that the policy provides pre-hospitalization coverage for 60 days before hospitalization.",
-        "type": "fill-in-the-blank",
-        "difficulty": "Easy",
-        "use": "substitute"
-    },
-    {
-        "question": "Which of the following is NOT a feature of Bajaj Allianz's Health Infinity policy?",
-        "options": [
-            "Unlimited sum insured",
-            "Pre-hospitalization coverage",
-            "Guaranteed claim approval",
-            "Day-care procedure coverage"
-        ],
-        "correctAnswer": "Guaranteed claim approval",
-        "explanation": "While the policy offers comprehensive coverage, it doesn't guarantee claim approval. Claim approval is subject to policy terms and conditions.",
+        "correctAnswer": "Portability",
+        "explanation": "The text states that Health Infinity offers a portability feature that allows you to bring your existing coverage with you.",
         "type": "mcq",
         "difficulty": "Medium",
         "use": "substitute"
