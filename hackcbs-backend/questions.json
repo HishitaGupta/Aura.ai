@@ -1,131 +1,131 @@
 [
     {
-        "question": "What is the main purpose of Bajaj Allianz's Health Infinity Policy?",
+        "question": "Bajaj Allianz Health Infinity is primarily designed to protect against the financial burden of:",
         "options": [
-            "To provide financial protection against medical expenses",
-            "To offer a discount on hospital room rent",
-            "To provide a free health checkup every year",
-            "To cover only pre-hospitalization expenses"
+            "Unexpected travel expenses",
+            "Unexpected medical expenses",
+            "Unexpected housing expenses",
+            "Unexpected legal expenses"
         ],
-        "correctAnswer": "To provide financial protection against medical expenses",
-        "explanation": "The text states that the policy is designed to protect you and your family from the financial burden of medical expenses.",
+        "correctAnswer": "Unexpected medical expenses",
+        "explanation": "The text states that Bajaj Allianz Health Infinity is designed to protect you and your family from the financial burden of unexpected medical expenses.",
         "type": "mcq",
         "difficulty": "Easy",
         "use": "normal"
     },
     {
-        "question": "What is the key benefit of the unlimited sum insured feature?",
+        "question": "This health insurance policy offers a coverage limit that is:",
         "options": [
-            "You can claim as much as you need, without any limits",
-            "You can claim a fixed amount, regardless of your medical expenses",
-            "You can claim up to a certain limit, depending on your age",
-            "You can claim up to a certain limit, depending on your income"
+            "Limited to a specific amount",
+            "Unlimited",
+            "Based on your income",
+            "Determined by your age"
         ],
-        "correctAnswer": "You can claim as much as you need, without any limits",
-        "explanation": "The text explicitly states that the policy offers unlimited sum insured, meaning you can claim as much as needed without any limits.",
+        "correctAnswer": "Unlimited",
+        "explanation": "The text mentions that the policy offers an unlimited sum insured, meaning there is no limit on the amount of coverage provided.",
         "type": "mcq",
         "difficulty": "Easy",
         "use": "normal"
     },
     {
-        "question": "Which of the following is NOT covered by the Health Infinity Policy?",
+        "question": "True or False: Bajaj Allianz Health Infinity covers only pre-hospitalization expenses.",
+        "options": [],
+        "correctAnswer": "False",
+        "explanation": "The text states that the policy covers both pre and post-hospitalization expenses, not just pre-hospitalization expenses.",
+        "type": "true-false",
+        "difficulty": "Easy",
+        "use": "normal"
+    },
+    {
+        "question": "The policy allows you to customize your _____________ to align with your budget.",
         "options": [
-            "Inpatient hospitalization",
-            "Pre-hospitalization expenses",
-            "Post-hospitalization expenses",
-            "Home-based nursing care"
+            "Premium amount",
+            "Room rent limit",
+            "Copayment option",
+            "All of the above"
         ],
-        "correctAnswer": "Home-based nursing care",
-        "explanation": "The text mentions coverage for inpatient hospitalization, pre-hospitalization, post-hospitalization, road ambulance, day-care procedures, and preventive health check-ups. Home-based nursing care is not explicitly mentioned.",
+        "correctAnswer": "Room rent limit",
+        "explanation": "The text mentions that the policy allows you to choose your room rent limit, giving you flexibility to suit your budget.",
+        "type": "fill-in-the-blank",
+        "difficulty": "Medium",
+        "use": "normal"
+    },
+    {
+        "question": "Which of the following is NOT a feature of Bajaj Allianz Health Infinity?",
+        "options": [
+            "Coverage for pre-existing diseases after a waiting period",
+            "Coverage for day-care procedures",
+            "Coverage for accidental injuries",
+            "Preventive health checkups"
+        ],
+        "correctAnswer": "Coverage for accidental injuries",
+        "explanation": "While the text mentions coverage for pre-existing diseases, day-care procedures, and preventive health checkups, it does not specifically mention coverage for accidental injuries.",
         "type": "mcq",
         "difficulty": "Medium",
         "use": "normal"
     },
     {
-        "question": "True or False: The Health Infinity Policy provides a 5% discount on premiums for every year you maintain a healthy lifestyle.",
-        "options": [],
-        "correctAnswer": "True",
-        "explanation": "The text mentions a wellness discount of 5% at every renewal if you maintain a healthy lifestyle and provide specific medical test reports.",
-        "type": "true-false",
-        "difficulty": "Easy",
-        "use": "normal"
-    },
-    {
-        "question": "What are the two claim settlement options offered by Health Infinity?",
+        "question": "Bajaj Allianz Health Infinity offers coverage for pre-existing diseases after a waiting period of:",
         "options": [
-            "Cashless and reimbursement",
-            "Direct payment and reimbursement",
-            "Online claim and offline claim",
-            "Pre-paid and post-paid"
+            "12 months",
+            "24 months",
+            "36 months",
+            "48 months"
         ],
-        "correctAnswer": "Cashless and reimbursement",
-        "explanation": "The text states that Health Infinity offers two claim settlement options: cashless and reimbursement.",
+        "correctAnswer": "36 months",
+        "explanation": "The text clearly states that coverage for pre-existing diseases is provided after a waiting period of 36 months.",
         "type": "mcq",
         "difficulty": "Easy",
-        "use": "normal"
+        "use": "substitute"
     },
     {
-        "question": "The Bajaj Allianz's Health Infinity Policy is designed to protect you and your ____ from the financial burden of medical expenses.",
+        "question": "The policy offers a ______________ for wellness and family members covered under a single policy.",
         "options": [
-            "friends",
-            "neighbors",
-            "family",
-            "colleagues"
+            "Discount",
+            "Bonus",
+            "Reward",
+            "Refund"
         ],
-        "correctAnswer": "family",
-        "explanation": "The text mentions the policy is designed to protect you and your family from medical expenses.",
+        "correctAnswer": "Discount",
+        "explanation": "The text states that the policy includes a generous discount for wellness and family members covered under a single policy.",
         "type": "fill-in-the-blank",
         "difficulty": "Easy",
         "use": "substitute"
     },
     {
-        "question": "The Health Infinity Policy allows you to choose your preferred ______ room rent.",
-        "options": [
-            "daily",
-            "weekly",
-            "monthly",
-            "annual"
-        ],
-        "correctAnswer": "daily",
-        "explanation": "The text states that the policy allows you to choose your preferred daily room rent.",
-        "type": "fill-in-the-blank",
-        "difficulty": "Easy",
-        "use": "substitute"
-    },
-    {
-        "question": "True or False: The Health Infinity Policy covers only inpatient hospitalization expenses.",
+        "question": "True or False: Bajaj Allianz Health Infinity offers only reimbursement claims.",
         "options": [],
         "correctAnswer": "False",
-        "explanation": "The text mentions that the policy covers a wide range of medical expenses, including inpatient hospitalization, pre-hospitalization, post-hospitalization, road ambulance, day-care procedures, and preventive health check-ups.",
+        "explanation": "The text mentions that the policy provides both cashless and reimbursement claim options.",
         "type": "true-false",
         "difficulty": "Easy",
         "use": "substitute"
     },
     {
-        "question": "What is the discount offered for purchasing the Health Infinity Policy online?",
+        "question": "Bajaj Allianz provides cashless claim facilities at their network of hospitals:",
         "options": [
-            "2.5%",
-            "5%",
-            "10%",
-            "15%"
+            "Only in major cities",
+            "Across India",
+            "In selected states",
+            "Internationally"
         ],
-        "correctAnswer": "5%",
-        "explanation": "The text mentions a special 5% discount for purchasing the policy online.",
+        "correctAnswer": "Across India",
+        "explanation": "The text mentions that the cashless facility is available at their extensive network of hospitals across India.",
         "type": "mcq",
         "difficulty": "Easy",
         "use": "substitute"
     },
     {
-        "question": "Which feature allows you to transfer your existing health insurance coverage to Health Infinity?",
+        "question": "For reimbursement claims, you are required to submit your medical bills within _____ days of discharge.",
         "options": [
-            "Wellness discount",
-            "Portability",
-            "Cashless claim",
-            "Reimbursement claim"
+            "15",
+            "20",
+            "25",
+            "30"
         ],
-        "correctAnswer": "Portability",
-        "explanation": "The text states that Health Infinity offers a portability feature that allows you to bring your existing coverage with you.",
-        "type": "mcq",
+        "correctAnswer": "30",
+        "explanation": "The text states that you can submit your medical bills and other necessary documents within 30 days of discharge for reimbursement claims.",
+        "type": "fill-in-the-blank",
         "difficulty": "Medium",
         "use": "substitute"
     }

@@ -2,295 +2,271 @@
     {
         "id": 1,
         "start_time": 0.0,
-        "end_time": 3.41,
-        "chunk": "Bajaj Allianz's Health Infinity Policy is a comprehensive",
-        "keyword": "Comprehensive Health Insurance Coverage"
+        "end_time": 3.4,
+        "chunk": "Bajaj Allianz Health Infinity is a comprehensive health",
+        "keyword": "Safety net for healthcare costs",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk1_video.mp4"
     },
     {
         "id": 2,
-        "start_time": 3.41,
-        "end_time": 6.82,
-        "chunk": "health insurance plan designed to protect you and",
-        "keyword": "Financial Protection from Medical Costs"
+        "start_time": 3.4,
+        "end_time": 6.8,
+        "chunk": "insurance policy designed to protect you and your",
+        "keyword": "Financial shield against medical bills",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk2_video.mp4"
     },
     {
         "id": 3,
-        "start_time": 6.82,
-        "end_time": 10.23,
-        "chunk": "your family from the financial burden of medical",
-        "keyword": "Peace of Mind with Unlimited Coverage"
+        "start_time": 6.8,
+        "end_time": 10.2,
+        "chunk": "family from the financial burden of unexpected medical",
+        "keyword": "Comprehensive healthcare umbrella",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk3_video.mp4"
     },
     {
         "id": 4,
-        "start_time": 10.23,
-        "end_time": 13.67,
-        "chunk": "expenses. It offers a range of features, making",
-        "keyword": "Flexible Daily Room Rent Options"
+        "start_time": 10.2,
+        "end_time": 13.63,
+        "chunk": "expenses. It offers a wide range of benefits,",
+        "keyword": "Healthcare safety net for the whole family",
+        "video_duration": 3.43,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk4_video.mp4"
     },
     {
         "id": 5,
-        "start_time": 13.67,
-        "end_time": 17.08,
-        "chunk": "it a perfect choice for those seeking peace",
-        "keyword": "Tailored Health Insurance Plan"
+        "start_time": 13.63,
+        "end_time": 17.06,
+        "chunk": "including unlimited sum insured, coverage for pre and",
+        "keyword": "Flexible health plan for different needs",
+        "video_duration": 3.43,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk5_video.mp4"
     },
     {
         "id": 6,
-        "start_time": 17.08,
-        "end_time": 20.49,
-        "chunk": "of mind. One of the key highlights is",
-        "keyword": "Comprehensive Health Insurance Coverage"
+        "start_time": 17.06,
+        "end_time": 20.52,
+        "chunk": "post-hospitalization expenses, day-care procedures, and even preventive health",
+        "keyword": "Family Doctor's Office",
+        "video_duration": 3.46,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk6_video.mp4"
     },
     {
         "id": 7,
-        "start_time": 20.49,
-        "end_time": 23.93,
-        "chunk": "the unlimited sum insured, meaning you can claim",
-        "keyword": "Unlimited Sum Insured Health Plan"
+        "start_time": 20.52,
+        "end_time": 23.92,
+        "chunk": "checkups. The policy is available for individuals and",
+        "keyword": "Hospital Bed and Family",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk7_video.mp4"
     },
     {
         "id": 8,
-        "start_time": 23.93,
-        "end_time": 27.37,
-        "chunk": "as much as you need, without any limits.",
-        "keyword": "Tailored Health Insurance Policy"
+        "start_time": 23.92,
+        "end_time": 27.44,
+        "chunk": "families, and covers self, spouse, dependent children, and",
+        "keyword": "Hand Holding Medical Bills",
+        "video_duration": 3.52,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk8_video.mp4"
     },
     {
         "id": 9,
-        "start_time": 27.37,
-        "end_time": 30.78,
-        "chunk": "It also introduces the flexibility of choosing your",
-        "keyword": "Family Health Insurance Benefits"
+        "start_time": 27.44,
+        "end_time": 30.84,
+        "chunk": "parents. It allows you to choose your room",
+        "keyword": "Protective Shield over Family",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk9_video.mp4"
     },
     {
         "id": 10,
-        "start_time": 30.78,
-        "end_time": 34.22,
-        "chunk": "preferred daily room rent, allowing you to tailor",
-        "keyword": "Medical Expense Coverage"
+        "start_time": 30.84,
+        "end_time": 34.27,
+        "chunk": "rent limit, offering flexibility to suit your budget.",
+        "keyword": "Money Bag with Cross Out",
+        "video_duration": 3.43,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk10_video.mp4"
     },
     {
         "id": 11,
-        "start_time": 34.22,
-        "end_time": 37.62,
-        "chunk": "the policy to your budget. The policy provides",
-        "keyword": "Comprehensive Health Insurance Coverage"
+        "start_time": 34.27,
+        "end_time": 37.67,
+        "chunk": "You can also opt for different copayment options",
+        "keyword": "Choosing coverage levels",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk11_video.mp4"
     },
     {
         "id": 12,
-        "start_time": 37.62,
-        "end_time": 41.06,
-        "chunk": "coverage for a wide range of medical expenses,",
-        "keyword": "Hospitalization and Medical Expenses"
+        "start_time": 37.67,
+        "end_time": 41.07,
+        "chunk": "based on your preferred level of cost sharing.",
+        "keyword": "Lifetime policy renewal",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk12_video.mp4"
     },
     {
         "id": 13,
-        "start_time": 41.06,
-        "end_time": 44.59,
-        "chunk": "including inpatient hospitalization, pre-hospitalization, post-hospitalization, road ambulance, day-care",
-        "keyword": "Preventative Care and Wellness"
+        "start_time": 41.07,
+        "end_time": 44.47,
+        "chunk": "One of the key features of this policy",
+        "keyword": "Preexisting condition coverage",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk13_video.mp4"
     },
     {
         "id": 14,
-        "start_time": 44.59,
-        "end_time": 48.03,
-        "chunk": "procedures, and preventive health check-ups. You'll also receive",
-        "keyword": "Income Tax Benefits"
+        "start_time": 44.47,
+        "end_time": 47.9,
+        "chunk": "is the lifetime renewal benefit, ensuring you have",
+        "keyword": "Family discount",
+        "video_duration": 3.43,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk14_video.mp4"
     },
     {
         "id": 15,
-        "start_time": 48.03,
-        "end_time": 51.44,
-        "chunk": "income tax benefits on the premiums you pay.",
-        "keyword": "Premium Discounts and Wellness"
+        "start_time": 47.9,
+        "end_time": 51.31,
+        "chunk": "continuous coverage as long as you renew annually",
+        "keyword": "Calendar with Check Mark",
+        "video_duration": 3.41,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk15_video.mp4"
     },
     {
         "id": 16,
-        "start_time": 51.44,
-        "end_time": 54.88,
-        "chunk": "Beyond these core benefits, the policy includes a",
-        "keyword": "Preventive Health Check-ups"
+        "start_time": 51.31,
+        "end_time": 54.74,
+        "chunk": "within the 30-day grace period. Additionally, the policy",
+        "keyword": "Open Hand with Coin",
+        "video_duration": 3.43,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk16_video.mp4"
     },
     {
         "id": 17,
-        "start_time": 54.88,
-        "end_time": 58.32,
-        "chunk": "valuable wellness discount, offering a 5% reduction in",
-        "keyword": "Wellness Discounts & Rewards"
+        "start_time": 54.74,
+        "end_time": 58.14,
+        "chunk": "provides coverage for preexisting diseases after a waiting",
+        "keyword": "Smiling Family with Doctor",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk17_video.mp4"
     },
     {
         "id": 18,
-        "start_time": 58.32,
-        "end_time": 61.73,
-        "chunk": "your premium at every renewal if you maintain",
-        "keyword": "Online Health Insurance Purchase"
+        "start_time": 58.14,
+        "end_time": 61.57,
+        "chunk": "period of 36 months, and includes a generous",
+        "keyword": "Building with Strong Foundation",
+        "video_duration": 3.43,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk18_video.mp4"
     },
     {
         "id": 19,
-        "start_time": 61.73,
-        "end_time": 65.14,
-        "chunk": "a healthy lifestyle and provide specific medical test",
-        "keyword": "Health Insurance Portability Feature"
+        "start_time": 61.57,
+        "end_time": 64.97,
+        "chunk": "discount for wellness and family members covered under",
+        "keyword": "Chart with Upward Arrow",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk19_video.mp4"
     },
     {
         "id": 20,
-        "start_time": 65.14,
-        "end_time": 68.58,
-        "chunk": "reports. Additionally, there are various discounts available for",
-        "keyword": "Cashless & Reimbursement Claims"
+        "start_time": 64.97,
+        "end_time": 68.37,
+        "chunk": "a single policy. To make it easier for",
+        "keyword": "Family Holding Policy Paper",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk20_video.mp4"
     },
     {
         "id": 21,
-        "start_time": 68.58,
-        "end_time": 72.05,
-        "chunk": "families, long-term policies, and employees of Bajaj Allianz.",
-        "keyword": "Bajaj Allianz Health Insurance Benefits"
+        "start_time": 68.37,
+        "end_time": 71.8,
+        "chunk": "you, Bajaj Allianz provides both cashless and reimbursement",
+        "keyword": "Hospital network map",
+        "video_duration": 3.43,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk21_video.mp4"
     },
     {
         "id": 22,
-        "start_time": 72.05,
-        "end_time": 75.49,
-        "chunk": "If you purchase the policy online, you can",
-        "keyword": "Online Purchase Discount"
+        "start_time": 71.8,
+        "end_time": 75.2,
+        "chunk": "claim options. The cashless facility is available at",
+        "keyword": "Claim process flow chart",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk22_video.mp4"
     },
     {
         "id": 23,
-        "start_time": 75.49,
-        "end_time": 78.9,
-        "chunk": "avail of a special 5% discount. For those",
-        "keyword": "Policy Portability Feature"
+        "start_time": 75.2,
+        "end_time": 78.63,
+        "chunk": "their extensive network of hospitals across India, simplifying",
+        "keyword": "Medical bill mountain",
+        "video_duration": 3.43,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk23_video.mp4"
     },
     {
         "id": 24,
-        "start_time": 78.9,
-        "end_time": 82.34,
-        "chunk": "looking to switch from another health insurance policy,",
-        "keyword": "Coverage Exclusions and Waiting Periods"
+        "start_time": 78.63,
+        "end_time": 82.06,
+        "chunk": "your medical expenses during hospitalization. For reimbursement claims,",
+        "keyword": "Insurance shield",
+        "video_duration": 3.43,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk24_video.mp4"
     },
     {
         "id": 25,
-        "start_time": 82.34,
-        "end_time": 85.75,
-        "chunk": "Health Infinity offers a portability feature that allows",
-        "keyword": "Review Policy Documents"
+        "start_time": 82.06,
+        "end_time": 85.46,
+        "chunk": "you can submit your medical bills and other",
+        "keyword": "Policy document stack",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk25_video.mp4"
     },
     {
         "id": 26,
-        "start_time": 85.75,
-        "end_time": 89.16,
-        "chunk": "you to bring your existing coverage with you.",
-        "keyword": "Bajaj Allianz Health Insurance"
+        "start_time": 85.46,
+        "end_time": 88.86,
+        "chunk": "necessary documents within 30 days of discharge. If",
+        "keyword": "Clock with Ticking Time",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk26_video.mp4"
     },
     {
         "id": 27,
-        "start_time": 89.16,
-        "end_time": 92.6,
-        "chunk": "Remember, it's crucial to understand the policy's exclusions",
-        "keyword": "Secure Family Wellbeing"
+        "start_time": 88.86,
+        "end_time": 92.26,
+        "chunk": "you're looking for a comprehensive health insurance policy",
+        "keyword": "Open Book with Heart",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk27_video.mp4"
     },
     {
         "id": 28,
-        "start_time": 92.6,
-        "end_time": 96.01,
-        "chunk": "and waiting periods. Certain medical conditions or procedures",
-        "keyword": "Financial Protection from Medical Costs"
+        "start_time": 92.26,
+        "end_time": 95.66,
+        "chunk": "with a wide range of benefits and a",
+        "keyword": "Doctor's Stethoscope",
+        "video_duration": 3.4,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk28_video.mp4"
     },
     {
         "id": 29,
-        "start_time": 96.01,
-        "end_time": 99.45,
-        "chunk": "may have a waiting period before they're covered,",
-        "keyword": "Peace of Mind Health Insurance"
+        "start_time": 95.66,
+        "end_time": 99.09,
+        "chunk": "user-friendly claim process, Bajaj Allianz Health Infinity is",
+        "keyword": "Smiling Family with Umbrella",
+        "video_duration": 3.43,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk29_video.mp4"
     },
     {
         "id": 30,
-        "start_time": 99.45,
-        "end_time": 102.86,
-        "chunk": "so it's important to review the policy documents",
-        "keyword": "Health Insurance Policy Exclusions"
-    },
-    {
-        "id": 31,
-        "start_time": 102.86,
-        "end_time": 106.27,
-        "chunk": "carefully. Health Infinity offers two claim settlement options:",
-        "keyword": "Health Insurance Options"
-    },
-    {
-        "id": 32,
-        "start_time": 106.27,
-        "end_time": 109.67,
-        "chunk": "cashless and reimbursement. Cashless treatment is available at",
-        "keyword": "Cashless vs. Reimbursement Claims"
-    },
-    {
-        "id": 33,
-        "start_time": 109.67,
-        "end_time": 113.11,
-        "chunk": "network hospitals, while reimbursement claims require you to",
-        "keyword": "Network Hospitals"
-    },
-    {
-        "id": 34,
-        "start_time": 113.11,
-        "end_time": 116.52,
-        "chunk": "pay for the medical expenses upfront and then",
-        "keyword": "Claim Reimbursement Process"
-    },
-    {
-        "id": 35,
-        "start_time": 116.52,
-        "end_time": 119.93,
-        "chunk": "claim the amount back from Bajaj Allianz. To",
-        "keyword": "Policy Purchase Options"
-    },
-    {
-        "id": 36,
-        "start_time": 119.93,
-        "end_time": 123.37,
-        "chunk": "buy this policy, contact your insurance advisor or",
-        "keyword": "Contact Insurance Advisor"
-    },
-    {
-        "id": 37,
-        "start_time": 123.37,
-        "end_time": 126.78,
-        "chunk": "visit Bajaj Allianz's website. Make sure to ask",
-        "keyword": "Understand Charges & Exclusions"
-    },
-    {
-        "id": 38,
-        "start_time": 126.78,
-        "end_time": 130.19,
-        "chunk": "about the charges and exclusions before filling the",
-        "keyword": "Comprehensive Health Insurance"
-    },
-    {
-        "id": 39,
-        "start_time": 130.19,
-        "end_time": 133.66,
-        "chunk": "proposal form. With its comprehensive coverage, attractive discounts,",
-        "keyword": "Bajaj Allianz Health Infinity"
-    },
-    {
-        "id": 40,
-        "start_time": 133.66,
-        "end_time": 137.1,
-        "chunk": "and convenient claim process, Bajaj Allianz's Health Infinity",
-        "keyword": "Health Insurance Waiting Periods"
-    },
-    {
-        "id": 41,
-        "start_time": 137.1,
-        "end_time": 140.51,
-        "chunk": "Policy provides a strong foundation for securing the",
-        "keyword": "Family Security Policy"
-    },
-    {
-        "id": 42,
-        "start_time": 140.51,
-        "end_time": 143.2,
-        "chunk": "well-being of your family.",
-        "keyword": "Financial Well-being"
+        "start_time": 99.09,
+        "end_time": 102.01,
+        "chunk": "definitely worth considering.",
+        "keyword": "Car with Medical Symbol",
+        "video_duration": 2.92,
+        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk30_video.mp4"
     }
 ]
