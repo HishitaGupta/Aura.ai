@@ -1,71 +1,85 @@
 [
     {
-        "question": "Bajaj Allianz Health Infinity is primarily designed to protect against the financial burden of:",
+        "question": "What is the unique feature of Bajaj Allianz Health Infinity that sets it apart from other health insurance plans?",
         "options": [
-            "Unexpected travel expenses",
-            "Unexpected medical expenses",
-            "Unexpected housing expenses",
-            "Unexpected legal expenses"
+            "Coverage for pre-existing diseases",
+            "Unlimited sum insured",
+            "Day-care procedure coverage",
+            "Income tax deductions on premiums"
         ],
-        "correctAnswer": "Unexpected medical expenses",
-        "explanation": "The text states that Bajaj Allianz Health Infinity is designed to protect you and your family from the financial burden of unexpected medical expenses.",
+        "correctAnswer": "Unlimited sum insured",
+        "explanation": "The text specifically mentions that Bajaj Allianz Health Infinity offers an \"unlimited sum insured\", meaning there's no limit on the amount you can claim for medical expenses.",
         "type": "mcq",
         "difficulty": "Easy",
         "use": "normal"
     },
     {
-        "question": "This health insurance policy offers a coverage limit that is:",
+        "question": "What is the maximum daily room rent option available with Bajaj Allianz Health Infinity?",
         "options": [
-            "Limited to a specific amount",
-            "Unlimited",
-            "Based on your income",
-            "Determined by your age"
+            "\u20b910,000",
+            "\u20b925,000",
+            "\u20b950,000",
+            "\u20b975,000"
         ],
-        "correctAnswer": "Unlimited",
-        "explanation": "The text mentions that the policy offers an unlimited sum insured, meaning there is no limit on the amount of coverage provided.",
+        "correctAnswer": "\u20b950,000",
+        "explanation": "The text states that the policy offers a range of room rent options, with the highest being \u20b950,000 per day.",
         "type": "mcq",
         "difficulty": "Easy",
         "use": "normal"
     },
     {
-        "question": "True or False: Bajaj Allianz Health Infinity covers only pre-hospitalization expenses.",
+        "question": "True or False: Bajaj Allianz Health Infinity covers pre-hospitalization expenses for 30 days and post-hospitalization expenses for 60 days.",
         "options": [],
         "correctAnswer": "False",
-        "explanation": "The text states that the policy covers both pre and post-hospitalization expenses, not just pre-hospitalization expenses.",
+        "explanation": "The text states that the policy covers pre-hospitalization expenses for 60 days and post-hospitalization expenses for 90 days.",
         "type": "true-false",
-        "difficulty": "Easy",
-        "use": "normal"
-    },
-    {
-        "question": "The policy allows you to customize your _____________ to align with your budget.",
-        "options": [
-            "Premium amount",
-            "Room rent limit",
-            "Copayment option",
-            "All of the above"
-        ],
-        "correctAnswer": "Room rent limit",
-        "explanation": "The text mentions that the policy allows you to choose your room rent limit, giving you flexibility to suit your budget.",
-        "type": "fill-in-the-blank",
         "difficulty": "Medium",
         "use": "normal"
     },
     {
-        "question": "Which of the following is NOT a feature of Bajaj Allianz Health Infinity?",
+        "question": "What is the maximum amount covered for road ambulance expenses per hospitalization?",
         "options": [
-            "Coverage for pre-existing diseases after a waiting period",
-            "Coverage for day-care procedures",
-            "Coverage for accidental injuries",
-            "Preventive health checkups"
+            "\u20b92,000",
+            "\u20b95,000",
+            "\u20b910,000",
+            "\u20b915,000"
         ],
-        "correctAnswer": "Coverage for accidental injuries",
-        "explanation": "While the text mentions coverage for pre-existing diseases, day-care procedures, and preventive health checkups, it does not specifically mention coverage for accidental injuries.",
+        "correctAnswer": "\u20b95,000",
+        "explanation": "The text states that the policy covers road ambulance expenses up to \u20b95,000 per hospitalization.",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "normal"
+    },
+    {
+        "question": "How often does Bajaj Allianz Health Infinity provide a preventive health checkup?",
+        "options": [
+            "Every year",
+            "Every two years",
+            "Every three years",
+            "Every five years"
+        ],
+        "correctAnswer": "Every three years",
+        "explanation": "The text mentions that the policy includes coverage for a preventive health checkup every three years.",
         "type": "mcq",
         "difficulty": "Medium",
         "use": "normal"
     },
     {
-        "question": "Bajaj Allianz Health Infinity offers coverage for pre-existing diseases after a waiting period of:",
+        "question": "What is the maximum age for individuals who do not require pre-policy medical tests?",
+        "options": [
+            "35 years",
+            "40 years",
+            "45 years",
+            "50 years"
+        ],
+        "correctAnswer": "45 years",
+        "explanation": "The text states that individuals under 45 years of age are exempt from pre-policy medical tests.",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "After how many months of continuous coverage do pre-existing diseases become covered under Bajaj Allianz Health Infinity?",
         "options": [
             "12 months",
             "24 months",
@@ -73,58 +87,44 @@
             "48 months"
         ],
         "correctAnswer": "36 months",
-        "explanation": "The text clearly states that coverage for pre-existing diseases is provided after a waiting period of 36 months.",
+        "explanation": "The text mentions that pre-existing diseases are covered after 36 months of continuous coverage.",
         "type": "mcq",
         "difficulty": "Easy",
         "use": "substitute"
     },
     {
-        "question": "The policy offers a ______________ for wellness and family members covered under a single policy.",
-        "options": [
-            "Discount",
-            "Bonus",
-            "Reward",
-            "Refund"
-        ],
-        "correctAnswer": "Discount",
-        "explanation": "The text states that the policy includes a generous discount for wellness and family members covered under a single policy.",
-        "type": "fill-in-the-blank",
-        "difficulty": "Easy",
-        "use": "substitute"
-    },
-    {
-        "question": "True or False: Bajaj Allianz Health Infinity offers only reimbursement claims.",
+        "question": "True or False: Bajaj Allianz Health Infinity offers a feature where you can choose your preferred room rent option.",
         "options": [],
-        "correctAnswer": "False",
-        "explanation": "The text mentions that the policy provides both cashless and reimbursement claim options.",
+        "correctAnswer": "True",
+        "explanation": "The text states that the policy allows you to select your preferred room rent option.",
         "type": "true-false",
         "difficulty": "Easy",
         "use": "substitute"
     },
     {
-        "question": "Bajaj Allianz provides cashless claim facilities at their network of hospitals:",
+        "question": "Fill in the blank: Bajaj Allianz Health Infinity covers _______ expenses for 90 days.",
         "options": [
-            "Only in major cities",
-            "Across India",
-            "In selected states",
-            "Internationally"
+            "pre-hospitalization",
+            "post-hospitalization",
+            "day-care",
+            "ambulance"
         ],
-        "correctAnswer": "Across India",
-        "explanation": "The text mentions that the cashless facility is available at their extensive network of hospitals across India.",
-        "type": "mcq",
+        "correctAnswer": "post-hospitalization",
+        "explanation": "The text states that the policy covers post-hospitalization expenses for 90 days.",
+        "type": "fill-in-the-blank",
         "difficulty": "Easy",
         "use": "substitute"
     },
     {
-        "question": "For reimbursement claims, you are required to submit your medical bills within _____ days of discharge.",
+        "question": "Fill in the blank: The policy covers day-care procedures and road ambulance expenses up to ______ per hospitalization.",
         "options": [
-            "15",
-            "20",
-            "25",
-            "30"
+            "\u20b92,000",
+            "\u20b95,000",
+            "\u20b910,000",
+            "\u20b915,000"
         ],
-        "correctAnswer": "30",
-        "explanation": "The text states that you can submit your medical bills and other necessary documents within 30 days of discharge for reimbursement claims.",
+        "correctAnswer": "\u20b95,000",
+        "explanation": "The text states that the policy covers road ambulance expenses up to \u20b95,000 per hospitalization.",
         "type": "fill-in-the-blank",
         "difficulty": "Medium",
         "use": "substitute"

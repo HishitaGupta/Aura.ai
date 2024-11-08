@@ -2,271 +2,154 @@
     {
         "id": 1,
         "start_time": 0.0,
-        "end_time": 3.4,
-        "chunk": "Bajaj Allianz Health Infinity is a comprehensive health",
-        "keyword": "Safety net for healthcare costs",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk1_video.mp4"
+        "end_time": 4.16,
+        "chunk": "Bajaj Allianz Health Infinity is a comprehensive health insurance plan",
+        "keyword": "Protective Shield for Family",
+        "video_duration": 4.16,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_1.jpg"
     },
     {
         "id": 2,
-        "start_time": 3.4,
-        "end_time": 6.8,
-        "chunk": "insurance policy designed to protect you and your",
-        "keyword": "Financial shield against medical bills",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk2_video.mp4"
+        "start_time": 4.16,
+        "end_time": 8.31,
+        "chunk": "designed to cover medical expenses for you and your family.",
+        "keyword": "Unlimited Health Coverage",
+        "video_duration": 4.15,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_2.jpg"
     },
     {
         "id": 3,
-        "start_time": 6.8,
-        "end_time": 10.2,
-        "chunk": "family from the financial burden of unexpected medical",
-        "keyword": "Comprehensive healthcare umbrella",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk3_video.mp4"
+        "start_time": 8.31,
+        "end_time": 12.5,
+        "chunk": "This policy offers a unique feature of unlimited sum insured,",
+        "keyword": "Room with a View",
+        "video_duration": 4.19,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_3.jpg"
     },
     {
         "id": 4,
-        "start_time": 10.2,
-        "end_time": 13.63,
-        "chunk": "expenses. It offers a wide range of benefits,",
-        "keyword": "Healthcare safety net for the whole family",
-        "video_duration": 3.43,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk4_video.mp4"
+        "start_time": 12.5,
+        "end_time": 16.66,
+        "chunk": "letting you focus on your health without worrying about coverage",
+        "keyword": "Hospital Stay Support",
+        "video_duration": 4.16,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_4.jpg"
     },
     {
         "id": 5,
-        "start_time": 13.63,
-        "end_time": 17.06,
-        "chunk": "including unlimited sum insured, coverage for pre and",
-        "keyword": "Flexible health plan for different needs",
-        "video_duration": 3.43,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk5_video.mp4"
+        "start_time": 16.66,
+        "end_time": 20.84,
+        "chunk": "limits. You can choose your preferred per-day room rent option,",
+        "keyword": "All-Around Health Coverage",
+        "video_duration": 4.18,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_5.jpg"
     },
     {
         "id": 6,
-        "start_time": 17.06,
-        "end_time": 20.52,
-        "chunk": "post-hospitalization expenses, day-care procedures, and even preventive health",
-        "keyword": "Family Doctor's Office",
-        "video_duration": 3.46,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk6_video.mp4"
+        "start_time": 20.84,
+        "end_time": 25.09,
+        "chunk": "with choices ranging from \u00e2\u201a\u00b93,000 to \u00e2\u201a\u00b950,000 per day, ensuring",
+        "keyword": "Doctor Examining Patient",
+        "video_duration": 4.25,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_6.jpg"
     },
     {
         "id": 7,
-        "start_time": 20.52,
-        "end_time": 23.92,
-        "chunk": "checkups. The policy is available for individuals and",
-        "keyword": "Hospital Bed and Family",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk7_video.mp4"
+        "start_time": 25.09,
+        "end_time": 29.25,
+        "chunk": "you have flexibility to meet your needs. This plan also",
+        "keyword": "Family Around Hospital Bed",
+        "video_duration": 4.16,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_7.jpg"
     },
     {
         "id": 8,
-        "start_time": 23.92,
-        "end_time": 27.44,
-        "chunk": "families, and covers self, spouse, dependent children, and",
-        "keyword": "Hand Holding Medical Bills",
-        "video_duration": 3.52,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk8_video.mp4"
+        "start_time": 29.25,
+        "end_time": 33.4,
+        "chunk": "covers pre-hospitalization expenses for 60 days and post-hospitalization expenses for",
+        "keyword": "Person Signing Insurance Paper",
+        "video_duration": 4.15,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_8.jpg"
     },
     {
         "id": 9,
-        "start_time": 27.44,
-        "end_time": 30.84,
-        "chunk": "parents. It allows you to choose your room",
-        "keyword": "Protective Shield over Family",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk9_video.mp4"
+        "start_time": 33.4,
+        "end_time": 37.59,
+        "chunk": "90 days. It includes coverage for day-care procedures, road ambulance",
+        "keyword": "Ambulance on Road",
+        "video_duration": 4.19,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_9.jpg"
     },
     {
         "id": 10,
-        "start_time": 30.84,
-        "end_time": 34.27,
-        "chunk": "rent limit, offering flexibility to suit your budget.",
-        "keyword": "Money Bag with Cross Out",
-        "video_duration": 3.43,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk10_video.mp4"
+        "start_time": 37.59,
+        "end_time": 41.8,
+        "chunk": "expenses up to \u00e2\u201a\u00b95,000 per hospitalization, and a preventive health",
+        "keyword": "Hospital Building Exterior",
+        "video_duration": 4.21,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_10.jpg"
     },
     {
         "id": 11,
-        "start_time": 34.27,
-        "end_time": 37.67,
-        "chunk": "You can also opt for different copayment options",
-        "keyword": "Choosing coverage levels",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk11_video.mp4"
+        "start_time": 41.8,
+        "end_time": 45.99,
+        "chunk": "checkup every three years. To make it even better, there",
+        "keyword": "Healthy Body, Safe Future",
+        "video_duration": 4.19,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_11.jpg"
     },
     {
         "id": 12,
-        "start_time": 37.67,
-        "end_time": 41.07,
-        "chunk": "based on your preferred level of cost sharing.",
-        "keyword": "Lifetime policy renewal",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk12_video.mp4"
+        "start_time": 45.99,
+        "end_time": 50.15,
+        "chunk": "are no pre-policy medical tests required for individuals under 45",
+        "keyword": "No Tests, Quick Coverage",
+        "video_duration": 4.16,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_12.jpg"
     },
     {
         "id": 13,
-        "start_time": 41.07,
-        "end_time": 44.47,
-        "chunk": "One of the key features of this policy",
-        "keyword": "Preexisting condition coverage",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk13_video.mp4"
+        "start_time": 50.15,
+        "end_time": 54.33,
+        "chunk": "years of age. Plus, pre-existing diseases are covered after 36",
+        "keyword": "Peace of Mind, Financial Relief",
+        "video_duration": 4.18,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_13.jpg"
     },
     {
         "id": 14,
-        "start_time": 44.47,
-        "end_time": 47.9,
-        "chunk": "is the lifetime renewal benefit, ensuring you have",
-        "keyword": "Family discount",
-        "video_duration": 3.43,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk14_video.mp4"
+        "start_time": 54.33,
+        "end_time": 58.52,
+        "chunk": "months of continuous coverage, giving you peace of mind knowing",
+        "keyword": "Hand Holding Medicine Bottle",
+        "video_duration": 4.19,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_14.jpg"
     },
     {
         "id": 15,
-        "start_time": 47.9,
-        "end_time": 51.31,
-        "chunk": "continuous coverage as long as you renew annually",
-        "keyword": "Calendar with Check Mark",
-        "video_duration": 3.41,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk15_video.mp4"
+        "start_time": 58.52,
+        "end_time": 62.68,
+        "chunk": "that your health is protected. You can also enjoy the",
+        "keyword": "Person Checking Bank Account",
+        "video_duration": 4.16,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_15.jpg"
     },
     {
         "id": 16,
-        "start_time": 51.31,
-        "end_time": 54.74,
-        "chunk": "within the 30-day grace period. Additionally, the policy",
-        "keyword": "Open Hand with Coin",
-        "video_duration": 3.43,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk16_video.mp4"
+        "start_time": 62.68,
+        "end_time": 66.83,
+        "chunk": "benefit of income tax deductions on the premiums paid for",
+        "keyword": "Smiling Family on Vacation",
+        "video_duration": 4.15,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_16.jpg"
     },
     {
         "id": 17,
-        "start_time": 54.74,
-        "end_time": 58.14,
-        "chunk": "provides coverage for preexisting diseases after a waiting",
-        "keyword": "Smiling Family with Doctor",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk17_video.mp4"
-    },
-    {
-        "id": 18,
-        "start_time": 58.14,
-        "end_time": 61.57,
-        "chunk": "period of 36 months, and includes a generous",
-        "keyword": "Building with Strong Foundation",
-        "video_duration": 3.43,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk18_video.mp4"
-    },
-    {
-        "id": 19,
-        "start_time": 61.57,
-        "end_time": 64.97,
-        "chunk": "discount for wellness and family members covered under",
-        "keyword": "Chart with Upward Arrow",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk19_video.mp4"
-    },
-    {
-        "id": 20,
-        "start_time": 64.97,
-        "end_time": 68.37,
-        "chunk": "a single policy. To make it easier for",
-        "keyword": "Family Holding Policy Paper",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk20_video.mp4"
-    },
-    {
-        "id": 21,
-        "start_time": 68.37,
-        "end_time": 71.8,
-        "chunk": "you, Bajaj Allianz provides both cashless and reimbursement",
-        "keyword": "Hospital network map",
-        "video_duration": 3.43,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk21_video.mp4"
-    },
-    {
-        "id": 22,
-        "start_time": 71.8,
-        "end_time": 75.2,
-        "chunk": "claim options. The cashless facility is available at",
-        "keyword": "Claim process flow chart",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk22_video.mp4"
-    },
-    {
-        "id": 23,
-        "start_time": 75.2,
-        "end_time": 78.63,
-        "chunk": "their extensive network of hospitals across India, simplifying",
-        "keyword": "Medical bill mountain",
-        "video_duration": 3.43,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk23_video.mp4"
-    },
-    {
-        "id": 24,
-        "start_time": 78.63,
-        "end_time": 82.06,
-        "chunk": "your medical expenses during hospitalization. For reimbursement claims,",
-        "keyword": "Insurance shield",
-        "video_duration": 3.43,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk24_video.mp4"
-    },
-    {
-        "id": 25,
-        "start_time": 82.06,
-        "end_time": 85.46,
-        "chunk": "you can submit your medical bills and other",
-        "keyword": "Policy document stack",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk25_video.mp4"
-    },
-    {
-        "id": 26,
-        "start_time": 85.46,
-        "end_time": 88.86,
-        "chunk": "necessary documents within 30 days of discharge. If",
-        "keyword": "Clock with Ticking Time",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk26_video.mp4"
-    },
-    {
-        "id": 27,
-        "start_time": 88.86,
-        "end_time": 92.26,
-        "chunk": "you're looking for a comprehensive health insurance policy",
-        "keyword": "Open Book with Heart",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk27_video.mp4"
-    },
-    {
-        "id": 28,
-        "start_time": 92.26,
-        "end_time": 95.66,
-        "chunk": "with a wide range of benefits and a",
-        "keyword": "Doctor's Stethoscope",
-        "video_duration": 3.4,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk28_video.mp4"
-    },
-    {
-        "id": 29,
-        "start_time": 95.66,
-        "end_time": 99.09,
-        "chunk": "user-friendly claim process, Bajaj Allianz Health Infinity is",
-        "keyword": "Smiling Family with Umbrella",
-        "video_duration": 3.43,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk29_video.mp4"
-    },
-    {
-        "id": 30,
-        "start_time": 99.09,
-        "end_time": 102.01,
-        "chunk": "definitely worth considering.",
-        "keyword": "Car with Medical Symbol",
-        "video_duration": 2.92,
-        "video": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\chunk_videos\\chunk30_video.mp4"
+        "start_time": 66.83,
+        "end_time": 70.66,
+        "chunk": "this policy.",
+        "keyword": "Calculator with Money Symbols",
+        "video_duration": 3.83,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_17.jpg"
     }
 ]

@@ -243,7 +243,7 @@ def generate_script(cleaned_txt_path, video_length, language, llm_prompt_path):
     
     return response.text
 
-video_length = 40  # Example: 120 seconds for a 2-minute video
+video_length = 20  # Example: 120 seconds for a 2-minute video
 language = "English"  # Specify the language, e.g., "English", "Spanish", etc.
 llm_prompt_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\llm_prompt.txt"
 
@@ -672,95 +672,398 @@ def calculate_video_durations(script_file_path):
 # Call this function before fetching or trimming videos
 calculate_video_durations(output_script_path)
 
-# Set your Pixabay API key and output folder path
-pixabay_api_key = "41610740-2e3b4e3089898192b13673058"
-video_output_folder = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\chunk_videos"
-
-# Ensure the video output folder exists
-if not os.path.exists(video_output_folder):
-    os.makedirs(video_output_folder)
-
-# Function to fetch a video URL from Pixabay based on a keyword
-def fetch_video_from_pixabay(keyword):
-    """Fetches a video URL from Pixabay based on the keyword."""
-    url = f"https://pixabay.com/api/videos/?key={pixabay_api_key}&q={keyword}"
-    response = requests.get(url)
-    if response.status_code == 200:
-        data = response.json()
-        if data["hits"]:
-            return data["hits"][0]["videos"]["medium"]["url"]  # Medium quality video URL
-    return None
-
-# Function to download a video from a URL
-def download_video(video_url, file_path):
-    """Downloads the video from the provided URL and saves it with the specified filename."""
-    video_response = requests.get(video_url)
-    if video_response.status_code == 200:
-        with open(file_path, "wb") as f:
-            f.write(video_response.content)
-        return file_path
-    return None
-
-# Function to trim a video to match the specified duration in script.json
-def trim_video(input_path, output_path, video_duration):
+def download_image(prompt, image_path, width=1280, height=720, seed=468605, model='flux'):
     """
-    Trims the video to match the specified duration starting from 0.
-    If video_duration exceeds the video's actual duration, it trims up to the end of the video.
+    Downloads an image generated based on the given prompt from Pollinations.ai and saves it to the specified path.
     """
-    with VideoFileClip(input_path) as clip:
-        # Use the smaller of the specified duration or the video's actual duration
-        adjusted_end_time = min(video_duration, clip.duration)
-        
-        # Trim from the beginning up to the adjusted end time
-        trimmed_clip = clip.subclip(0, adjusted_end_time)
-        trimmed_clip.write_videofile(output_path, codec="libx264", audio_codec="aac")
+    # Format the image URL with the prompt and parameters
+    image_url = f"https://pollinations.ai/p/{prompt}?width={width}&height={height}&seed={seed}&model={model}"
     
-    os.remove(input_path)  # Delete the original untrimmed video file
+    # Request the image from Pollinations.ai
+    response = requests.get(image_url)
+    response.raise_for_status()  # Raise an error if the request was unsuccessful
+    
+    # Save the image to the specified path
+    with open(image_path, 'wb') as file:
+        file.write(response.content)
+    
+    print(f"Image downloaded and saved as {image_path}")
 
-# Function to fetch, trim, and save videos based on keywords in script.json
-def fetch_and_process_videos(script_file_path, video_output_folder):
+def generate_images_for_chunks(script_file_path):
     """
-    Fetches, trims, and saves videos based on keywords in script.json, updating the file with video paths.
+    Iterates over chunks in script.json, generates an image for each chunk using Pollinations.ai,
+    saves each image in an 'images' directory, and updates script.json with the image file path.
     """
-    # Load the script JSON data
+    # Load the script data from script.json
     with open(script_file_path, 'r') as f:
         script_data = json.load(f)
+    
+    # Ensure 'images' directory exists
+    images_dir = os.path.join(os.path.dirname(script_file_path), 'images')
+    os.makedirs(images_dir, exist_ok=True)
 
+    # Process each chunk in the script.json
     for chunk in script_data:
-        keyword = chunk["keyword"]
-        video_duration = chunk.get("video_duration", None)  # Get the video duration from script.json
-
-        if video_duration is None:
-            print(f"Skipping chunk {chunk['id']}: video_duration is missing.")
-            continue
-
-        # Fetch the video URL from Pixabay
-        video_url = fetch_video_from_pixabay(keyword)
+        prompt = chunk['keyword']  # Use the chunk text as the prompt
+        image_filename = f"img_{chunk['id']}.jpg"
+        image_path = os.path.join(images_dir, image_filename)
         
-        if video_url:
-            # Define the file paths for the downloaded and trimmed videos
-            original_video_path = os.path.join(video_output_folder, f"chunk{chunk['id']}_original.mp4")
-            trimmed_video_path = os.path.join(video_output_folder, f"chunk{chunk['id']}_video.mp4")
-            
-            # Download the video
-            if download_video(video_url, original_video_path):
-                # Trim the video to match the specified video duration and save it
-                trim_video(original_video_path, trimmed_video_path, video_duration)
-                
-                # Update the script JSON data with the trimmed video path
-                chunk["video"] = trimmed_video_path
-            else:
-                print(f"Failed to download video for keyword: {keyword}")
-        else:
-            print(f"No video found for keyword: {keyword}")
-
-    # Save the updated script.json with the video paths included
+        # Generate and download the image
+        download_image(prompt, image_path)
+        
+        # Update the chunk with the image path
+        chunk['img_path'] = image_path
+        
+        # Sleep briefly to avoid overwhelming the API
+        time.sleep(1)
+    
+    # Save the updated script.json with image paths
     with open(script_file_path, 'w') as f:
         json.dump(script_data, f, indent=4)
-    print("Video paths updated in script.json")
+    
+    print("Script.json updated with image paths")
 
-# Run the function to fetch and process videos
-fetch_and_process_videos(output_script_path, video_output_folder)
+generate_images_for_chunks(output_script_path)
+
+def generate_video_with_images_and_subtitles(audio_path, script_json_path, output_video_path, font_size=20):
+    # Load audio file
+    audio = AudioFileClip(audio_path)
+    audio_duration = audio.duration
+
+    # Load script.json
+    try:
+        with open(script_json_path, "r", encoding="utf-8") as json_file:
+            script_data = json.load(json_file)
+    except FileNotFoundError:
+        print(f"Error: The file {script_json_path} does not exist.")
+        return
+    except Exception as e:
+        print(f"An error occurred while reading the JSON file: {e}")
+        return
+
+    # Create a list to hold image clips with duration
+    image_clips = []
+    for entry in script_data:
+        img_path = entry.get("img_path")
+        duration = entry.get("video_duration")
+        
+        if not img_path or not os.path.exists(img_path):
+            print(f"Image file not found for chunk: {entry['chunk']}")
+            continue
+        
+        # Load the image and set its duration
+        image_clip = ImageClip(img_path).set_duration(duration)
+        image_clips.append(image_clip)
+    
+    # Concatenate all image clips into a single video
+    if not image_clips:
+        print("No image clips were created; please check the images directory and script.json.")
+        return
+    video_background = concatenate_videoclips(image_clips, method="compose")
+
+    # Create subtitle clips based on start and end times in script.json
+    subtitle_clips = []
+    for entry in script_data:
+        start_time = entry["start_time"]
+        end_time = entry["end_time"]
+        text = entry["chunk"]
+        
+        # Create the subtitle text clip
+        subtitle_text = TextClip(
+            text, fontsize=font_size, color="black", font="Arial", 
+            size=(video_background.w - 40, None), method="caption"
+        )
+
+        # Create a yellow background for the subtitle text
+        subtitle_bg = ColorClip(
+            size=(subtitle_text.w + 20, subtitle_text.h + 10), 
+            color=(255, 255, 0)  # Yellow background color
+        )
+
+        # Position the subtitle and background together at the bottom of the video
+        subtitle_with_bg = CompositeVideoClip([
+            subtitle_bg.set_position(("center", "bottom")),  # Yellow background
+            subtitle_text.set_position(("center", "bottom"))  # Text overlay
+        ], size=(video_background.w, video_background.h)).set_start(start_time).set_end(end_time)
+        
+        subtitle_clips.append(subtitle_with_bg)
+
+    # Composite the final video with images, audio, and subtitles
+    final_video = CompositeVideoClip([video_background, *subtitle_clips]).set_audio(audio)
+    
+    # Export the video
+    final_video.write_videofile(output_video_path, fps=24, codec="libx264", audio_codec="aac")
+    print(f"Video with images, yellow subtitle background, and audio saved to {output_video_path}")
+
+# Usage example
+output_video_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\output_with_subtitles.mp4"
+generate_video_with_images_and_subtitles(final_output_path, output_script_path, output_video_path)
+
+
+# Set your Pixabay API key and output folder path
+# pixabay_api_key = "41610740-2e3b4e3089898192b13673058"
+# video_output_folder = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\chunk_videos"
+
+# # Ensure the video output folder exists
+# if not os.path.exists(video_output_folder):
+#     os.makedirs(video_output_folder)
+
+# Function to fetch a video URL from Pixabay based on a keyword
+#videos fetching and donwloading part
+# def fetch_video_from_pixabay(keyword):
+#     """Fetches a video URL from Pixabay based on the keyword."""
+#     url = f"https://pixabay.com/api/videos/?key={pixabay_api_key}&q={keyword}"
+#     response = requests.get(url)
+#     if response.status_code == 200:
+#         data = response.json()
+#         if data["hits"]:
+#             return data["hits"][0]["videos"]["medium"]["url"]  # Medium quality video URL
+#     return None
+
+# # Function to download a video from a URL
+# def download_video(video_url, file_path):
+    # """Downloads the video from the provided URL and saves it with the specified filename."""
+    # video_response = requests.get(video_url)
+    # if video_response.status_code == 200:
+    #     with open(file_path, "wb") as f:
+    #         f.write(video_response.content)
+    #     return file_path
+    # return None
+
+# Function to trim a video to match the specified duration in script.json
+#-------------------------------------------------------------> start, working hai ye use krnahai if for videos to ye use kro bs
+# def trim_video(input_path, output_path, video_duration):
+    # """
+    # Trims the video to match the specified duration starting from 0.
+    # If video_duration exceeds the video's actual duration, it trims up to the end of the video.
+    # """
+    # with VideoFileClip(input_path) as clip:
+    #     # Use the smaller of the specified duration or the video's actual duration
+    #     adjusted_end_time = min(video_duration, clip.duration)
+        
+    #     # Trim from the beginning up to the adjusted end time
+    #     trimmed_clip = clip.subclip(0, adjusted_end_time)
+    #     trimmed_clip.write_videofile(output_path, codec="libx264", audio_codec="aac")
+    
+    # os.remove(input_path)  # Delete the original untrimmed video file
+
+# Function to fetch, trim, and save videos based on keywords in script.json
+# def fetch_and_process_videos(script_file_path, video_output_folder):
+#     """
+#     Fetches, trims, and saves videos based on keywords in script.json, updating the file with video paths.
+#     """
+#     # Load the script JSON data
+#     with open(script_file_path, 'r') as f:
+#         script_data = json.load(f)
+
+#     for chunk in script_data:
+#         keyword = chunk["keyword"]
+#         video_duration = chunk.get("video_duration", None)  # Get the video duration from script.json
+
+#         if video_duration is None:
+#             print(f"Skipping chunk {chunk['id']}: video_duration is missing.")
+#             continue
+
+#         # Fetch the video URL from Pixabay
+#         video_url = fetch_video_from_pixabay(keyword)
+        
+#         if video_url:
+#             # Define the file paths for the downloaded and trimmed videos
+#             original_video_path = os.path.join(video_output_folder, f"chunk{chunk['id']}_original.mp4")
+#             trimmed_video_path = os.path.join(video_output_folder, f"chunk{chunk['id']}_video.mp4")
+            
+#             # Download the video
+#             if download_video(video_url, original_video_path):
+#                 # Trim the video to match the specified video duration and save it
+#                 trim_video(original_video_path, trimmed_video_path, video_duration)
+                
+#                 # Update the script JSON data with the trimmed video path
+#                 chunk["video"] = trimmed_video_path
+#             else:
+#                 print(f"Failed to download video for keyword: {keyword}")
+#         else:
+#             print(f"No video found for keyword: {keyword}")
+
+#     # Save the updated script.json with the video paths included
+#     with open(script_file_path, 'w') as f:
+#         json.dump(script_data, f, indent=4)
+#     print("Video paths updated in script.json")
+
+# # Run the function to fetch and process videos
+# fetch_and_process_videos(output_script_path, video_output_folder)
+#-------------------------------------------------------------> end
+
+# function to concatenate all the chunk-videos into a single video
+#-----------------------------------------------------------------------------------------------------> start, ye long wala hai viddeo  ka function jo chlta he but not needed
+# def concatenate_clips(input_folder, output_video_path):
+#     """
+#     Concatenates all video clips in the input folder and saves them as a single video file.
+#     """
+#     # Get all video file paths from the directory
+#     video_files = sorted([os.path.join(input_folder, f) for f in os.listdir(input_folder) if f.endswith('_video.mp4')])
+    
+#     # Load each video file as a VideoFileClip
+#     clips = [VideoFileClip(file) for file in video_files]
+    
+#     # Concatenate the clips into one video
+#     final_clip = concatenate_videoclips(clips, method="compose")
+    
+#     # Save the concatenated video as script.mp4
+#     final_clip.write_videofile(output_video_path, codec="libx264", audio_codec="aac")
+#     print(f"Concatenated video saved to {output_video_path}")
+
+#     # Close the clip objects to free memory
+#     for clip in clips:
+#         clip.close()
+#     final_clip.close()
+
+# # Path to save the concatenated script video
+# script_video_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\script.mp4"
+
+# # Run the concatenation function
+# concatenate_clips(video_output_folder, script_video_path)
+
+# def generate_video_with_timed_subtitles(audio_path, script_json_path, output_video_path, background_video_path, font_size=18):
+#     """
+#     Generates a video with subtitles synced to the provided audio and overlays them on the background video.
+#     """
+#     # Load the background video
+#     background_video = VideoFileClip(background_video_path)
+#     video_width, video_height = background_video.size
+
+#     # Load the audio file and get its duration
+#     audio = AudioFileClip(audio_path)
+#     audio_duration = audio.duration
+
+#     # Adjust background video duration to match audio if needed
+#     background_video = background_video.set_duration(audio_duration)
+
+#     # Define subtitle styles
+#     subtitle_bg_color = (255, 255, 0)  # Yellow background for subtitles
+#     font_color = 'black'  # Black font color for subtitles
+
+#     # Load subtitle timing data from script.json
+#     try:
+#         with open(script_json_path, "r", encoding="utf-8") as json_file:
+#             script_data = json.load(json_file)
+#     except FileNotFoundError:
+#         print(f"Error: The file {script_json_path} does not exist.")
+#         return
+#     except Exception as e:
+#         print(f"An error occurred while reading the JSON file: {e}")
+#         return
+
+#     # Create subtitle clips based on start and end times in script.json
+#     subtitle_clips = []
+#     for entry in script_data:
+#         start_time = entry["start_time"]
+#         end_time = entry["end_time"]
+#         text = entry["chunk"]
+
+#         # Create the subtitle text clip
+#         subtitle = TextClip(text, fontsize=font_size, color=font_color, font="Arial", size=(video_width - 40, None), method="caption")
+
+#         # Create a background for the subtitle text
+#         subtitle_bg = ColorClip(size=(subtitle.w + 10, subtitle.h + 10), color=subtitle_bg_color)
+
+#         # Overlay text on background and set timing
+#         subtitle_with_bg = CompositeVideoClip(
+#             [subtitle_bg.set_position(("center", "bottom")),
+#             subtitle.set_position(("center", "bottom"))],
+#             size=(video_width, video_height)
+#         ).set_start(start_time).set_end(end_time)
+
+#         subtitle_clips.append(subtitle_with_bg)
+
+#     # Composite the final video with background, audio, and timed subtitles
+#     final_video = CompositeVideoClip([background_video, *subtitle_clips]).set_audio(audio)
+    
+#     # Export the video
+#     final_video.write_videofile(output_video_path, fps=24, codec="libx264", audio_codec="aac")
+#     print(f"Final video with subtitles saved to {output_video_path}")
+
+#     # Close clips to free memory
+#     background_video.close()
+#     audio.close()
+#     for clip in subtitle_clips:
+#         clip.close()
+#     final_video.close()
+
+# # Path to save the final video
+# output_video_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\final-video.mp4"
+
+# # Run the function to generate the final video with subtitles
+# generate_video_with_timed_subtitles(final_output_path, output_script_path, output_video_path, script_video_path)
+#-----------------------------------------------------------------------------------------------------> end
+
+# def generate_video_with_timed_subtitles(audio_path, script_json_path, chunk_videos_folder, output_video_path, font_size=20):
+#     # Load the audio file
+#     audio = AudioFileClip(audio_path)
+#     audio_duration = audio.duration
+
+#     # Load subtitle timing data from script.json
+#     try:
+#         with open(script_json_path, "r", encoding="utf-8") as json_file:
+#             script_data = json.load(json_file)
+#     except FileNotFoundError:
+#         print(f"Error: The file {script_json_path} does not exist.")
+#         return
+#     except Exception as e:
+#         print(f"An error occurred while reading the JSON file: {e}")
+#         return
+
+#     # Load all chunk videos from the directory in sorted order by filename (chunk1, chunk2, etc.)
+#     video_clips = []
+#     for entry in script_data:
+#         chunk_id = entry["id"]
+#         chunk_path = os.path.join(chunk_videos_folder, f"chunk{chunk_id}_video.mp4")
+        
+#         if os.path.exists(chunk_path):
+#             clip = VideoFileClip(chunk_path)
+#             video_clips.append(clip)
+#         else:
+#             print(f"Warning: Video chunk file {chunk_path} not found. Skipping this chunk.")
+    
+#     # Concatenate all video chunks in sequence
+#     if video_clips:
+#         concatenated_video = concatenate_videoclips(video_clips, method="compose")
+#         concatenated_video = concatenated_video.set_duration(audio_duration)  # Match duration with audio
+#     else:
+#         print("Error: No video chunks found to concatenate.")
+#         return
+
+#     # Create subtitle clips based on start and end times in script.json
+#     subtitle_clips = []
+#     for entry in script_data:
+#         start_time = entry["start_time"]
+#         end_time = entry["end_time"]
+#         text = entry["chunk"]
+
+#         # Create the subtitle text clip
+#         subtitle = TextClip(text, fontsize=font_size, color='black', font="Arial", size=(concatenated_video.w - 40, None), method="caption")
+
+#         # Create a background for the subtitle text
+#         subtitle_bg = CompositeVideoClip([subtitle.set_position(("center", "bottom"))], size=(concatenated_video.w, concatenated_video.h)).set_start(start_time).set_end(end_time)
+#         subtitle_clips.append(subtitle_bg)
+
+#     # Combine the video, audio, and subtitles
+#     final_video = CompositeVideoClip([concatenated_video, *subtitle_clips]).set_audio(audio)
+
+#     # Export the final video
+#     final_video.write_videofile(output_video_path, fps=24, codec="libx264", audio_codec="aac")
+#     print(f"Final video with subtitles saved to {output_video_path}")
+
+#     # Close clips to free resources
+#     for clip in video_clips:
+#         clip.close()
+#     concatenated_video.close()
+#     audio.close()
+
+# output_video_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\pdf1.mp4"
+
+# generate_video_with_timed_subtitles(final_output_path, output_script_path, video_output_folder, output_video_path)
+
+#------------------------------------------------------------------------------------------------------> end
 
 # final function to generate video with timed subtitles
 # def generate_video_with_timed_subtitles(audio_path, script_json_path, output_video_path, font_size=18):
@@ -818,10 +1121,3 @@ fetch_and_process_videos(output_script_path, video_output_folder)
 # output_video_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\output_with_subtitles.mp4"
 
 # generate_video_with_timed_subtitles(final_output_path, output_script_path, output_video_path)
-
-
-
-
-
-
-
