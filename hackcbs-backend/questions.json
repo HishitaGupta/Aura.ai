@@ -29,7 +29,10 @@
     },
     {
         "question": "True or False: Bajaj Allianz Health Infinity covers pre-hospitalization expenses for 30 days and post-hospitalization expenses for 60 days.",
-        "options": [],
+        "options": [
+            "True",
+            "False"
+        ],
         "correctAnswer": "False",
         "explanation": "The text states that the policy covers pre-hospitalization expenses for 60 days and post-hospitalization expenses for 90 days.",
         "type": "true-false",
@@ -94,7 +97,10 @@
     },
     {
         "question": "True or False: Bajaj Allianz Health Infinity offers a feature where you can choose your preferred room rent option.",
-        "options": [],
+        "options": [
+            "True",
+            "False"
+        ],
         "correctAnswer": "True",
         "explanation": "The text states that the policy allows you to select your preferred room rent option.",
         "type": "true-false",

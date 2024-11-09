@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import quizData from '../../../hackrx-backend/questions.json';
+import quizData from '../../../hackcbs-backend/questions.json';
 import { Gradient } from './design/Services';
 import Button from './Button';
 import Section from './Section';
@@ -39,7 +39,7 @@ const Quiz = () => {
 
   const handleAnswerOptionClick = (selectedOption) => {
     setHasAnswered(true); // Mark as answered
-    const correct = selectedOption === quizData[currentQuestion].answer;
+    const correct = selectedOption === quizData[currentQuestion].correctAnswer;
     setIsCorrect(correct);
     if (correct) {
       setScore(prevScore => prevScore + 1);
@@ -129,9 +129,10 @@ const Quiz = () => {
 
               {showFeedback && (
                 <div className={`text-center p-4 rounded-lg ${isCorrect ? ' bg-n-5' : ' bg-n-5'}`}>
-                  {isCorrect
-                    ? "Correct!"
-                    : `Incorrect. The correct answer was ${quizData[currentQuestion].answer}.`}
+                  {isCorrect ? "Correct!" : `Incorrect. The correct answer was ${quizData[currentQuestion].correctAnswer}.`}
+                  <div className="mt-2">
+                    <p className="text-sm">{quizData[currentQuestion].explanation}</p>
+                  </div>
                 </div>
               )}
 

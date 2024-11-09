@@ -9,11 +9,12 @@ import { FaFacebook, FaTwitter } from 'react-icons/fa';
 import ChatBot from './Chatbot';
 import { Gradient } from './design/Roadmap';
 import { v4 as uuidv4 } from 'uuid';
+import finalVideo from "../../../hackcbs-backend/output_with_subtitles.mp4"
 
 
 const Preview = ({source }) => {
     const videoRef = useRef(null);
-    const [videoUrl, setVideoUrl] = useState('https://videos.pexels.com/video-files/5471765/5471765-hd_1920_1080_30fps.mp4');
+    const [videoUrl, setVideoUrl] = useState(finalVideo);
     const [copied, setCopied] = useState(false);
     const [showPopup, setShowPopup] = useState(false);
     const dummyEmbedCode = `<iframe src="${videoUrl}" width="800" height="400" frameborder="0" allowfullscreen></iframe>`;
