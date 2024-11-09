@@ -29,7 +29,8 @@
     "recharts": "^2.12.7",
     "scroll-lock": "^2.1.5",
     "swiper": "^11.1.14",
-    "tailwind-merge": "^2.5.2"
+    "tailwind-merge": "^2.5.2",
+    "uuid": "^11.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",

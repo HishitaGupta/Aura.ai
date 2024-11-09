@@ -1,21 +1,22 @@
 import React, { useState, useRef, useEffect } from 'react';
+import axios from 'axios';
 import Section from './Section';
 import { GradientLight } from './design/Features';
 import Button from './Button';
-import { Linkedin } from 'lucide-react'; // Social media icons
+import { Linkedin } from 'lucide-react';
 import { BsWhatsapp } from 'react-icons/bs';
 import { FaFacebook, FaTwitter } from 'react-icons/fa';
 import ChatBot from './Chatbot';
 import { Gradient } from './design/Roadmap';
+import { v4 as uuidv4 } from 'uuid';
 
-const Preview = () => {
-    const videoRef = useRef(null); // Ref for the video element
-    const [videoUrl, setVideoUrl] = useState('http://127.0.0.1:8000/video/final_slideshow');
+
+const Preview = ({source }) => {
+    const videoRef = useRef(null);
+    const [videoUrl, setVideoUrl] = useState('https://videos.pexels.com/video-files/5471765/5471765-hd_1920_1080_30fps.mp4');
     const [copied, setCopied] = useState(false);
-    const [showPopup, setShowPopup] = useState(false); // State for popup visibility
-    const dummyEmbedCode = `<iframe src="${videoUrl}" width="800" height="400" frameborder="0" allowfullscreen></iframe>`; // Dummy embed code
-
-    // Analytics state
+    const [showPopup, setShowPopup] = useState(false);
+    const dummyEmbedCode = `<iframe src="${videoUrl}" width="800" height="400" frameborder="0" allowfullscreen></iframe>`;
     const [analytics, setAnalytics] = useState({
         pauses: 0,
         pauseTimestamps: [],
@@ -23,17 +24,75 @@ const Preview = () => {
         speedChanges: 0,
     });
 
+    // Helper function to send analytics data
+    // const sendAnalytics = (eventType, additionalData = {}) => {
+    //     axios.post("http://localhost:5000/api/analytics", {
+    //         guestId,
+    //         event: eventType,
+    //         time: videoRef.current.currentTime,
+    //         additionalData,
+    //     }, {
+    //         headers: {
+    //             'Content-Type': 'application/json', // Adjust as needed
+    //         }
+    //     });
+    // };
+
+    // Preview.jsx - Modified sendAnalytics function
+
+const sendAnalytics = async (eventType, additionalData = {}) => {
+    try {
+      const response = await axios.post("http://localhost:5000/api/analytics", {
+        guestId,
+        event: eventType,
+        time: videoRef.current ? videoRef.current.currentTime : 0,
+        additionalData,
+      }, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        withCredentials: true // Add this if using credentials
+      });
+      
+      console.log('Analytics sent successfully:', response.data);
+    } catch (error) {
+      console.error('Error sending analytics:', error);
+      if (error.response) {
+        console.error('Response error:', error.response.data);
+      }
+    }
+  };
+    useEffect(() => {
+        // Capture device info and location on first load
+        const deviceInfo = {
+            device: navigator.userAgent,
+            location: window.location.href,
+            source,
+        };
+        sendAnalytics("page_load", deviceInfo);
+    }, []);
+// Generate or retrieve the guestId
+const getGuestId = () => {
+    let guestId = localStorage.getItem('guestId');
+    if (!guestId) {
+        guestId = uuidv4(); // Generate a new UUID
+        localStorage.setItem('guestId', guestId); // Store it in local storage
+    }
+    return guestId;
+};
+
+const guestId = getGuestId(); // Retrieve or create the guest ID
     const handleCopyLink = () => {
         navigator.clipboard.writeText(videoUrl).then(() => {
             setCopied(true);
-            setTimeout(() => setCopied(false), 2000); // Reset copied status after 2 seconds
+            setTimeout(() => setCopied(false), 2000);
         });
     };
 
     const handleEmbedCopy = () => {
         navigator.clipboard.writeText(dummyEmbedCode).then(() => {
             setCopied(true);
-            setTimeout(() => setCopied(false), 2000); // Reset copied status after 2 seconds
+            setTimeout(() => setCopied(false), 2000);
         });
     };
 
@@ -63,36 +122,8 @@ const Preview = () => {
         }
     };
 
-    const handleEmbedCode = () => {
-        setShowPopup(true); // Show the popup when the button is clicked
-    };
-
-    const closePopup = () => {
-        setShowPopup(false); // Function to close the popup
-    };
-
-    const sendAnalytics = () => {
-        // Send analytics data to the backend
-        fetch('http://localhost:5000/api/send-analytics', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(analytics),
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Analytics sent successfully:', data);
-        })
-        .catch(error => {
-            console.error('Error sending analytics:', error);
-        });
-    };
+    const handleEmbedCode = () => setShowPopup(true);
+    const closePopup = () => setShowPopup(false);
 
     // Video event handlers
     const handlePause = () => {
@@ -101,20 +132,22 @@ const Preview = () => {
             pauses: prevState.pauses + 1,
             pauseTimestamps: [...prevState.pauseTimestamps, videoRef.current.currentTime],
         }));
+        sendAnalytics("pause");
     };
 
     const handleReplay = () => {
-        videoRef.current.currentTime = 0; // Reset video time to the beginning
-        videoRef.current.play(); // Play the video again
+        videoRef.current.currentTime = 0;
+        videoRef.current.play();
         setAnalytics(prevState => ({
             ...prevState,
             replays: prevState.replays + 1,
         }));
-        sendAnalytics(); // Send analytics immediately after replay
+        sendAnalytics("replay");
     };
 
     const handleVideoEnded = () => {
-        sendAnalytics(); // Send analytics when the video ends
+        sendAnalytics("completed");
+        setTimeout(() => alert("Sign up to get more personalized content!"), 500);
     };
 
     const handleSpeedChange = () => {
@@ -122,27 +155,16 @@ const Preview = () => {
             ...prevState,
             speedChanges: prevState.speedChanges + 1,
         }));
+        sendAnalytics("speed_change");
     };
 
     useEffect(() => {
         const video = videoRef.current;
-
-        // Add event listeners to track speed changes
         if (video) {
             video.addEventListener('ratechange', handleSpeedChange);
-            // Cleanup event listeners on unmount
-            return () => {
-                video.removeEventListener('ratechange', handleSpeedChange);
-            };
+            return () => video.removeEventListener('ratechange', handleSpeedChange);
         }
     }, []);
-
-    useEffect(() => {
-        // Send analytics when the component is unmounted
-        return () => {
-            sendAnalytics(); // Send any remaining analytics when component is unmounted
-        };
-    }, [analytics]);
 
     return (
         <Section
@@ -150,7 +172,6 @@ const Preview = () => {
             crosses
             crossesOffset="lg:translate-y-[5.25rem]"
             customPaddings
-            id=""
         >
             <GradientLight />
             <div className="flex justify-center h-screen text-center">
@@ -158,18 +179,20 @@ const Preview = () => {
                     <h1 className="text-2xl font-bold mb-4">Video Preview</h1>
                     <div className="relative">
                         {/* Video Component */}
-                        <video 
-                            ref={videoRef} // Attach ref to the video element
-                            className="w-[800px] h-[400px]" 
-                            controls 
+                        <video
+                            ref={videoRef}
+                            className="w-[800px] h-[400px]"
+                            controls
+                            onPlay={() => sendAnalytics("play")}
                             onPause={handlePause}
-                            onEnded={handleVideoEnded} // Trigger analytics on video end
+                            onEnded={handleVideoEnded}
+                            onTimeUpdate={() => sendAnalytics("timeupdate")}
                         >
                             <source src={videoUrl} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>
 
-                        {/* Social Icons on the Right, Vertically Stacked */}
+                        {/* Social Icons */}
                         <div className="absolute right-[-60px] top-1/2 transform -translate-y-1/2 flex flex-col gap-4">
                             <button onClick={() => handleSocialShare('facebook')} aria-label="Share on Facebook">
                                 <FaFacebook size={20} className="hover:text-purple-500 cursor-pointer" />
@@ -191,16 +214,9 @@ const Preview = () => {
                         <Button onClick={handleCopyLink} className="flex gap-2 w-full">
                             <span>{copied ? 'Link Copied!' : 'Copy Link'}</span>
                         </Button>
-                        <Button href="/quiz" className="flex gap-2 w-full">
-                            Play Quiz
-                        </Button>
-                        <Button onClick={handleEmbedCode} className="flex gap-5 w-full">
-                            Embedded Code
-                        </Button>
-                        {/* Replay Button */}
-                        <Button onClick={handleReplay} className="flex gap-5 w-full">
-                            Replay Video
-                        </Button>
+                        <Button href="/quiz" className="flex gap-2 w-full">Play Quiz</Button>
+                        <Button onClick={handleEmbedCode} className="flex gap-5 w-full">Embed Code</Button>
+                        <Button onClick={handleReplay} className="flex gap-5 w-full">Replay Video</Button>
                     </div>
 
                     {/* Popup for Embed Code */}
@@ -215,12 +231,8 @@ const Preview = () => {
                                     value={dummyEmbedCode}
                                 />
                                 <div className="flex gap-10">
-                                    <Button onClick={closePopup} className="flex gap-2 w-full">
-                                        Cancel
-                                    </Button>
-                                    <Button onClick={handleEmbedCopy} className="flex gap-5 w-full">
-                                        Copy Code
-                                    </Button>
+                                    <Button onClick={closePopup} className="flex gap-2 w-full">Cancel</Button>
+                                    <Button onClick={handleEmbedCopy} className="flex gap-5 w-full">Copy Code</Button>
                                 </div>
                             </div>
                         </div>

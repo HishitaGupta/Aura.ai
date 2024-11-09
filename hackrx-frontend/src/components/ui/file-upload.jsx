@@ -27,6 +27,159 @@ const secondaryVariant = {
   },
 };
 
+// export const FileUpload = ({ onChange }) => {
+//   const [files, setFiles] = useState([]);
+//   const fileInputRef = useRef(null);
+
+//   const handleFileChange = (newFiles) => {
+//     if (newFiles && newFiles.length > 0) {
+//       setFiles([newFiles[0]]); // Keep only the first selected file
+//       if (onChange) {
+//         onChange(newFiles); // Pass newFiles (an array of files) to the parent component
+//       }
+
+//       // Programmatically close the dialog by resetting the input
+//       fileInputRef.current.value = ''; // Clear the input value to reset the file input
+//     } else {
+//       console.error("No files provided.");
+//     }
+//   };
+
+//   const handleClick = () => {
+//     // Click on the file input
+//     fileInputRef.current?.click();
+//   };
+
+//   const { getRootProps, getInputProps, isDragActive } = useDropzone({
+//     multiple: false, // Allow only one file at a time
+//     onDrop: handleFileChange,
+//     onDropRejected: (error) => {
+//       console.log(error);
+//     },
+//   });
+
+//   return (
+//     <div className="w-full" {...getRootProps()}>
+//       <motion.div
+//         onClick={handleClick}
+//         whileHover="animate"
+//         className="p-10 group/file block rounded-lg cursor-pointer w-full relative overflow-hidden"
+//       >
+//         <input
+//           {...getInputProps()} // Use getInputProps to correctly handle the input props
+//           ref={fileInputRef}
+//           id="file-upload-handle"
+//           type="file"
+//           className="hidden"
+          
+//         />
+//         <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]">
+//           <div className="absolute top-0 left-0 max-w-full">
+//             <img
+//               className="w-full"
+//               src={grid}
+//               width={550}
+//               height={550}
+//               alt="Grid"
+//             />
+//           </div>
+//         </div>
+//         <div className="flex flex-col items-center justify-center">
+//           <h1 className=" h4 relative z-20 ">
+//             Upload file
+//           </h1>
+//           <h2 className="relative z-20  h6 font-sans font-normal text-neutral-400 dark:text-neutral-400 text-base mt-2 sm:text-center">
+//             Drag or drop your files here or click to upload
+//           </h2>
+//           <div className="relative w-full mt-10 max-w-xl mx-auto">
+//             {files.length > 0 &&
+//               files.map((file, idx) => (
+//                 <motion.div
+//                   key={"file" + idx}
+//                   layoutId={idx === 0 ? "file-upload" : "file-upload-" + idx}
+//                   className={cn(
+//                     "relative overflow-hidden z-40 bg-n-8 flex flex-col items-start justify-start md:h-24 p-4 mt-4 w-full mx-auto rounded-md",
+//                     "shadow-sm"
+//                   )}
+//                 >
+//                   <div className="flex justify-between w-full items-center gap-4">
+//                     <motion.p
+//                       initial={{ opacity: 0 }}
+//                       animate={{ opacity: 1 }}
+//                       layout
+//                       className="text-base text-neutral-300 truncate max-w-xs"
+//                     >
+//                       {file.name}
+//                     </motion.p>
+//                     <motion.p
+//                       initial={{ opacity: 0 }}
+//                       animate={{ opacity: 1 }}
+//                       layout
+//                       className="rounded-lg px-2 py-1 w-fit flex-shrink-0 text-sm text-white shadow-input"
+//                     >
+//                       {(file.size / (1024 * 1024)).toFixed(2)} MB
+//                     </motion.p>
+//                   </div>
+
+//                   <div className="flex text-sm md:flex-row flex-col items-start md:items-center w-full mt-2 justify-between text-neutral-300">
+//                     <motion.p
+//                       initial={{ opacity: 0 }}
+//                       animate={{ opacity: 1 }}
+//                       layout
+//                       className="px-1 py-0.5 rounded-md bg-n-7 "
+//                     >
+//                       {file.type}
+//                     </motion.p>
+
+//                     <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} layout>
+//                       modified{" "}
+//                       {new Date(file.lastModified).toLocaleDateString()}
+//                     </motion.p>
+//                   </div>
+//                 </motion.div>
+//               ))}
+//             {!files.length && (
+//               <motion.div
+//                 layoutId="file-upload"
+//                 variants={mainVariant}
+//                 transition={{
+//                   type: "spring",
+//                   stiffness: 300,
+//                   damping: 20,
+//                 }}
+//                 className={cn(
+//                   "relative group-hover/file:shadow-2xl z-40 bg-n-5/40 flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md",
+//                   "shadow-[0px_10px_50px_rgba(0,0,0,0.1)]"
+//                 )}
+//               >
+//                 {isDragActive ? (
+//                   <motion.p
+//                     initial={{ opacity: 0 }}
+//                     animate={{ opacity: 1 }}
+//                     className="text-neutral-600 flex flex-col items-center"
+//                   >
+//                     Drop it
+//                     <IconUpload className="h-4 w-4 text-neutral-600 dark:text-neutral-400" />
+//                   </motion.p>
+//                 ) : (
+//                   <IconUpload className="h-4 w-4 text-neutral-300" />
+//                 )}
+//               </motion.div>
+//             )}
+
+//             {!files.length && (
+//               <motion.div
+//                 variants={secondaryVariant}
+//                 className="absolute opacity-0 border border-dashed border-n-3/80 inset-0 z-30 bg-transparent flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md"
+//               ></motion.div>
+//             )}
+//           </div>
+//         </div>
+//       </motion.div>
+//     </div>
+//   );
+// };
+
 export const FileUpload = ({ onChange }) => {
   const [files, setFiles] = useState([]);
   const fileInputRef = useRef(null);
@@ -37,17 +190,9 @@ export const FileUpload = ({ onChange }) => {
       if (onChange) {
         onChange(newFiles); // Pass newFiles (an array of files) to the parent component
       }
-
-      // Programmatically close the dialog by resetting the input
-      fileInputRef.current.value = ''; // Clear the input value to reset the file input
     } else {
       console.error("No files provided.");
     }
-  };
-
-  const handleClick = () => {
-    // Click on the file input
-    fileInputRef.current?.click();
   };
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
@@ -61,18 +206,17 @@ export const FileUpload = ({ onChange }) => {
   return (
     <div className="w-full" {...getRootProps()}>
       <motion.div
-        onClick={handleClick}
-        whileHover="animate"
         className="p-10 group/file block rounded-lg cursor-pointer w-full relative overflow-hidden"
       >
+        {/* Hide the file input, let the dropzone handle the dialog */}
         <input
           {...getInputProps()} // Use getInputProps to correctly handle the input props
           ref={fileInputRef}
           id="file-upload-handle"
           type="file"
           className="hidden"
-          
         />
+        
         <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]">
           <div className="absolute top-0 left-0 max-w-full">
             <img
@@ -85,12 +229,12 @@ export const FileUpload = ({ onChange }) => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center">
-          <p className="relative z-20 font-sans font-bold text-neutral-300 text-base">
+          <h1 className=" h4 relative z-20 ">
             Upload file
-          </p>
-          <p className="relative z-20 font-sans font-normal text-neutral-400 dark:text-neutral-400 text-base mt-2 sm:text-center">
+          </h1>
+          <h2 className="relative z-20  h6 font-sans font-normal text-neutral-400 dark:text-neutral-400 text-base mt-2 sm:text-center">
             Drag or drop your files here or click to upload
-          </p>
+          </h2>
           <div className="relative w-full mt-10 max-w-xl mx-auto">
             {files.length > 0 &&
               files.map((file, idx) => (
@@ -115,7 +259,7 @@ export const FileUpload = ({ onChange }) => {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       layout
-                      className="rounded-lg px-2 py-1 w-fit flex-shrink-0 text-sm dark:bg-neutral-600 text-white shadow-input"
+                      className="rounded-lg px-2 py-1 w-fit flex-shrink-0 text-sm text-white shadow-input"
                     >
                       {(file.size / (1024 * 1024)).toFixed(2)} MB
                     </motion.p>
@@ -148,7 +292,7 @@ export const FileUpload = ({ onChange }) => {
                   damping: 20,
                 }}
                 className={cn(
-                  "relative group-hover/file:shadow-2xl z-40 dark:bg-n-2 flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md",
+                  "relative group-hover/file:shadow-2xl z-40 bg-n-5/40 flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md",
                   "shadow-[0px_10px_50px_rgba(0,0,0,0.1)]"
                 )}
               >
@@ -162,16 +306,9 @@ export const FileUpload = ({ onChange }) => {
                     <IconUpload className="h-4 w-4 text-neutral-600 dark:text-neutral-400" />
                   </motion.p>
                 ) : (
-                  <IconUpload className="h-4 w-4 text-neutral-600 dark:text-neutral-300" />
+                  <IconUpload className="h-4 w-4 text-neutral-300" />
                 )}
               </motion.div>
-            )}
-
-            {!files.length && (
-              <motion.div
-                variants={secondaryVariant}
-                className="absolute opacity-0 border border-dashed border-n-3/80 inset-0 z-30 bg-transparent flex items-center justify-center h-32 mt-4 w-full max-w-[8rem] mx-auto rounded-md"
-              ></motion.div>
             )}
           </div>
         </div>
@@ -179,6 +316,8 @@ export const FileUpload = ({ onChange }) => {
     </div>
   );
 };
+
+
 
 export function GridPattern() {
   const columns = 41;
