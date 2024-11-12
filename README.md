@@ -46,6 +46,7 @@ AURA.ai is a cutting-edge AI driven platform designed to **Automate video creati
 ### **Cloud Service Providers:**
 - **Firebase** - (real-time database and authentication)  
 - **DigitalOcean** - (server and database hosting)
+- **MongoDB Atlas** - (analytics storage)
 
 ### **Hosting Platforms:**
 - **Vercel** - (Frontend deployment)  
