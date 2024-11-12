@@ -75,7 +75,7 @@ const ChatBot = () => {
             {isOpen && (
                 <div className="chatbot-container p-4 bg-black border rounded-lg shadow-lg fixed bottom-5 right-5 w-90 max-h-[80vh] flex flex-col z-50">
                     <div className="flex justify-between items-center mb-2">
-                        <h2 className="text-xl font ">AuraBOT</h2>
+                        <h2 className="text-xl font ">AuraBot</h2>
                         <button onClick={() => setIsOpen(false)} className="">
                             <X size={20} />
                         </button>

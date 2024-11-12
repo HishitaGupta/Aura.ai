@@ -1,38 +1,29 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+import globals from "globals";
+import pluginReact from "eslint-plugin-react";
+import pluginReactHooks from "eslint-plugin-react-hooks";
 
-export default [
-  { ignores: ['dist'] },
-  {
-    files: ['**/*.{js,jsx}'],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-      parserOptions: {
-        ecmaVersion: 'latest',
-        ecmaFeatures: { jsx: true },
-        sourceType: 'module',
+/** @type {import('eslint').Linter.Config} */
+const config = {
+  overrides: [
+    {
+      files: ["**/*.{js,jsx,ts,tsx}"],
+      languageOptions: {
+        globals: globals.browser,
+      },
+      plugins: ["react", "react-hooks"],
+      extends: [
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "eslint:recommended"
+      ],
+      rules: {
+        "react/react-in-jsx-scope": "off", // React 17+ doesn't require this rule
+        "react/prop-types": "off", // Optional: If you don't want to enforce prop types
+        "react-hooks/rules-of-hooks": "error", // Enforce the rules of hooks
+        "react-hooks/exhaustive-deps": "warn", // Warn about missing dependencies in effect hooks
       },
     },
-    settings: { react: { version: '18.3' } },
-    plugins: {
-      react,
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
-    },
-    rules: {
-      ...js.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...react.configs['jsx-runtime'].rules,
-      ...reactHooks.configs.recommended.rules,
-      'react/jsx-no-target-blank': 'off',
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-    },
-  },
-]
+  ],
+};
+
+export default config;
