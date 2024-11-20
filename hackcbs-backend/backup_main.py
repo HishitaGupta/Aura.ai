@@ -367,7 +367,6 @@ def ask_aura_question(user_question, txt_file_path):
     
     return answer
 
-
 # def save_image_from_url(image_url, save_directory, image_index):
 #     os.makedirs(save_directory, exist_ok=True)
     

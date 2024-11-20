@@ -173,7 +173,7 @@ import Button from './Button';
 import happy from "../assets/team/happy.png";
 import hishita from "../assets/team/hishita.png";
 import ansh from "../assets/team/ansh.png";
-import vedansh from "../assets/team/moksh.png";
+import vedansh from "../assets/team/vedansh.png";
 
 import { curve } from '../assets';
 import { FaArrowLeft, FaArrowRight, FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
@@ -197,42 +197,54 @@ const Team = () => {
             },
             line:"Teamwork makes the dream work.",
         },
+        // {
+        //     id: 2,
+        //     name: "Moksh Bansal",
+        //     role: "Lead Frontend Dev",
+        //     image: vedansh,
+        //     socialLinks: {
+        //         linkedin: "https://www.linkedin.com/in/vedansh-sharma-7bb01a244/",
+        //         github: "https://github.com/Titan-Codes",
+        //         instagram: "https://www.instagram.com/veeedansh/?__pwa=1",
+        //     },
+        //     line:"Indeed a frontend developer.",
+        // },
         {
             id: 2,
-            name: "Moksh Bansal",
-            role: "Lead Frontend Dev",
+            name: "Hishita Gupta",
+            role: "Lead Frontend Dev & UI/UX Designer",
+            image: hishita,
+            socialLinks: {
+                linkedin: "https://www.linkedin.com/in/hishita-gupta/",
+                github: "https://github.com/HishitaGupta",
+                instagram: "https://www.instagram.com/hishitagupta/?__pwa=1",
+            },
+            line:"Together, we achieve more.",
+        },
+        {
+            id: 3,
+            name: "Ansh Chahal",
+            role: "Project Manager & Business Strategist",
+            image: ansh,
+            socialLinks: {
+                linkedin: "https://www.linkedin.com/in/anshchahal/",
+                github: "https://github.com/chahalansh",
+                instagram: "https://www.instagram.com/anshchahall/?__pwa=1",
+            },
+            line:"Unity is strength.",
+        },
+        {
+            id: 4,
+            name: "Vedansh Sharma",
+            role: "Lead Backend Dev & AI Specialist",
             image: vedansh,
             socialLinks: {
-                linkedin: "https://www.linkedin.com/in/vedansh-sharma-7bb01a244/",
-                github: "https://github.com/Titan-Codes",
-                instagram: "https://www.instagram.com/veeedansh/?__pwa=1",
+                linkedin: "https://www.linkedin.com/in/anshchahal/",
+                github: "https://github.com/chahalansh",
+                instagram: "https://www.instagram.com/anshchahall/?__pwa=1",
             },
-            line:"Indeed a frontend developer.",
+            line:"Unity is strength.",
         },
-        // {
-        //     id: 3,
-        //     name: "Hishita Gupta",
-        //     role: "Lead Frontend Dev & UI/UX Designer",
-        //     image: hishita,
-        //     socialLinks: {
-        //         linkedin: "https://www.linkedin.com/in/hishita-gupta/",
-        //         github: "https://github.com/HishitaGupta",
-        //         instagram: "https://www.instagram.com/hishitagupta/?__pwa=1",
-        //     },
-        //     line:"Together, we achieve more.",
-        // },
-        // {
-        //     id: 4,
-        //     name: "Ansh Chahal",
-        //     role: "Project Manager & Business Strategist",
-        //     image: ansh,
-        //     socialLinks: {
-        //         linkedin: "https://www.linkedin.com/in/anshchahal/",
-        //         github: "https://github.com/chahalansh",
-        //         instagram: "https://www.instagram.com/anshchahall/?__pwa=1",
-        //     },
-        //     line:"Unity is strength.",
-        // },
         // Add other team members similarly
     ];
 
