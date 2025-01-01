@@ -46,14 +46,17 @@ import {
     react,
     gradient,
     cost,
-
+    time,
+    purplegradient,
+    engagement,
+    retention,
 } from "../assets";
 
-import purplegradient from '../assets/purplegradient.png'
+// import purplegradient from '../assets/purplegradient.png'
 // import cost from '../assets/impact/cost.png'
-import time from '../assets/impact/time.png'
-import engagement from '../assets/impact/engagement.png'
-import retention from '../assets/impact/retention.png'
+// import time from '../assets/impact/time.png'
+// import engagement from '../assets/impact/engagement.png'
+// import retention from '../assets/impact/retention.png'
 import feedback1 from '../assets/feedback/feedback1.avif';
 import feedback2 from '../assets/feedback/feedback2.avif';
 import feedback3 from '../assets/feedback/feedback3.avif';
