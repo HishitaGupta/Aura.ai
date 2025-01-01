@@ -92,6 +92,11 @@ import react from "./collaboration/react.png"
 import background from "./hero/background.svg"
 
 import gradientpng from "../assets/gradient.png"
+import cost from "../assets/Impact/cost.png"
+import time from "../assets/Impact/time.png"
+import retention from "../assets/Impact/retention.png"
+import engagement from "../assets/Impact/engagement.png"
+import purplegradient from "../assets/purplegradient.png"
 
 export {
   
@@ -176,5 +181,10 @@ export {
   python,
   react,
   background,
-  gradientpng
+  gradientpng,
+  cost,
+  time,
+  retention,
+  engagement,
+  purplegradient
 };
