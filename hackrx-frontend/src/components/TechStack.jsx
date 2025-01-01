@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { collabApps } from "../constants/Index"; // Ensure constants are correctly imported
+import { collabApps } from "../constants/Index.jsx"; // Ensure constants are correctly imported
 import Aura from "../assets/logo/logo-aura.png";
 import Section from "./Section";
 import Heading from "./Heading";
