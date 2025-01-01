@@ -1,6 +1,6 @@
 import { FaGithub, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { notification1 } from "../assets";
-import { notificationImages } from "../constants";
+import { notificationImages } from "../constants/Index";
 import { Link } from "react-router-dom";
 
 const Notification2 = ({ className, title }) => {

@@ -93,7 +93,7 @@
 // export default Collaboration;
 import { check } from "../assets";
 import logo from "../assets/logo/logo-aura.png";
-import { collabApps, collabContent, collabText } from "../constants";
+import { collabApps, collabContent, collabText } from "../constants/Index.jsx";
 import Button from "./Button";
 import Section from "./Section";
 import { GradientLight } from "./design/Features.jsx";

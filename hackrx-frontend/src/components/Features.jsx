@@ -70,7 +70,7 @@
 // };
 
 // export default Benefits;
-import { benefits } from "../constants";
+import { benefits } from "../constants/Index";
 import Heading from "./Heading";
 import Section from "./Section";
 import Arrow from "../assets/svg/Arrow";

@@ -32,7 +32,7 @@
 
 import React from "react";
 import Section from "./Section";
-import { socials } from "../constants";
+import { socials } from "../constants/Index";
 import logo from "../assets/logo/logo-aura.png"
 import PrivacyPolicy from "./PrivacyPolicy";
 import { Link } from "react-router-dom";

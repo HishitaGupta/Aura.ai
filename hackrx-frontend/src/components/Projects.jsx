@@ -1,4 +1,4 @@
-import { singleBenefit } from "../constants"; // Adjust the import according to where you place the object
+import { singleBenefit } from "../constants/Index"; // Adjust the import according to where you place the object
 import Heading from "./Heading";
 import Section from "./Section";
 import Arrow from "../assets/svg/Arrow";
