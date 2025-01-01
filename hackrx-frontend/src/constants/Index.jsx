@@ -45,11 +45,12 @@ import {
     python,
     react,
     gradient,
+    cost,
 
 } from "../assets";
 
 import purplegradient from '../assets/purplegradient.png'
-import cost from '../assets/impact/cost.png'
+// import cost from '../assets/impact/cost.png'
 import time from '../assets/impact/time.png'
 import engagement from '../assets/impact/engagement.png'
 import retention from '../assets/impact/retention.png'
