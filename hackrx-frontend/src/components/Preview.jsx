@@ -9,7 +9,7 @@ import { FaFacebook, FaTwitter } from 'react-icons/fa';
 import ChatBot from './Chatbot';
 import { Gradient } from './design/Roadmap';
 import { v4 as uuidv4 } from 'uuid';
-import finalVideo from "../../../hackcbs-backend/output_with_subtitles.mp4"
+import finalVideo from "../../../hackcbs-backend/assets/budget/output_with_subtitles.mp4"
 
 
 const Preview = ({source }) => {
@@ -218,6 +218,7 @@ const guestId = getGuestId(); // Retrieve or create the guest ID
                         <Button href="/quiz" className="flex gap-2 w-full">Play Quiz</Button>
                         <Button onClick={handleEmbedCode} className="flex gap-5 w-full">Embed Code</Button>
                         <Button onClick={handleReplay} className="flex gap-5 w-full">Replay Video</Button>
+                        <Button className="flex gap-5 w-full"><a href='https://framevr.io/aura-ai-VR'>Explore AR/VR</a></Button>
                     </div>
 
                     {/* Popup for Embed Code */}

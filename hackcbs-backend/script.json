@@ -2,154 +2,122 @@
     {
         "id": 1,
         "start_time": 0.0,
-        "end_time": 4.16,
-        "chunk": "Bajaj Allianz Health Infinity is a comprehensive health insurance plan",
-        "keyword": "Protective Shield for Family",
-        "video_duration": 4.16,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_1.jpg"
+        "end_time": 4.09,
+        "chunk": "India's 2025-26 budget focuses on inclusive growth, aiming",
+        "keyword": "India's growth engine",
+        "video_duration": 4.09,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_1.webp"
     },
     {
         "id": 2,
-        "start_time": 4.16,
-        "end_time": 8.31,
-        "chunk": "designed to cover medical expenses for you and your family.",
-        "keyword": "Unlimited Health Coverage",
-        "video_duration": 4.15,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_2.jpg"
+        "start_time": 4.09,
+        "end_time": 8.16,
+        "chunk": "for a \"Viksit Bharat.\" Four key engines drive",
+        "keyword": "Farmer tending crops",
+        "video_duration": 4.07,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_2.webp"
     },
     {
         "id": 3,
-        "start_time": 8.31,
-        "end_time": 12.5,
-        "chunk": "This policy offers a unique feature of unlimited sum insured,",
-        "keyword": "Room with a View",
-        "video_duration": 4.19,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_3.jpg"
+        "start_time": 8.16,
+        "end_time": 12.34,
+        "chunk": "this: agriculture, MSMEs, investment, and exports, fueled by",
+        "keyword": "Businessperson shaking hands",
+        "video_duration": 4.18,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_3.webp"
     },
     {
         "id": 4,
-        "start_time": 12.5,
-        "end_time": 16.66,
-        "chunk": "letting you focus on your health without worrying about coverage",
-        "keyword": "Hospital Stay Support",
-        "video_duration": 4.16,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_4.jpg"
+        "start_time": 12.34,
+        "end_time": 16.4,
+        "chunk": "reforms. Agriculture gets a boost with the Prime",
+        "keyword": "Factory worker assembling product",
+        "video_duration": 4.06,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_4.webp"
     },
     {
         "id": 5,
-        "start_time": 16.66,
-        "end_time": 20.84,
-        "chunk": "limits. You can choose your preferred per-day room rent option,",
-        "keyword": "All-Around Health Coverage",
-        "video_duration": 4.18,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_5.jpg"
+        "start_time": 16.4,
+        "end_time": 20.5,
+        "chunk": "Minister DhanDhaanya Krishi Yojana, focusing on productivity and",
+        "keyword": "Student studying in classroom",
+        "video_duration": 4.1,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_5.webp"
     },
     {
         "id": 6,
-        "start_time": 20.84,
-        "end_time": 25.09,
-        "chunk": "with choices ranging from \u00e2\u201a\u00b93,000 to \u00e2\u201a\u00b950,000 per day, ensuring",
-        "keyword": "Doctor Examining Patient",
-        "video_duration": 4.25,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_6.jpg"
+        "start_time": 20.5,
+        "end_time": 24.56,
+        "chunk": "credit. MSMEs see increased credit availability and revised",
+        "keyword": "Doctor examining patient",
+        "video_duration": 4.06,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_6.webp"
     },
     {
         "id": 7,
-        "start_time": 25.09,
-        "end_time": 29.25,
-        "chunk": "you have flexibility to meet your needs. This plan also",
-        "keyword": "Family Around Hospital Bed",
-        "video_duration": 4.16,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_7.jpg"
+        "start_time": 24.56,
+        "end_time": 28.63,
+        "chunk": "classification criteria to encourage growth. Investment is prioritized",
+        "keyword": "Shipping container on a ship",
+        "video_duration": 4.07,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_7.webp"
     },
     {
         "id": 8,
-        "start_time": 29.25,
-        "end_time": 33.4,
-        "chunk": "covers pre-hospitalization expenses for 60 days and post-hospitalization expenses for",
-        "keyword": "Person Signing Insurance Paper",
+        "start_time": 28.63,
+        "end_time": 32.78,
+        "chunk": "through enhanced healthcare, education, and skilling initiatives. Finally,",
+        "keyword": "Construction worker building",
         "video_duration": 4.15,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_8.jpg"
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_8.webp"
     },
     {
         "id": 9,
-        "start_time": 33.4,
-        "end_time": 37.59,
-        "chunk": "90 days. It includes coverage for day-care procedures, road ambulance",
-        "keyword": "Ambulance on Road",
-        "video_duration": 4.19,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_9.jpg"
+        "start_time": 32.78,
+        "end_time": 36.87,
+        "chunk": "export promotion is key, with a new Export",
+        "keyword": "Computer programmer coding",
+        "video_duration": 4.09,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_9.webp"
     },
     {
         "id": 10,
-        "start_time": 37.59,
-        "end_time": 41.8,
-        "chunk": "expenses up to \u00e2\u201a\u00b95,000 per hospitalization, and a preventive health",
-        "keyword": "Hospital Building Exterior",
-        "video_duration": 4.21,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_10.jpg"
+        "start_time": 36.87,
+        "end_time": 40.94,
+        "chunk": "Promotion Mission and digital trade infrastructure. The budget",
+        "keyword": "Family celebrating a festival",
+        "video_duration": 4.07
     },
     {
         "id": 11,
-        "start_time": 41.8,
-        "end_time": 45.99,
-        "chunk": "checkup every three years. To make it even better, there",
-        "keyword": "Healthy Body, Safe Future",
-        "video_duration": 4.19,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_11.jpg"
+        "start_time": 40.94,
+        "end_time": 45.0,
+        "chunk": "also includes significant tax reforms simplifying the process",
+        "keyword": "Tax cuts, economic boost",
+        "video_duration": 4.06
     },
     {
         "id": 12,
-        "start_time": 45.99,
-        "end_time": 50.15,
-        "chunk": "are no pre-policy medical tests required for individuals under 45",
-        "keyword": "No Tests, Quick Coverage",
-        "video_duration": 4.16,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_12.jpg"
+        "start_time": 45.0,
+        "end_time": 49.06,
+        "chunk": "and benefiting the middle class with significant tax",
+        "keyword": "Hands signing a contract",
+        "video_duration": 4.06
     },
     {
         "id": 13,
-        "start_time": 50.15,
-        "end_time": 54.33,
-        "chunk": "years of age. Plus, pre-existing diseases are covered after 36",
-        "keyword": "Peace of Mind, Financial Relief",
-        "video_duration": 4.18,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_13.jpg"
+        "start_time": 49.06,
+        "end_time": 53.16,
+        "chunk": "reductions. This multi-pronged approach aims to create jobs,",
+        "keyword": "Person using a mobile phone",
+        "video_duration": 4.1
     },
     {
         "id": 14,
-        "start_time": 54.33,
-        "end_time": 58.52,
-        "chunk": "months of continuous coverage, giving you peace of mind knowing",
-        "keyword": "Hand Holding Medicine Bottle",
-        "video_duration": 4.19,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_14.jpg"
-    },
-    {
-        "id": 15,
-        "start_time": 58.52,
-        "end_time": 62.68,
-        "chunk": "that your health is protected. You can also enjoy the",
-        "keyword": "Person Checking Bank Account",
-        "video_duration": 4.16,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_15.jpg"
-    },
-    {
-        "id": 16,
-        "start_time": 62.68,
-        "end_time": 66.83,
-        "chunk": "benefit of income tax deductions on the premiums paid for",
-        "keyword": "Smiling Family on Vacation",
-        "video_duration": 4.15,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_16.jpg"
-    },
-    {
-        "id": 17,
-        "start_time": 66.83,
-        "end_time": 70.66,
-        "chunk": "this policy.",
-        "keyword": "Calculator with Money Symbols",
-        "video_duration": 3.83,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_17.jpg"
+        "start_time": 53.16,
+        "end_time": 56.89,
+        "chunk": "improve livelihoods, and strengthen India\u00e2\u20ac\u2122s global position.",
+        "keyword": "Group of people collaborating",
+        "video_duration": 3.73
     }
 ]

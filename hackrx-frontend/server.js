@@ -21,7 +21,7 @@ app.get('/api/images', (req, res) => {
         if (err) {
             return res.status(500).json({ error: 'Failed to fetch images' });
         }
-        const imageFiles = files.filter(file => /\.(jpg|jpeg|png|gif)$/i.test(file));
+        const imageFiles = files.filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file));
         // Send just the filenames of the images instead of the absolute paths
         res.json({ images: imageFiles });
     });

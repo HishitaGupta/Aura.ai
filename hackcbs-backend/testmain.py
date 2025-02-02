@@ -154,7 +154,7 @@ def extract_text_from_file(file_path, output_path):
         print(f"Text extracted and saved to {output_path}")
 
 # paths to the pdf file and the output text file
-pdf_path = r"C:\Users\Happy yadav\Desktop\aura.ai\test\doc\pdf1.pdf"
+pdf_path = r"C:\Users\Happy yadav\Desktop\aura.ai\test\doc\budget_speech.pdf"
 output_text_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\extracted.txt"
 cleaned_text_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\cleaned.txt"
 
@@ -243,7 +243,7 @@ def generate_script(cleaned_txt_path, video_length, language, llm_prompt_path):
     
     return response.text
 
-video_length = 20  # Example: 120 seconds for a 2-minute video
+video_length = 30  # Example: 120 seconds for a 2-minute video
 language = "English"  # Specify the language, e.g., "English", "Spanish", etc.
 llm_prompt_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\llm_prompt.txt"
 
@@ -352,7 +352,7 @@ def chunk_text(text, max_length=500):
     
     return chunks
 
-def generate_audio_with_background(llm_prompt_path, output_audio_path, background_music_path, final_output_path, language_code="hi-IN", speaker="meera", pitch=0.1, pace=1, loudness=1, music_volume=-15):
+def generate_audio_with_background(llm_prompt_path, output_audio_path, background_music_path, final_output_path, language_code="en-IN", speaker="meera", pitch=0.1, pace=1, loudness=1, music_volume=-15):
     try:
         # Read text from llm_prompt_path
         with open(llm_prompt_path, "r", encoding="utf-8") as file:
@@ -445,7 +445,7 @@ generate_audio_with_background(
     output_audio_path=output_audio_path,
     background_music_path=background_music_path,
     final_output_path=final_output_path,
-    language_code="hi-IN",
+    language_code="en-IN",
     speaker="meera",
     pitch=0.1,
     pace=1,
@@ -672,58 +672,117 @@ def calculate_video_durations(script_file_path):
 # Call this function before fetching or trimming videos
 calculate_video_durations(output_script_path)
 
-def download_image(prompt, image_path, width=1280, height=720, seed=468605, model='flux'):
-    """
-    Downloads an image generated based on the given prompt from Pollinations.ai and saves it to the specified path.
-    """
-    # Format the image URL with the prompt and parameters
-    image_url = f"https://pollinations.ai/p/{prompt}?width={width}&height={height}&seed={seed}&model={model}"
+# def download_image(prompt, image_path, width=1280, height=720, seed=468605, model='flux'):
+#     """
+#     Downloads an image generated based on the given prompt from Pollinations.ai and saves it to the specified path.
+#     """
+#     # Format the image URL with the prompt and parameters
+#     image_url = f"https://pollinations.ai/p/{prompt}?width={width}&height={height}&seed={seed}&model={model}"
     
-    # Request the image from Pollinations.ai
-    response = requests.get(image_url)
-    response.raise_for_status()  # Raise an error if the request was unsuccessful
+#     # Request the image from Pollinations.ai
+#     response = requests.get(image_url)
+#     response.raise_for_status()  # Raise an error if the request was unsuccessful
     
-    # Save the image to the specified path
-    with open(image_path, 'wb') as file:
-        file.write(response.content)
+#     # Save the image to the specified path
+#     with open(image_path, 'wb') as file:
+#         file.write(response.content)
     
-    print(f"Image downloaded and saved as {image_path}")
+#     print(f"Image downloaded and saved as {image_path}")
 
-def generate_images_for_chunks(script_file_path):
+# def generate_images_for_chunks(script_file_path):
+#     """
+#     Iterates over chunks in script.json, generates an image for each chunk using Pollinations.ai,
+#     saves each image in an 'images' directory, and updates script.json with the image file path.
+#     """
+#     # Load the script data from script.json
+#     with open(script_file_path, 'r') as f:
+#         script_data = json.load(f)
+    
+#     # Ensure 'images' directory exists
+#     images_dir = os.path.join(os.path.dirname(script_file_path), 'images')
+#     os.makedirs(images_dir, exist_ok=True)
+
+#     # Process each chunk in the script.json
+#     for chunk in script_data:
+#         prompt = chunk['keyword']  # Use the chunk text as the prompt
+#         image_filename = f"img_{chunk['id']}.jpg"
+#         image_path = os.path.join(images_dir, image_filename)
+        
+#         # Generate and download the image
+#         download_image(prompt, image_path)
+        
+#         # Update the chunk with the image path
+#         chunk['img_path'] = image_path
+        
+#         # Sleep briefly to avoid overwhelming the API
+#         time.sleep(1)
+    
+#     # Save the updated script.json with image paths
+#     with open(script_file_path, 'w') as f:
+#         json.dump(script_data, f, indent=4)
+    
+#     print("Script.json updated with image paths")
+
+# --------------------------------------------------------------------------------------------------------------------
+def download_image(prompt, image_path, api_key, output_format="webp", aspect_ratio="16:9"):
     """
-    Iterates over chunks in script.json, generates an image for each chunk using Pollinations.ai,
+    Downloads an image generated based on the given prompt from Stability AI's API and saves it to the specified path.
+    """
+    url = "https://api.stability.ai/v2beta/stable-image/generate/core"
+    headers = {
+        "authorization": f"Bearer {api_key}",
+        "accept": "image/*"
+    }
+    data = {
+        "prompt": prompt,
+        "output_format": output_format,
+        "aspect_ratio": aspect_ratio
+    }
+    
+    response = requests.post(url, headers=headers, data=data, files={"none": ""})
+    
+    if response.status_code == 200:
+        with open(image_path, "wb") as file:
+            file.write(response.content)
+        print(f"Image downloaded and saved as {image_path}")
+    else:
+        raise Exception(f"Error: {response.status_code} - {response.text}")
+
+def generate_images_for_chunks(script_file_path, api_key, aspect_ratio="16:9"):
+    """
+    Iterates over chunks in script.json, generates an image for each chunk using Stability AI,
     saves each image in an 'images' directory, and updates script.json with the image file path.
     """
-    # Load the script data from script.json
-    with open(script_file_path, 'r') as f:
+    with open(script_file_path, "r") as f:
         script_data = json.load(f)
     
-    # Ensure 'images' directory exists
-    images_dir = os.path.join(os.path.dirname(script_file_path), 'images')
+    images_dir = os.path.join(os.path.dirname(script_file_path), "images")
     os.makedirs(images_dir, exist_ok=True)
-
-    # Process each chunk in the script.json
+    
     for chunk in script_data:
-        prompt = chunk['keyword']  # Use the chunk text as the prompt
-        image_filename = f"img_{chunk['id']}.jpg"
+        prompt = chunk.get("keyword", "A generic AI-generated image")  # Default prompt if missing
+        image_filename = f"img_{chunk['id']}.webp"
         image_path = os.path.join(images_dir, image_filename)
         
-        # Generate and download the image
-        download_image(prompt, image_path)
+        try:
+            download_image(prompt, image_path, api_key, aspect_ratio=aspect_ratio)
+            chunk["img_path"] = image_path
+        except Exception as e:
+            print(f"Failed to generate image for chunk {chunk['id']}: {e}")
         
-        # Update the chunk with the image path
-        chunk['img_path'] = image_path
-        
-        # Sleep briefly to avoid overwhelming the API
-        time.sleep(1)
+        time.sleep(1)  # Avoid hitting rate limits
     
-    # Save the updated script.json with image paths
-    with open(script_file_path, 'w') as f:
+    with open(script_file_path, "w") as f:
         json.dump(script_data, f, indent=4)
     
     print("Script.json updated with image paths")
 
-generate_images_for_chunks(output_script_path)
+# Example usage (replace with your actual API key)
+api_key = "sk-Xips2HbQGXa2GTbRE3Y08s933bqp7eNhSUGw4eyFW1Vu4Cep"
+generate_images_for_chunks(output_script_path, api_key, aspect_ratio="16:9")
+
+
+# generate_images_for_chunks(output_script_path)
 
 def generate_video_with_images_and_subtitles(audio_path, script_json_path, output_video_path, font_size=20):
     # Load audio file

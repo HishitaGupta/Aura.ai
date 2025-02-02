@@ -8,7 +8,7 @@ import AvatarSelection from './Customisation/AvatarSelection';
 import BrandingSelection from './Customisation/BrandingSelection';
 import { Image, ScrollText, AudioLinesIcon, BriefcaseBusinessIcon, CircleUserRound } from "lucide-react";
 import { Link, useLocation } from 'react-router-dom';
-import finalVideo from "../../../hackcbs-backend/output_with_subtitles.mp4"
+import finalVideo from "../../../hackcbs-backend/assets/budget/output_with_subtitles.mp4"
 
 // Sidebar Navigation Items
 const NAV_ITEMS = [
