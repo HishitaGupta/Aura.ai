@@ -2,122 +2,145 @@
     {
         "id": 1,
         "start_time": 0.0,
-        "end_time": 4.09,
-        "chunk": "India's 2025-26 budget focuses on inclusive growth, aiming",
+        "end_time": 4.24,
+        "chunk": "India's 2025-26 budget focuses on a \"Viksit Bharat,\"",
         "keyword": "India's growth engine",
-        "video_duration": 4.09,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_1.webp"
+        "video_duration": 4.24,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_1.jpg"
     },
     {
         "id": 2,
-        "start_time": 4.09,
-        "end_time": 8.16,
-        "chunk": "for a \"Viksit Bharat.\" Four key engines drive",
-        "keyword": "Farmer tending crops",
-        "video_duration": 4.07,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_2.webp"
+        "start_time": 4.24,
+        "end_time": 8.46,
+        "chunk": "or developed India. Four key engines drive this",
+        "keyword": "Farmer harvesting golden rice field",
+        "video_duration": 4.22,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_2.jpg"
     },
     {
         "id": 3,
-        "start_time": 8.16,
-        "end_time": 12.34,
-        "chunk": "this: agriculture, MSMEs, investment, and exports, fueled by",
-        "keyword": "Businessperson shaking hands",
-        "video_duration": 4.18,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_3.webp"
+        "start_time": 8.46,
+        "end_time": 12.79,
+        "chunk": "vision: agriculture, MSMEs, investment, and exports, fueled by",
+        "keyword": "Small business owner smiling confidently",
+        "video_duration": 4.33,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_3.jpg"
     },
     {
         "id": 4,
-        "start_time": 12.34,
-        "end_time": 16.4,
-        "chunk": "reforms. Agriculture gets a boost with the Prime",
-        "keyword": "Factory worker assembling product",
-        "video_duration": 4.06,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_4.webp"
+        "start_time": 12.79,
+        "end_time": 17.0,
+        "chunk": "crucial reforms. Agriculture's boost includes the Prime Minister",
+        "keyword": "Construction worker building modern highway",
+        "video_duration": 4.21,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_4.jpg"
     },
     {
         "id": 5,
-        "start_time": 16.4,
-        "end_time": 20.5,
-        "chunk": "Minister DhanDhaanya Krishi Yojana, focusing on productivity and",
-        "keyword": "Student studying in classroom",
-        "video_duration": 4.1,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_5.webp"
+        "start_time": 17.0,
+        "end_time": 21.25,
+        "chunk": "DhanDhaanya Krishi Yojana, targeting 100 low-productivity districts. Aatmanirbharta",
+        "keyword": "Indian flag waving proudly in wind",
+        "video_duration": 4.25,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_5.jpg"
     },
     {
         "id": 6,
-        "start_time": 20.5,
-        "end_time": 24.56,
-        "chunk": "credit. MSMEs see increased credit availability and revised",
-        "keyword": "Doctor examining patient",
-        "video_duration": 4.06,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_6.webp"
+        "start_time": 21.25,
+        "end_time": 25.49,
+        "chunk": "(self-reliance) in pulses is prioritized, alongside initiatives for",
+        "keyword": "Hands exchanging rupees in market",
+        "video_duration": 4.24,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_6.jpg"
     },
     {
         "id": 7,
-        "start_time": 24.56,
-        "end_time": 28.63,
-        "chunk": "classification criteria to encourage growth. Investment is prioritized",
-        "keyword": "Shipping container on a ship",
-        "video_duration": 4.07,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_7.webp"
+        "start_time": 25.49,
+        "end_time": 29.71,
+        "chunk": "edible oils and vegetables. MSMEs get a classification",
+        "keyword": "Laptop computer displaying growth charts",
+        "video_duration": 4.22,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_7.jpg"
     },
     {
         "id": 8,
-        "start_time": 28.63,
-        "end_time": 32.78,
-        "chunk": "through enhanced healthcare, education, and skilling initiatives. Finally,",
-        "keyword": "Construction worker building",
-        "video_duration": 4.15,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_8.webp"
+        "start_time": 29.71,
+        "end_time": 33.98,
+        "chunk": "revision, enhanced credit guarantees, and new credit cards.",
+        "keyword": "Modern school children using tablets",
+        "video_duration": 4.27,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_8.jpg"
     },
     {
         "id": 9,
-        "start_time": 32.78,
-        "end_time": 36.87,
-        "chunk": "export promotion is key, with a new Export",
-        "keyword": "Computer programmer coding",
-        "video_duration": 4.09,
-        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_9.webp"
+        "start_time": 33.98,
+        "end_time": 38.22,
+        "chunk": "Investment focuses on people (Anganwadi improvements, broadband for",
+        "keyword": "Family enjoying meal together happily",
+        "video_duration": 4.24,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_9.jpg"
     },
     {
         "id": 10,
-        "start_time": 36.87,
-        "end_time": 40.94,
-        "chunk": "Promotion Mission and digital trade infrastructure. The budget",
-        "keyword": "Family celebrating a festival",
-        "video_duration": 4.07
+        "start_time": 38.22,
+        "end_time": 42.5,
+        "chunk": "schools and health centers), the economy (infrastructure PPPs,",
+        "keyword": "Truck loaded with export goods",
+        "video_duration": 4.28,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_10.jpg"
     },
     {
         "id": 11,
-        "start_time": 40.94,
-        "end_time": 45.0,
-        "chunk": "also includes significant tax reforms simplifying the process",
-        "keyword": "Tax cuts, economic boost",
-        "video_duration": 4.06
+        "start_time": 42.5,
+        "end_time": 46.77,
+        "chunk": "asset monetization), and innovation (AI centers, a Deep",
+        "keyword": "Golden goose laying eggs",
+        "video_duration": 4.27,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_11.jpg"
     },
     {
         "id": 12,
-        "start_time": 45.0,
-        "end_time": 49.06,
-        "chunk": "and benefiting the middle class with significant tax",
-        "keyword": "Hands signing a contract",
-        "video_duration": 4.06
+        "start_time": 46.77,
+        "end_time": 51.02,
+        "chunk": "Tech fund). Finally, export promotion will be strengthened",
+        "keyword": "Money tree growing fast",
+        "video_duration": 4.25,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_12.jpg"
     },
     {
         "id": 13,
-        "start_time": 49.06,
-        "end_time": 53.16,
-        "chunk": "reductions. This multi-pronged approach aims to create jobs,",
-        "keyword": "Person using a mobile phone",
-        "video_duration": 4.1
+        "start_time": 51.02,
+        "end_time": 55.23,
+        "chunk": "through a dedicated mission and digital trade platforms.",
+        "keyword": "Open trade floodgates",
+        "video_duration": 4.21,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_13.jpg"
     },
     {
         "id": 14,
-        "start_time": 53.16,
-        "end_time": 56.89,
-        "chunk": "improve livelihoods, and strengthen India\u00e2\u20ac\u2122s global position.",
-        "keyword": "Group of people collaborating",
-        "video_duration": 3.73
+        "start_time": 55.23,
+        "end_time": 59.47,
+        "chunk": "These initiatives, along with tax reforms including substantial",
+        "keyword": "Tax relief sunshine",
+        "video_duration": 4.24,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_14.jpg"
+    },
+    {
+        "id": 15,
+        "start_time": 59.47,
+        "end_time": 63.72,
+        "chunk": "income tax relief for the middle class, aim",
+        "keyword": "Prosperous India sunrise",
+        "video_duration": 4.25,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_15.jpg"
+    },
+    {
+        "id": 16,
+        "start_time": 63.72,
+        "end_time": 67.42,
+        "chunk": "to create a prosperous and inclusive India.",
+        "keyword": "Smiling woman using smartphone app",
+        "video_duration": 3.7,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_16.jpg"
     }
 ]

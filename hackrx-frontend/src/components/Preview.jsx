@@ -9,7 +9,7 @@ import { FaFacebook, FaTwitter } from 'react-icons/fa';
 import ChatBot from './Chatbot';
 import { Gradient } from './design/Roadmap';
 import { v4 as uuidv4 } from 'uuid';
-import finalVideo from "../../../hackcbs-backend/assets/budget/output_with_subtitles.mp4"
+import finalVideo from "../../../hackcbs-backend/assets/output_with_subtitles.mp4"
 
 
 const Preview = ({source }) => {

@@ -25,6 +25,8 @@ import base64
 from docx import Document
 from pptx import Presentation
 import time
+import logging
+from requests.exceptions import RequestException
 
 # Load environment variables
 load_dotenv()
@@ -243,7 +245,7 @@ def generate_script(cleaned_txt_path, video_length, language, llm_prompt_path):
     
     return response.text
 
-video_length = 30  # Example: 120 seconds for a 2-minute video
+video_length = 40  # Example: 120 seconds for a 2-minute video
 language = "English"  # Specify the language, e.g., "English", "Spanish", etc.
 llm_prompt_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\llm_prompt.txt"
 
@@ -672,6 +674,89 @@ def calculate_video_durations(script_file_path):
 # Call this function before fetching or trimming videos
 calculate_video_durations(output_script_path)
 
+# logging :
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('image_generation.log'),
+        logging.StreamHandler()
+    ]
+)
+
+def download_image(prompt, image_path, width=1280, height=720, seed=468605, model='flux', max_retries=3, delay=5):
+    """
+    Downloads an image from Pollinations.ai with retry logic and error handling.
+    """
+    image_url = f"https://pollinations.ai/p/{prompt}?width={width}&height={height}&seed={seed}&model={model}"
+    
+    for attempt in range(max_retries):
+        try:
+            logging.info(f"Attempting to download image for prompt: {prompt} (Attempt {attempt + 1}/{max_retries})")
+            response = requests.get(image_url, timeout=30)
+            response.raise_for_status()
+            
+            with open(image_path, 'wb') as file:
+                file.write(response.content)
+            
+            logging.info(f"Successfully saved image to {image_path}")
+            return True
+            
+        except RequestException as e:
+            logging.error(f"Attempt {attempt + 1} failed: {str(e)}")
+            if attempt < max_retries - 1:
+                logging.info(f"Retrying in {delay} seconds...")
+                time.sleep(delay)
+            continue
+    
+    logging.error(f"Failed to download image after {max_retries} attempts")
+    return False
+
+def generate_images_for_chunks(script_file_path):
+    """
+    Generates images for script chunks with error handling and logging.
+    """
+    try:
+        with open(script_file_path, 'r') as f:
+            script_data = json.load(f)
+    except (json.JSONDecodeError, FileNotFoundError) as e:
+        logging.error(f"Failed to load script.json: {str(e)}")
+        return False
+
+    images_dir = os.path.join(os.path.dirname(script_file_path), 'images')
+    try:
+        os.makedirs(images_dir, exist_ok=True)
+    except OSError as e:
+        logging.error(f"Failed to create images directory: {str(e)}")
+        return False
+
+    successful_downloads = 0
+    failed_downloads = 0
+
+    for chunk in script_data:
+        prompt = chunk['keyword']
+        image_filename = f"img_{chunk['id']}.jpg"
+        image_path = os.path.join(images_dir, image_filename)
+        
+        if download_image(prompt, image_path):
+            chunk['img_path'] = image_path
+            successful_downloads += 1
+        else:
+            failed_downloads += 1
+            chunk['img_path'] = None
+        
+        time.sleep(1)
+
+    try:
+        with open(script_file_path, 'w') as f:
+            json.dump(script_data, f, indent=4)
+        logging.info(f"Script.json updated. Successful downloads: {successful_downloads}, Failed: {failed_downloads}")
+        return True
+    except IOError as e:
+        logging.error(f"Failed to update script.json: {str(e)}")
+        return False
+# ----------------------------------------------------------- working code for generating images using pollinations.ai
 # def download_image(prompt, image_path, width=1280, height=720, seed=468605, model='flux'):
 #     """
 #     Downloads an image generated based on the given prompt from Pollinations.ai and saves it to the specified path.
@@ -723,66 +808,66 @@ calculate_video_durations(output_script_path)
     
 #     print("Script.json updated with image paths")
 
-# --------------------------------------------------------------------------------------------------------------------
-def download_image(prompt, image_path, api_key, output_format="webp", aspect_ratio="16:9"):
-    """
-    Downloads an image generated based on the given prompt from Stability AI's API and saves it to the specified path.
-    """
-    url = "https://api.stability.ai/v2beta/stable-image/generate/core"
-    headers = {
-        "authorization": f"Bearer {api_key}",
-        "accept": "image/*"
-    }
-    data = {
-        "prompt": prompt,
-        "output_format": output_format,
-        "aspect_ratio": aspect_ratio
-    }
+# ----------------------working CODE FOR GENERATING THE IMAGE USING STABILITY AI 
+# def download_image(prompt, image_path, api_key, output_format="webp", aspect_ratio="16:9"):
+#     """
+#     Downloads an image generated based on the given prompt from Stability AI's API and saves it to the specified path.
+#     """
+#     url = "https://api.stability.ai/v2beta/stable-image/generate/core"
+#     headers = {
+#         "authorization": f"Bearer {api_key}",
+#         "accept": "image/*"
+#     }
+#     data = {
+#         "prompt": prompt,
+#         "output_format": output_format,
+#         "aspect_ratio": aspect_ratio
+#     }
     
-    response = requests.post(url, headers=headers, data=data, files={"none": ""})
+#     response = requests.post(url, headers=headers, data=data, files={"none": ""})
     
-    if response.status_code == 200:
-        with open(image_path, "wb") as file:
-            file.write(response.content)
-        print(f"Image downloaded and saved as {image_path}")
-    else:
-        raise Exception(f"Error: {response.status_code} - {response.text}")
+#     if response.status_code == 200:
+#         with open(image_path, "wb") as file:
+#             file.write(response.content)
+#         print(f"Image downloaded and saved as {image_path}")
+#     else:
+#         raise Exception(f"Error: {response.status_code} - {response.text}")
 
-def generate_images_for_chunks(script_file_path, api_key, aspect_ratio="16:9"):
-    """
-    Iterates over chunks in script.json, generates an image for each chunk using Stability AI,
-    saves each image in an 'images' directory, and updates script.json with the image file path.
-    """
-    with open(script_file_path, "r") as f:
-        script_data = json.load(f)
+# def generate_images_for_chunks(script_file_path, api_key, aspect_ratio="16:9"):
+#     """
+#     Iterates over chunks in script.json, generates an image for each chunk using Stability AI,
+#     saves each image in an 'images' directory, and updates script.json with the image file path.
+#     """
+#     with open(script_file_path, "r") as f:
+#         script_data = json.load(f)
     
-    images_dir = os.path.join(os.path.dirname(script_file_path), "images")
-    os.makedirs(images_dir, exist_ok=True)
+#     images_dir = os.path.join(os.path.dirname(script_file_path), "images")
+#     os.makedirs(images_dir, exist_ok=True)
     
-    for chunk in script_data:
-        prompt = chunk.get("keyword", "A generic AI-generated image")  # Default prompt if missing
-        image_filename = f"img_{chunk['id']}.webp"
-        image_path = os.path.join(images_dir, image_filename)
+#     for chunk in script_data:
+#         prompt = chunk.get("keyword", "A generic AI-generated image")  # Default prompt if missing
+#         image_filename = f"img_{chunk['id']}.webp"
+#         image_path = os.path.join(images_dir, image_filename)
         
-        try:
-            download_image(prompt, image_path, api_key, aspect_ratio=aspect_ratio)
-            chunk["img_path"] = image_path
-        except Exception as e:
-            print(f"Failed to generate image for chunk {chunk['id']}: {e}")
+#         try:
+#             download_image(prompt, image_path, api_key, aspect_ratio=aspect_ratio)
+#             chunk["img_path"] = image_path
+#         except Exception as e:
+#             print(f"Failed to generate image for chunk {chunk['id']}: {e}")
         
-        time.sleep(1)  # Avoid hitting rate limits
+#         time.sleep(1)  # Avoid hitting rate limits
     
-    with open(script_file_path, "w") as f:
-        json.dump(script_data, f, indent=4)
+#     with open(script_file_path, "w") as f:
+#         json.dump(script_data, f, indent=4)
     
-    print("Script.json updated with image paths")
+#     print("Script.json updated with image paths")
 
 # Example usage (replace with your actual API key)
-api_key = "sk-Xips2HbQGXa2GTbRE3Y08s933bqp7eNhSUGw4eyFW1Vu4Cep"
-generate_images_for_chunks(output_script_path, api_key, aspect_ratio="16:9")
+# api_key = "sk-Xips2HbQGXa2GTbRE3Y08s933bqp7eNhSUGw4eyFW1Vu4Cep"
+# generate_images_for_chunks(output_script_path, api_key, aspect_ratio="16:9")
 
 
-# generate_images_for_chunks(output_script_path)
+generate_images_for_chunks(output_script_path)
 
 def generate_video_with_images_and_subtitles(audio_path, script_json_path, output_video_path, font_size=20):
     # Load audio file

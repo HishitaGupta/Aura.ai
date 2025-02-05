@@ -1,243 +1,243 @@
 [
     {
-        "question": "What is the overarching goal of India's 2025-26 budget?",
+        "question": "What is the overarching vision of India's 2025-26 budget?",
         "options": [
-            "Economic stability",
-            "Inclusive growth and \"Viksit Bharat\"",
-            "Reduced inflation",
-            "Increased military spending"
+            "A self-reliant India",
+            "A developed India",
+            "An agricultural powerhouse",
+            "An export-oriented economy"
         ],
-        "correctAnswer": "Inclusive growth and \"Viksit Bharat\"",
-        "explanation": "The text explicitly states that the budget aims for inclusive growth and a \"Viksit Bharat\" (developed India).",
+        "correctAnswer": "A developed India",
+        "explanation": "The text explicitly states that the budget focuses on \"Viksit Bharat,\" which translates to \"Developed India.\"",
         "type": "mcq",
         "difficulty": "Easy",
         "use": "normal"
     },
     {
-        "question": "Which scheme is mentioned as boosting agricultural productivity and credit?",
+        "question": "Which program targets 100 low-productivity districts to boost agriculture?",
         "options": [
-            "Krishi Vikas Yojana",
+            "Aatmanirbhar Bharat",
             "Prime Minister DhanDhaanya Krishi Yojana",
-            "Gram Uday Se Bharat Uday",
-            "Swachh Bharat Abhiyan"
+            "Deep Tech Fund",
+            "Anganwadi improvement program"
         ],
         "correctAnswer": "Prime Minister DhanDhaanya Krishi Yojana",
-        "explanation": "The text specifically names the Prime Minister DhanDhaanya Krishi Yojana as focused on agricultural productivity and credit.",
+        "explanation": "The text specifically mentions this program and its target.",
         "type": "mcq",
-        "difficulty": "Easy",
+        "difficulty": "Medium",
         "use": "normal"
     },
     {
-        "question": "The budget prioritizes investment in which sectors?",
+        "question": "The budget prioritizes self-reliance in which agricultural product?",
         "options": [
-            "Defense and infrastructure",
-            "Healthcare, education, and skilling",
-            "Tourism and entertainment",
-            "Agriculture and mining"
+            "Rice",
+            "Wheat",
+            "Pulses",
+            "Edible oils"
         ],
-        "correctAnswer": "Healthcare, education, and skilling",
-        "explanation": "The passage clearly indicates that investment is prioritized through enhanced healthcare, education, and skilling initiatives.",
+        "correctAnswer": "Pulses",
+        "explanation": "The text explicitly mentions \"Aatmanirbharta (self-reliance) in pulses.\"",
         "type": "mcq",
         "difficulty": "Easy",
         "use": "normal"
     },
     {
-        "question": "True or False: The 2025-26 budget includes significant tax reforms aimed at simplifying the process and benefiting the middle class.",
+        "question": "True or False: The budget includes initiatives for improving Anganwadis and expanding broadband access.",
         "options": [],
         "correctAnswer": "True",
-        "explanation": "The text explicitly mentions significant tax reforms designed to simplify the process and benefit the middle class with tax reductions.",
+        "explanation": "The text mentions investment in people, including Anganwadi improvements and broadband for schools and health centers.",
         "type": "true-false",
         "difficulty": "Easy",
         "use": "normal"
     },
     {
-        "question": "Fill in the blank:  The budget aims to create jobs, improve ______, and strengthen India\u2019s global position.",
+        "question": "The budget aims to strengthen export promotion through which means?",
         "options": [
-            "infrastructure",
-            "livelihoods",
-            "technology"
+            "Increased tariffs",
+            "Subsidies for domestic consumption",
+            "A dedicated mission and digital trade platforms",
+            "Reduction in export quotas"
         ],
-        "correctAnswer": "livelihoods",
-        "explanation": "The text explicitly states that the budget aims to create jobs, improve livelihoods, and strengthen India\u2019s global position.",
-        "type": "fill-in-the-blank",
-        "difficulty": "Easy",
-        "use": "normal"
-    },
-    {
-        "question": "What are the four key engines driving India's 2025-26 budget?",
-        "options": [
-            "Agriculture, industry, services, and technology",
-            "Agriculture, MSMEs, investment, and exports",
-            "Tourism, infrastructure, finance, and manufacturing",
-            "Healthcare, education, technology, and infrastructure"
-        ],
-        "correctAnswer": "Agriculture, MSMEs, investment, and exports",
-        "explanation": "The text explicitly lists agriculture, MSMEs, investment, and exports as the four key engines.",
+        "correctAnswer": "A dedicated mission and digital trade platforms",
+        "explanation": "The text explicitly mentions this as the strategy for export promotion.",
         "type": "mcq",
-        "difficulty": "Easy",
-        "use": "substitute"
+        "difficulty": "Medium",
+        "use": "normal"
     },
     {
-        "question": "True or False: The budget focuses solely on boosting large corporations for economic growth.",
-        "options": [],
-        "correctAnswer": "False",
-        "explanation": "The budget focuses on inclusive growth, mentioning MSMEs as a key engine, indicating a focus beyond large corporations.",
-        "type": "true-false",
-        "difficulty": "Easy",
-        "use": "substitute"
-    },
-    {
-        "question": "Fill in the blank:  The budget includes a new ______  to promote exports.",
+        "question": "Fill in the blank:  The budget provides ______ for the middle class.",
         "options": [
-            "Trade agreement",
-            "Export Promotion Mission",
-            "Tax incentive program"
+            "Increased taxes",
+            "Income tax relief",
+            "Reduced social security benefits"
         ],
-        "correctAnswer": "Export Promotion Mission",
-        "explanation": "The text mentions a new Export Promotion Mission as a key initiative for export promotion.",
+        "correctAnswer": "Income tax relief",
+        "explanation": "The text clearly states that the budget includes \"substantial income tax relief for the middle class.\"",
         "type": "fill-in-the-blank",
         "difficulty": "Easy",
         "use": "substitute"
     },
     {
-        "question": "What is one way the budget aims to help MSMEs?",
+        "question": "True or False:  The budget focuses solely on economic growth, neglecting social development.",
+        "options": [],
+        "correctAnswer": "False",
+        "explanation": "The budget includes investments in people (Anganwadi improvements, broadband) alongside economic initiatives.",
+        "type": "true-false",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "Fill in the blank:  One of the four key engines driving the \"Viksit Bharat\" vision is ______.",
         "options": [
-            "Reducing taxes for large corporations",
-            "Providing increased credit availability",
-            "Nationalizing key industries",
-            "Restricting foreign investment"
+            "Tourism",
+            "Investment",
+            "Mining",
+            "Manufacturing"
         ],
-        "correctAnswer": "Providing increased credit availability",
-        "explanation": "The text explicitly states that MSMEs will see increased credit availability.",
+        "correctAnswer": "Investment",
+        "explanation": "The text lists agriculture, MSMEs, investment, and exports as the four key engines.",
+        "type": "fill-in-the-blank",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "What type of improvements are mentioned in the context of investment in people?",
+        "options": [
+            "Infrastructure improvements",
+            "Technological advancements",
+            "Anganwadi and Broadband improvements",
+            "Export promotion strategies"
+        ],
+        "correctAnswer": "Anganwadi and Broadband improvements",
+        "explanation": "The text explicitly mentions these as part of investment in people.",
         "type": "mcq",
         "difficulty": "Medium",
         "use": "substitute"
     },
     {
-        "question": "True or False:  The budget's focus on export promotion includes only physical goods, not digital trade.",
+        "question": "True or False: The budget proposes asset monetization as a strategy to boost investment in the economy.",
         "options": [],
-        "correctAnswer": "False",
-        "explanation": "The text mentions the development of digital trade infrastructure as part of the export promotion strategy.",
+        "correctAnswer": "True",
+        "explanation": "The text mentions asset monetization as a focus for economic investment.",
         "type": "true-false",
         "difficulty": "Medium",
         "use": "substitute"
     },
     {
-        "question": "What is the primary objective of the Prime Minister DhanDhaanya Krishi Yojana?",
+        "question": "What is the primary aim of the initiatives mentioned in the text?",
         "options": [
-            "Improving irrigation infrastructure",
-            "Providing subsidies on farm equipment",
-            "Boosting productivity and credit in agriculture",
-            "Promoting organic farming"
+            "To increase agricultural exports only",
+            "To create a prosperous and inclusive India",
+            "To improve the lives of only the wealthy class",
+            "To reduce India's trade deficit"
         ],
-        "correctAnswer": "Boosting productivity and credit in agriculture",
-        "explanation": "The text explicitly states that the scheme focuses on productivity and credit in agriculture.",
+        "correctAnswer": "To create a prosperous and inclusive India",
+        "explanation": "The text explicitly states this as the overall goal.",
         "type": "mcq",
-        "difficulty": "Medium",
-        "use": "normal"
+        "difficulty": "Easy",
+        "use": "substitute"
     },
     {
-        "question": "True or false: The budget proposes significant cuts to healthcare spending.",
-        "options": [],
-        "correctAnswer": "False",
-        "explanation": "The text states that investment is prioritized through enhanced healthcare initiatives, implying increased, not decreased, spending.",
-        "type": "true-false",
-        "difficulty": "Medium",
-        "use": "normal"
-    },
-    {
-        "question": "Fill in the blank: Besides tax reforms, the budget also emphasizes ______ to support growth.",
+        "question": "Fill in the blank: MSMEs will receive ______ to improve access to credit.",
         "options": [
-            "military expansion",
-            "infrastructure development",
-            "reforms"
+            "Higher taxes",
+            "Reduced regulations",
+            "Enhanced credit guarantees"
         ],
-        "correctAnswer": "reforms",
-        "explanation": "The introductory paragraph mentions that the four key engines are fueled by reforms, showing that reforms are a key element of the budget's strategy besides tax reforms.",
+        "correctAnswer": "Enhanced credit guarantees",
+        "explanation": "The text mentions enhanced credit guarantees for MSMEs.",
         "type": "fill-in-the-blank",
-        "difficulty": "Medium",
-        "use": "normal"
+        "difficulty": "Easy",
+        "use": "substitute"
     },
     {
-        "question": "Besides increased credit availability, what other measure is mentioned to support MSMEs?",
+        "question": "True or False:  The budget's focus on innovation includes the establishment of AI centers.",
+        "options": [],
+        "correctAnswer": "True",
+        "explanation": "The text mentions the creation of AI centers as part of the investment in innovation.",
+        "type": "true-false",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "What initiative is mentioned to promote investment in innovation?",
         "options": [
-            "Tax exemptions",
-            "Direct government investment",
-            "Revised classification criteria",
-            "Mergers and acquisitions"
+            "A new agricultural policy",
+            "A Deep Tech fund",
+            "Increased tariffs on imports",
+            "Expansion of the public transportation system"
         ],
-        "correctAnswer": "Revised classification criteria",
-        "explanation": "The text mentions revised classification criteria for MSMEs as another measure to encourage their growth.",
+        "correctAnswer": "A Deep Tech fund",
+        "explanation": "The text explicitly mentions a Deep Tech fund as part of investment in innovation.",
         "type": "mcq",
         "difficulty": "Medium",
-        "use": "normal"
+        "use": "substitute"
     },
     {
-        "question": "True or false: The budget exclusively focuses on domestic economic growth and ignores India's global position.",
+        "question": "True or False: The budget's focus on MSMEs includes the introduction of new credit cards.",
         "options": [],
-        "correctAnswer": "False",
-        "explanation": "The text explicitly mentions strengthening India\u2019s global position as one of the budget\u2019s aims.",
+        "correctAnswer": "True",
+        "explanation": "The text mentions new credit cards as a measure to support MSMEs.",
         "type": "true-false",
         "difficulty": "Medium",
-        "use": "normal"
+        "use": "substitute"
     },
     {
-        "question": "What specific infrastructure improvement is mentioned in the text related to exports?",
+        "question": "Fill in the blank:  The budget includes initiatives for edible ______ and vegetables.",
         "options": [
-            "Improved roads",
-            "Advanced port facilities",
-            "Digital trade infrastructure",
-            "New rail lines"
+            "Fruits",
+            "Oils",
+            "Grains"
         ],
-        "correctAnswer": "Digital trade infrastructure",
-        "explanation": "The text explicitly mentions improved digital trade infrastructure as part of export promotion efforts.",
-        "type": "mcq",
-        "difficulty": "Hard",
-        "use": "normal"
-    },
-    {
-        "question": "True or false: The budget solely relies on fiscal measures and ignores any structural reforms.",
-        "options": [],
-        "correctAnswer": "False",
-        "explanation": "The text highlights reforms as a key driver for the four key engines, suggesting that structural reforms are part of the budget's approach.",
-        "type": "true-false",
-        "difficulty": "Hard",
-        "use": "normal"
-    },
-    {
-        "question": "Fill in the blank: The budget's focus on ______ aims to improve the skills of the workforce.",
-        "options": [
-            "healthcare",
-            "education",
-            "agriculture"
-        ],
-        "correctAnswer": "education",
-        "explanation": "The text explicitly mentions investment in education as a key aspect of skilling initiatives.",
+        "correctAnswer": "Oils",
+        "explanation": "The text explicitly mentions initiatives for edible oils.",
         "type": "fill-in-the-blank",
-        "difficulty": "Hard",
-        "use": "normal"
+        "difficulty": "Easy",
+        "use": "substitute"
     },
     {
-        "question": "According to the text, what is the intended impact of the tax reforms on the middle class?",
+        "question": "What kind of partnerships are mentioned in relation to infrastructure investment?",
         "options": [
-            "Increased tax burden",
-            "No significant change",
-            "Significant tax reductions",
-            "Minor tax increases"
+            "Public-Private Partnerships",
+            "International Partnerships",
+            "Government-NGO Partnerships",
+            "Public-Military Partnerships"
         ],
-        "correctAnswer": "Significant tax reductions",
-        "explanation": "The text explicitly states that the middle class will benefit from significant tax reductions.",
+        "correctAnswer": "Public-Private Partnerships",
+        "explanation": "The text mentions infrastructure PPPs.",
         "type": "mcq",
-        "difficulty": "Hard",
-        "use": "normal"
+        "difficulty": "Medium",
+        "use": "substitute"
     },
     {
-        "question": "True or false: The budget's success hinges entirely on the successful implementation of the Prime Minister DhanDhaanya Krishi Yojana.",
+        "question": "True or False:  The budget only focuses on urban development and neglects rural areas.",
         "options": [],
         "correctAnswer": "False",
-        "explanation": "While the scheme is important, the budget's success depends on a multi-pronged approach encompassing multiple key engines, not solely on one scheme.",
+        "explanation": "The agricultural focus and initiatives like Anganwadi improvements suggest attention to rural areas as well.",
         "type": "true-false",
-        "difficulty": "Hard",
-        "use": "normal"
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "Fill in the blank:  The budget aims for ______ in pulses.",
+        "options": [
+            "Increased imports",
+            "Self-reliance (Aatmanirbharta)",
+            "Reduced production"
+        ],
+        "correctAnswer": "Self-reliance (Aatmanirbharta)",
+        "explanation": "The text explicitly mentions Aatmanirbharta in pulses.",
+        "type": "fill-in-the-blank",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "True or False:  A classification revision for MSMEs is part of the budget's proposals.",
+        "options": [],
+        "correctAnswer": "True",
+        "explanation": "The text explicitly mentions this.",
+        "type": "true-false",
+        "difficulty": "Easy",
+        "use": "substitute"
     }
 ]

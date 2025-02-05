@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "start_time": 0.0,
+        "end_time": 3.73,
+        "chunk": "This year's budget focuses on building a developed",
+        "keyword": "Nation building engine",
+        "video_duration": 3.73,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_1.jpg"
+    },
+    {
+        "id": 2,
+        "start_time": 3.73,
+        "end_time": 7.46,
+        "chunk": "India (\"Viksit Bharat\") by boosting four key engines:",
+        "keyword": "Farmer tending crops in field",
+        "video_duration": 3.73,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_2.jpg"
+    },
+    {
+        "id": 3,
+        "start_time": 7.46,
+        "end_time": 11.31,
+        "chunk": "agriculture, MSMEs, investment, and exports, fueled by crucial",
+        "keyword": "Hands signing business contract",
+        "video_duration": 3.85,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_3.jpg"
+    },
+    {
+        "id": 4,
+        "start_time": 11.31,
+        "end_time": 15.03,
+        "chunk": "reforms. We'll enhance agricultural productivity through the Prime",
+        "keyword": "Construction worker building road",
+        "video_duration": 3.72,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_4.jpg"
+    },
+    {
+        "id": 5,
+        "start_time": 15.03,
+        "end_time": 18.79,
+        "chunk": "Minister DhanDhaanya Krishi Yojana, focusing on 100 low-productivity",
+        "keyword": "Truck loaded with export goods",
+        "video_duration": 3.76,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_5.jpg"
+    },
+    {
+        "id": 6,
+        "start_time": 18.79,
+        "end_time": 22.55,
+        "chunk": "districts. Simultaneously, we're launching a rural prosperity program",
+        "keyword": "Doctor examining patient in clinic",
+        "video_duration": 3.76,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_6.jpg"
+    },
+    {
+        "id": 7,
+        "start_time": 22.55,
+        "end_time": 26.28,
+        "chunk": "to create opportunities and reduce rural-urban migration. To",
+        "keyword": "Student studying in classroom",
+        "video_duration": 3.73,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_7.jpg"
+    },
+    {
+        "id": 8,
+        "start_time": 26.28,
+        "end_time": 30.04,
+        "chunk": "support MSMEs, we're increasing credit availability and introducing",
+        "keyword": "Factory worker operating machinery",
+        "video_duration": 3.76,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_8.jpg"
+    },
+    {
+        "id": 9,
+        "start_time": 30.04,
+        "end_time": 33.77,
+        "chunk": "credit cards for micro-enterprises. Investment will be driven",
+        "keyword": "Money growing on tree",
+        "video_duration": 3.73,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_9.jpg"
+    },
+    {
+        "id": 10,
+        "start_time": 33.77,
+        "end_time": 37.53,
+        "chunk": "by increased spending on education and healthcare, along",
+        "keyword": "Hands shaking on deal",
+        "video_duration": 3.76,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_10.jpg"
+    },
+    {
+        "id": 11,
+        "start_time": 37.53,
+        "end_time": 41.26,
+        "chunk": "with infrastructure projects and reforms in the power",
+        "keyword": "Building a stronger nation",
+        "video_duration": 3.73,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_11.jpg"
+    },
+    {
+        "id": 12,
+        "start_time": 41.26,
+        "end_time": 45.01,
+        "chunk": "and mining sectors. Finally, export promotion will be",
+        "keyword": "Modern city skyline at night",
+        "video_duration": 3.75,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_12.jpg"
+    },
+    {
+        "id": 13,
+        "start_time": 45.01,
+        "end_time": 48.74,
+        "chunk": "enhanced through a new Export Promotion Mission and",
+        "keyword": "Rural village with happy people",
+        "video_duration": 3.73,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_13.jpg"
+    },
+    {
+        "id": 14,
+        "start_time": 48.74,
+        "end_time": 52.5,
+        "chunk": "digital trade infrastructure. These measures, coupled with tax",
+        "keyword": "Person using a computer",
+        "video_duration": 3.76,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_14.jpg"
+    },
+    {
+        "id": 15,
+        "start_time": 52.5,
+        "end_time": 56.26,
+        "chunk": "reforms, aim to create a more inclusive and",
+        "keyword": "Indian flag waving proudly",
+        "video_duration": 3.76,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_15.jpg"
+    },
+    {
+        "id": 16,
+        "start_time": 56.26,
+        "end_time": 59.66,
+        "chunk": "prosperous India.",
+        "keyword": "Scales of justice balancing",
+        "video_duration": 3.4,
+        "img_path": "C:\\Users\\Happy yadav\\Desktop\\aura.ai\\hackcbs-backend\\images\\img_16.jpg"
+    }
+]

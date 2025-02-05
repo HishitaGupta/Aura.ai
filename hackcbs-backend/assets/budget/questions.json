@@ -1,0 +1,252 @@
+[
+    {
+        "question": "What is the main goal of this year's budget?",
+        "options": [
+            "Reducing rural-urban migration",
+            "Building a developed India",
+            "Increasing agricultural exports",
+            "Improving healthcare infrastructure"
+        ],
+        "correctAnswer": "Building a developed India",
+        "explanation": "The text explicitly states that the budget focuses on building a developed India ('Viksit Bharat').",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "normal"
+    },
+    {
+        "question": "Which program aims to enhance agricultural productivity in 100 low-productivity districts?",
+        "options": [
+            "Rural Prosperity Program",
+            "Prime Minister DhanDhaanya Krishi Yojana",
+            "Export Promotion Mission",
+            "MSME Credit Card Program"
+        ],
+        "correctAnswer": "Prime Minister DhanDhaanya Krishi Yojana",
+        "explanation": "The text specifically mentions the Prime Minister DhanDhaanya Krishi Yojana as the program focused on enhancing agricultural productivity in 100 low-productivity districts.",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "normal"
+    },
+    {
+        "question": "The budget aims to support MSMEs by ______.",
+        "options": [
+            "Reducing taxes",
+            "Increasing credit availability",
+            "Providing land subsidies",
+            "Investing in infrastructure"
+        ],
+        "correctAnswer": "Increasing credit availability",
+        "explanation": "The text clearly states that support for MSMEs includes increasing credit availability and introducing credit cards for micro-enterprises.",
+        "type": "fill-in-the-blank",
+        "difficulty": "Easy",
+        "use": "normal"
+    },
+    {
+        "question": "True or False: The budget includes plans for increased spending on education and healthcare.",
+        "options": [],
+        "correctAnswer": "True",
+        "explanation": "The text explicitly mentions increased spending on education and healthcare as a driver of investment.",
+        "type": "true-false",
+        "difficulty": "Easy",
+        "use": "normal"
+    },
+    {
+        "question": "What is the name of the initiative designed to boost India's exports?",
+        "options": [
+            "Rural Prosperity Program",
+            "Prime Minister DhanDhaanya Krishi Yojana",
+            "Export Promotion Mission",
+            "MSME Credit Card Program"
+        ],
+        "correctAnswer": "Export Promotion Mission",
+        "explanation": "The text mentions the establishment of a new Export Promotion Mission to enhance export promotion.",
+        "type": "mcq",
+        "difficulty": "Medium",
+        "use": "normal"
+    },
+    {
+        "question": "The budget's focus on 'four key engines' includes which of the following?",
+        "options": [
+            "Agriculture, Tourism, Technology, and Finance",
+            "Manufacturing, Services, Infrastructure, and Energy",
+            "Agriculture, MSMEs, Investment, and Exports",
+            "Healthcare, Education, Rural Development, and Urban Renewal"
+        ],
+        "correctAnswer": "Agriculture, MSMEs, Investment, and Exports",
+        "explanation": "The text explicitly lists these four sectors as the key engines of the budget.",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "True or False:  The budget only focuses on urban development.",
+        "options": [],
+        "correctAnswer": "False",
+        "explanation": "The budget includes a rural prosperity program designed to create opportunities in rural areas and reduce rural-urban migration.",
+        "type": "true-false",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "The budget plans to improve export promotion through a new ______ and digital trade infrastructure.",
+        "options": [
+            "Tax reform system",
+            "Export Promotion Mission",
+            "Investment fund",
+            "Agricultural subsidy program"
+        ],
+        "correctAnswer": "Export Promotion Mission",
+        "explanation": "The text explicitly states this.",
+        "type": "fill-in-the-blank",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "Besides increased credit availability, what other measure is proposed to support MSMEs?",
+        "options": [
+            "Tax breaks",
+            "Government grants",
+            "Credit cards for micro-enterprises",
+            "Skills development programs"
+        ],
+        "correctAnswer": "Credit cards for micro-enterprises",
+        "explanation": "The text mentions this as a specific measure to help MSMEs.",
+        "type": "mcq",
+        "difficulty": "Medium",
+        "use": "substitute"
+    },
+    {
+        "question": "What sector will benefit from reforms in the power and mining sectors?",
+        "options": [
+            "Agriculture",
+            "MSME",
+            "Investment",
+            "Exports"
+        ],
+        "correctAnswer": "Investment",
+        "explanation": "The text links reforms in power and mining to boosting investment.",
+        "type": "mcq",
+        "difficulty": "Medium",
+        "use": "substitute"
+    },
+    {
+        "question": "True or False: The budget solely focuses on economic growth and ignores social welfare.",
+        "options": [],
+        "correctAnswer": "False",
+        "explanation": "The budget includes increased spending on education and healthcare, demonstrating a focus on social welfare.",
+        "type": "true-false",
+        "difficulty": "Medium",
+        "use": "substitute"
+    },
+    {
+        "question": "Besides tax reforms, what other factor is mentioned as contributing to a more inclusive and prosperous India?",
+        "options": [
+            "Increased military spending",
+            "Improved infrastructure",
+            "Technological advancement",
+            "Increased tourism"
+        ],
+        "correctAnswer": "Improved infrastructure",
+        "explanation": "The text connects tax reforms and other measures, including infrastructure projects, to creating a more inclusive and prosperous India.",
+        "type": "mcq",
+        "difficulty": "Medium",
+        "use": "substitute"
+    },
+    {
+        "question": "Fill in the blank:  The budget aims to reduce ______ by creating opportunities in rural areas.",
+        "options": [
+            "Urban sprawl",
+            "Rural-urban migration",
+            "Poverty",
+            "Unemployment"
+        ],
+        "correctAnswer": "Rural-urban migration",
+        "explanation": "The text explicitly mentions this as a goal of the rural prosperity program.",
+        "type": "fill-in-the-blank",
+        "difficulty": "Medium",
+        "use": "substitute"
+    },
+    {
+        "question": "True or False: The budget focuses on digitalization only in the export sector.",
+        "options": [],
+        "correctAnswer": "False",
+        "explanation": "While mentioned in the context of exports, digitalization is likely implied across various sectors for efficiency and inclusivity.",
+        "type": "true-false",
+        "difficulty": "Medium",
+        "use": "substitute"
+    },
+    {
+        "question": "The budget mentions which two key sectors will receive increased government investment?",
+        "options": [
+            "Tourism & Agriculture",
+            "Education & Healthcare",
+            "Manufacturing & Technology",
+            "Mining & Finance"
+        ],
+        "correctAnswer": "Education & Healthcare",
+        "explanation": "The text explicitly mentions this.",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "What is the primary objective of the 'rural prosperity program'?",
+        "options": [
+            "Boosting agricultural exports",
+            "Developing urban infrastructure",
+            "Creating rural opportunities and reducing rural-urban migration",
+            "Promoting investment in rural industries"
+        ],
+        "correctAnswer": "Creating rural opportunities and reducing rural-urban migration",
+        "explanation": "The text clearly states this as the program's aim.",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "True or False: The budget proposes new tax increases to fund its initiatives.",
+        "options": [],
+        "correctAnswer": "False",
+        "explanation": "The text mentions tax reforms, but doesn't specify whether these are increases or decreases.  The focus is on reforms, not necessarily increases.",
+        "type": "true-false",
+        "difficulty": "Medium",
+        "use": "substitute"
+    },
+    {
+        "question": "Fill in the blank:  Increased spending on _____ and ______ is mentioned as a key driver of investment.",
+        "options": [
+            "Defense, Transportation",
+            "Education, Healthcare",
+            "Agriculture, Manufacturing",
+            "Technology, Tourism"
+        ],
+        "correctAnswer": "Education, Healthcare",
+        "explanation": "The passage explicitly mentions this.",
+        "type": "fill-in-the-blank",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "Which of the following is NOT explicitly mentioned as a key focus area in the budget?",
+        "options": [
+            "Agriculture",
+            "Tourism",
+            "MSMEs",
+            "Exports"
+        ],
+        "correctAnswer": "Tourism",
+        "explanation": "While other sectors are mentioned, tourism is not explicitly named as a key focus area of this budget.",
+        "type": "mcq",
+        "difficulty": "Medium",
+        "use": "substitute"
+    },
+    {
+        "question": "True or False: The budget emphasizes creating a more exclusive and less prosperous India.",
+        "options": [],
+        "correctAnswer": "False",
+        "explanation": "The text explicitly mentions the opposite goal, creating a more inclusive and prosperous India.",
+        "type": "true-false",
+        "difficulty": "Easy",
+        "use": "substitute"
+    }
+]
