@@ -1,243 +1,281 @@
 [
     {
-        "question": "What is the overarching vision of India's 2025-26 budget?",
+        "question": "What is the maximum coverage offered by Bajaj Allianz Health Infinity for road ambulance?",
         "options": [
-            "A self-reliant India",
-            "A developed India",
-            "An agricultural powerhouse",
-            "An export-oriented economy"
+            "\u20b92,000",
+            "\u20b95,000",
+            "\u20b910,000",
+            "Unlimited"
         ],
-        "correctAnswer": "A developed India",
-        "explanation": "The text explicitly states that the budget focuses on \"Viksit Bharat,\" which translates to \"Developed India.\"",
+        "correctAnswer": "\u20b95,000",
+        "explanation": "The text explicitly states that road ambulance coverage is included up to \u20b95,000 per hospitalization.",
         "type": "mcq",
         "difficulty": "Easy",
         "use": "normal"
     },
     {
-        "question": "Which program targets 100 low-productivity districts to boost agriculture?",
+        "question": "Is Bajaj Allianz Health Infinity a group health insurance plan?",
         "options": [
-            "Aatmanirbhar Bharat",
-            "Prime Minister DhanDhaanya Krishi Yojana",
-            "Deep Tech Fund",
-            "Anganwadi improvement program"
+            "True",
+            "False"
         ],
-        "correctAnswer": "Prime Minister DhanDhaanya Krishi Yojana",
-        "explanation": "The text specifically mentions this program and its target.",
-        "type": "mcq",
-        "difficulty": "Medium",
-        "use": "normal"
-    },
-    {
-        "question": "The budget prioritizes self-reliance in which agricultural product?",
-        "options": [
-            "Rice",
-            "Wheat",
-            "Pulses",
-            "Edible oils"
-        ],
-        "correctAnswer": "Pulses",
-        "explanation": "The text explicitly mentions \"Aatmanirbharta (self-reliance) in pulses.\"",
-        "type": "mcq",
-        "difficulty": "Easy",
-        "use": "normal"
-    },
-    {
-        "question": "True or False: The budget includes initiatives for improving Anganwadis and expanding broadband access.",
-        "options": [],
-        "correctAnswer": "True",
-        "explanation": "The text mentions investment in people, including Anganwadi improvements and broadband for schools and health centers.",
-        "type": "true-false",
-        "difficulty": "Easy",
-        "use": "normal"
-    },
-    {
-        "question": "The budget aims to strengthen export promotion through which means?",
-        "options": [
-            "Increased tariffs",
-            "Subsidies for domestic consumption",
-            "A dedicated mission and digital trade platforms",
-            "Reduction in export quotas"
-        ],
-        "correctAnswer": "A dedicated mission and digital trade platforms",
-        "explanation": "The text explicitly mentions this as the strategy for export promotion.",
-        "type": "mcq",
-        "difficulty": "Medium",
-        "use": "normal"
-    },
-    {
-        "question": "Fill in the blank:  The budget provides ______ for the middle class.",
-        "options": [
-            "Increased taxes",
-            "Income tax relief",
-            "Reduced social security benefits"
-        ],
-        "correctAnswer": "Income tax relief",
-        "explanation": "The text clearly states that the budget includes \"substantial income tax relief for the middle class.\"",
-        "type": "fill-in-the-blank",
-        "difficulty": "Easy",
-        "use": "substitute"
-    },
-    {
-        "question": "True or False:  The budget focuses solely on economic growth, neglecting social development.",
-        "options": [],
         "correctAnswer": "False",
-        "explanation": "The budget includes investments in people (Anganwadi improvements, broadband) alongside economic initiatives.",
+        "explanation": "The text clearly mentions it's an individual plan, covering individuals, spouse, children, and parents.",
         "type": "true-false",
         "difficulty": "Easy",
-        "use": "substitute"
+        "use": "normal"
     },
     {
-        "question": "Fill in the blank:  One of the four key engines driving the \"Viksit Bharat\" vision is ______.",
+        "question": "Pre-existing diseases are covered after ________ months with Bajaj Allianz Health Infinity.",
         "options": [
-            "Tourism",
-            "Investment",
-            "Mining",
-            "Manufacturing"
+            "12",
+            "24",
+            "36",
+            "48"
         ],
-        "correctAnswer": "Investment",
-        "explanation": "The text lists agriculture, MSMEs, investment, and exports as the four key engines.",
+        "correctAnswer": "36",
+        "explanation": "The text specifies that pre-existing diseases are covered after 36 months.",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "normal"
+    },
+    {
+        "question": "The policy includes a free health checkup every ______ years.",
+        "options": [
+            "one",
+            "two",
+            "three",
+            "five"
+        ],
+        "correctAnswer": "three",
+        "explanation": "The text states that a free health checkup is offered every three years.",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "normal"
+    },
+    {
+        "question": "Fill in the blank:  Post-hospitalization expenses are covered for up to ____ days.",
+        "options": [
+            "60",
+            "90",
+            "30"
+        ],
+        "correctAnswer": "90",
+        "explanation": "The text mentions coverage for post-hospitalization expenses for 90 days.",
         "type": "fill-in-the-blank",
         "difficulty": "Easy",
-        "use": "substitute"
+        "use": "normal"
     },
     {
-        "question": "What type of improvements are mentioned in the context of investment in people?",
+        "question": "Does this policy cover cosmetic surgery?",
         "options": [
-            "Infrastructure improvements",
-            "Technological advancements",
-            "Anganwadi and Broadband improvements",
-            "Export promotion strategies"
+            "True",
+            "False"
         ],
-        "correctAnswer": "Anganwadi and Broadband improvements",
-        "explanation": "The text explicitly mentions these as part of investment in people.",
-        "type": "mcq",
-        "difficulty": "Medium",
-        "use": "substitute"
-    },
-    {
-        "question": "True or False: The budget proposes asset monetization as a strategy to boost investment in the economy.",
-        "options": [],
-        "correctAnswer": "True",
-        "explanation": "The text mentions asset monetization as a focus for economic investment.",
-        "type": "true-false",
-        "difficulty": "Medium",
-        "use": "substitute"
-    },
-    {
-        "question": "What is the primary aim of the initiatives mentioned in the text?",
-        "options": [
-            "To increase agricultural exports only",
-            "To create a prosperous and inclusive India",
-            "To improve the lives of only the wealthy class",
-            "To reduce India's trade deficit"
-        ],
-        "correctAnswer": "To create a prosperous and inclusive India",
-        "explanation": "The text explicitly states this as the overall goal.",
-        "type": "mcq",
-        "difficulty": "Easy",
-        "use": "substitute"
-    },
-    {
-        "question": "Fill in the blank: MSMEs will receive ______ to improve access to credit.",
-        "options": [
-            "Higher taxes",
-            "Reduced regulations",
-            "Enhanced credit guarantees"
-        ],
-        "correctAnswer": "Enhanced credit guarantees",
-        "explanation": "The text mentions enhanced credit guarantees for MSMEs.",
-        "type": "fill-in-the-blank",
-        "difficulty": "Easy",
-        "use": "substitute"
-    },
-    {
-        "question": "True or False:  The budget's focus on innovation includes the establishment of AI centers.",
-        "options": [],
-        "correctAnswer": "True",
-        "explanation": "The text mentions the creation of AI centers as part of the investment in innovation.",
-        "type": "true-false",
-        "difficulty": "Easy",
-        "use": "substitute"
-    },
-    {
-        "question": "What initiative is mentioned to promote investment in innovation?",
-        "options": [
-            "A new agricultural policy",
-            "A Deep Tech fund",
-            "Increased tariffs on imports",
-            "Expansion of the public transportation system"
-        ],
-        "correctAnswer": "A Deep Tech fund",
-        "explanation": "The text explicitly mentions a Deep Tech fund as part of investment in innovation.",
-        "type": "mcq",
-        "difficulty": "Medium",
-        "use": "substitute"
-    },
-    {
-        "question": "True or False: The budget's focus on MSMEs includes the introduction of new credit cards.",
-        "options": [],
-        "correctAnswer": "True",
-        "explanation": "The text mentions new credit cards as a measure to support MSMEs.",
-        "type": "true-false",
-        "difficulty": "Medium",
-        "use": "substitute"
-    },
-    {
-        "question": "Fill in the blank:  The budget includes initiatives for edible ______ and vegetables.",
-        "options": [
-            "Fruits",
-            "Oils",
-            "Grains"
-        ],
-        "correctAnswer": "Oils",
-        "explanation": "The text explicitly mentions initiatives for edible oils.",
-        "type": "fill-in-the-blank",
-        "difficulty": "Easy",
-        "use": "substitute"
-    },
-    {
-        "question": "What kind of partnerships are mentioned in relation to infrastructure investment?",
-        "options": [
-            "Public-Private Partnerships",
-            "International Partnerships",
-            "Government-NGO Partnerships",
-            "Public-Military Partnerships"
-        ],
-        "correctAnswer": "Public-Private Partnerships",
-        "explanation": "The text mentions infrastructure PPPs.",
-        "type": "mcq",
-        "difficulty": "Medium",
-        "use": "substitute"
-    },
-    {
-        "question": "True or False:  The budget only focuses on urban development and neglects rural areas.",
-        "options": [],
         "correctAnswer": "False",
-        "explanation": "The agricultural focus and initiatives like Anganwadi improvements suggest attention to rural areas as well.",
+        "explanation": "The text lists cosmetic surgery as an exclusion.",
         "type": "true-false",
         "difficulty": "Easy",
         "use": "substitute"
     },
     {
-        "question": "Fill in the blank:  The budget aims for ______ in pulses.",
+        "question": "What is the maximum duration of pre-hospitalization coverage offered?",
         "options": [
-            "Increased imports",
-            "Self-reliance (Aatmanirbharta)",
-            "Reduced production"
+            "30 days",
+            "60 days",
+            "90 days",
+            "1 year"
         ],
-        "correctAnswer": "Self-reliance (Aatmanirbharta)",
-        "explanation": "The text explicitly mentions Aatmanirbharta in pulses.",
-        "type": "fill-in-the-blank",
+        "correctAnswer": "60 days",
+        "explanation": "The text mentions that pre-hospitalization expenses are covered for 60 days.",
+        "type": "mcq",
         "difficulty": "Easy",
         "use": "substitute"
     },
     {
-        "question": "True or False:  A classification revision for MSMEs is part of the budget's proposals.",
-        "options": [],
-        "correctAnswer": "True",
-        "explanation": "The text explicitly mentions this.",
+        "question": "Up to what age are there no pre-policy medical tests required?",
+        "options": [
+            "35",
+            "40",
+            "45",
+            "50"
+        ],
+        "correctAnswer": "45",
+        "explanation": "The text explicitly states that no pre-policy medical tests are required up to age 45.",
+        "type": "mcq",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "True or false:  This policy is not renewable.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "False",
+        "explanation": "The text mentions it's a lifetime renewable policy.",
         "type": "true-false",
         "difficulty": "Easy",
         "use": "substitute"
+    },
+    {
+        "question": "What type of procedures are included in this policy?",
+        "options": [
+            "Only emergency procedures",
+            "Day-care procedures and emergency procedures",
+            "Only cosmetic procedures"
+        ],
+        "correctAnswer": "Day-care procedures and emergency procedures",
+        "explanation": "The text mentions that day-care procedures are included, implying a broader coverage than just emergency procedures.",
+        "type": "mcq",
+        "difficulty": "Medium",
+        "use": "substitute"
+    },
+    {
+        "question": "What is the grace period for annual renewal?",
+        "options": [
+            "15 days",
+            "30 days",
+            "45 days",
+            "60 days"
+        ],
+        "correctAnswer": "30 days",
+        "explanation": "The text states that the policy is subject to annual renewal within a 30-day grace period.",
+        "type": "mcq",
+        "difficulty": "Medium",
+        "use": "normal"
+    },
+    {
+        "question": "Fill in the blanks: The policy offers a _____ sum insured and covers _____ and post-hospitalization expenses.",
+        "options": [
+            [
+                "limited",
+                "pre"
+            ],
+            [
+                "unlimited",
+                "pre"
+            ],
+            [
+                "limited",
+                "post"
+            ],
+            [
+                "unlimited",
+                "post"
+            ]
+        ],
+        "correctAnswer": [
+            "unlimited",
+            "pre"
+        ],
+        "explanation": "The text states both unlimited sum insured and coverage of pre- and post-hospitalization expenses.",
+        "type": "fill-in-the-blank",
+        "difficulty": "Medium",
+        "use": "normal"
+    },
+    {
+        "question": "Are there any income tax benefits associated with this policy?",
+        "options": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "True",
+        "explanation": "The text mentions that income tax benefits are available on premiums.",
+        "type": "true-false",
+        "difficulty": "Medium",
+        "use": "normal"
+    },
+    {
+        "question": "Does the policy cover all types of surgical procedures?",
+        "options": [
+            "Yes",
+            "No",
+            "Only specific procedures"
+        ],
+        "correctAnswer": "No",
+        "explanation": "The text mentions exclusions apply to specific procedures, implying not all are covered.",
+        "type": "mcq",
+        "difficulty": "Medium",
+        "use": "normal"
+    },
+    {
+        "question": "Fill in the blank:  This is a ______ renewable policy.",
+        "options": [
+            "one-time",
+            "lifetime",
+            "five-year"
+        ],
+        "correctAnswer": "lifetime",
+        "explanation": "The policy is explicitly described as a lifetime renewable policy.",
+        "type": "fill-in-the-blank",
+        "difficulty": "Medium",
+        "use": "normal"
+    },
+    {
+        "question": "Does the policy require pre-policy medical tests for all age groups?",
+        "options": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "False",
+        "explanation": "The text specifies that pre-policy medical tests are not required up to age 45.",
+        "type": "true-false",
+        "difficulty": "Medium",
+        "use": "substitute"
+    },
+    {
+        "question": "What are the key factors influencing the premium amount?",
+        "options": [
+            "Sum insured only",
+            "Daily room rent only",
+            "Sum insured and daily room rent",
+            "Pre-existing conditions"
+        ],
+        "correctAnswer": "Sum insured and daily room rent",
+        "explanation": "The text mentions that the choice of daily room rent impacts the premium.",
+        "type": "mcq",
+        "difficulty": "Medium",
+        "use": "substitute"
+    },
+    {
+        "question": "What is the primary benefit of this health insurance plan according to the text?",
+        "options": [
+            "Low premium",
+            "Coverage for family members",
+            "Comprehensive coverage at competitive prices",
+            "Unlimited sum insured"
+        ],
+        "correctAnswer": "Comprehensive coverage at competitive prices",
+        "explanation": "The opening sentence highlights this as the main advantage.",
+        "type": "mcq",
+        "difficulty": "Medium",
+        "use": "substitute"
+    },
+    {
+        "question": "True or false:  The Bajaj Allianz Health Infinity plan covers only the policyholder.",
+        "options": [
+            "True",
+            "False"
+        ],
+        "correctAnswer": "False",
+        "explanation": "The text explicitly mentions that it covers the policyholder, spouse, children, and parents.",
+        "type": "true-false",
+        "difficulty": "Easy",
+        "use": "substitute"
+    },
+    {
+        "question": "Which of the following is NOT explicitly mentioned as an exclusion in the text?",
+        "options": [
+            "Cosmetic surgery",
+            "Pre-existing conditions (before 36 months)",
+            "Dental procedures",
+            "Specific procedures with waiting periods"
+        ],
+        "correctAnswer": "Dental procedures",
+        "explanation": "While other options are explicitly stated as exclusions, dental procedures are not mentioned in the provided text.",
+        "type": "mcq",
+        "difficulty": "Hard",
+        "use": "normal"
     }
 ]

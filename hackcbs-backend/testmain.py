@@ -156,7 +156,7 @@ def extract_text_from_file(file_path, output_path):
         print(f"Text extracted and saved to {output_path}")
 
 # paths to the pdf file and the output text file
-pdf_path = r"C:\Users\Happy yadav\Desktop\aura.ai\test\doc\budget_speech.pdf"
+pdf_path = r"C:\Users\Happy yadav\Desktop\aura.ai\test\doc\pdf1.pdf"
 output_text_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\extracted.txt"
 cleaned_text_path = r"C:\Users\Happy yadav\Desktop\aura.ai\hackcbs-backend\cleaned.txt"
 
