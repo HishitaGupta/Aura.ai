@@ -4,7 +4,7 @@
     <td><img src="https://hackerx-winner.vercel.app/assets/logo-aura-IEnDMhwM.png" height="70px" width="50px" alt="Aura.ai"></td>
   </tr>
 </table>
-
+ 
 ---
 
 AURA.ai is a cutting-edge AI driven platform designed to **Automate video creation** from text-based input documents such as brochures or PDFs. It seamlessly integrates **interactive quizzes** and provides detailed **analytics** to enhance user engagement. Perfect for **education, corporate training,** and **HR assessments**, AURA.ai offers **multilingual support** and real-time feedback, transforming the way content is delivered.
