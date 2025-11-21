@@ -1,0 +1,40 @@
+{
+  "image_paths": {
+    "hook": "./output/images/hook.png",
+    "topic_1_visual_0": "./output/images/topic_1_visual_0.png",
+    "topic_1_visual_1": "./output/images/topic_1_visual_1.png",
+    "topic_1_visual_2": "./output/images/topic_1_visual_2.png",
+    "topic_2_visual_0": "./output/images/topic_2_visual_0.png",
+    "topic_2_visual_1": "./output/images/topic_2_visual_1.png",
+    "topic_2_visual_2": "./output/images/topic_2_visual_2.png",
+    "topic_3_visual_0": "./output/images/topic_3_visual_0.png",
+    "topic_3_visual_1": "./output/images/topic_3_visual_1.png",
+    "topic_3_visual_2": "./output/images/topic_3_visual_2.png",
+    "topic_4_visual_0": "./output/images/topic_4_visual_0.png",
+    "topic_4_visual_1": "./output/images/topic_4_visual_1.png",
+    "topic_4_visual_2": "./output/images/topic_4_visual_2.png",
+    "conclusion": "./output/images/conclusion.png"
+  },
+  "topic_mapping": {
+    "topic_1": [
+      "./output/images/topic_1_visual_0.png",
+      "./output/images/topic_1_visual_1.png",
+      "./output/images/topic_1_visual_2.png"
+    ],
+    "topic_2": [
+      "./output/images/topic_2_visual_0.png",
+      "./output/images/topic_2_visual_1.png",
+      "./output/images/topic_2_visual_2.png"
+    ],
+    "topic_3": [
+      "./output/images/topic_3_visual_0.png",
+      "./output/images/topic_3_visual_1.png",
+      "./output/images/topic_3_visual_2.png"
+    ],
+    "topic_4": [
+      "./output/images/topic_4_visual_0.png",
+      "./output/images/topic_4_visual_1.png",
+      "./output/images/topic_4_visual_2.png"
+    ]
+  }
+}

@@ -1,0 +1,232 @@
+[
+  {
+    "index": 0,
+    "type": "hook",
+    "section": "hook",
+    "topic_number": null,
+    "start_ms": 0,
+    "end_ms": 10029,
+    "duration_ms": 10029,
+    "text": "Did you know that empowering women can transform entire communities? Join us as we explore groundbreaking initiatives that are reshaping health, safety, and leadership for women everywhere!"
+  },
+  {
+    "index": 1,
+    "type": "topic",
+    "section": "topic_1",
+    "topic_number": 1,
+    "start_ms": 10029,
+    "end_ms": 17318,
+    "duration_ms": 7289,
+    "text": "The Medical Termination of Pregnancy Act, 2021, is all about ensuring safe abortion services for women."
+  },
+  {
+    "index": 2,
+    "type": "topic",
+    "section": "topic_1",
+    "topic_number": 1,
+    "start_ms": 17318,
+    "end_ms": 22192,
+    "duration_ms": 4874,
+    "text": "First, it allows for abortions up to 24 weeks for specific groups of women."
+  },
+  {
+    "index": 3,
+    "type": "topic",
+    "section": "topic_1",
+    "topic_number": 1,
+    "start_ms": 22192,
+    "end_ms": 27078,
+    "duration_ms": 4886,
+    "text": "Second, it emphasizes the importance of safe procedures to prevent unsafe abortions."
+  },
+  {
+    "index": 4,
+    "type": "topic",
+    "section": "topic_1",
+    "topic_number": 1,
+    "start_ms": 27078,
+    "end_ms": 32266,
+    "duration_ms": 5188,
+    "text": "Finally, this act supports women's health and well-being, giving them the right to make choices."
+  },
+  {
+    "index": 5,
+    "type": "topic",
+    "section": "topic_2",
+    "topic_number": 2,
+    "start_ms": 32266,
+    "end_ms": 37605,
+    "duration_ms": 5339,
+    "text": "The Beti Bachao Beti Padhao scheme is all about ensuring the survival and empowerment of girls."
+  },
+  {
+    "index": 6,
+    "type": "topic",
+    "section": "topic_2",
+    "topic_number": 2,
+    "start_ms": 37605,
+    "end_ms": 42270,
+    "duration_ms": 4665,
+    "text": "First, it focuses on protecting the girl child from discrimination and neglect."
+  },
+  {
+    "index": 7,
+    "type": "topic",
+    "section": "topic_2",
+    "topic_number": 2,
+    "start_ms": 42270,
+    "end_ms": 47794,
+    "duration_ms": 5524,
+    "text": "Second, it promotes education for girls, ensuring they have equal opportunities to learn and grow."
+  },
+  {
+    "index": 8,
+    "type": "topic",
+    "section": "topic_2",
+    "topic_number": 2,
+    "start_ms": 47794,
+    "end_ms": 53702,
+    "duration_ms": 5908,
+    "text": "Lastly, this initiative encourages positive attitudes towards girls, helping to change societal norms."
+  },
+  {
+    "index": 9,
+    "type": "topic",
+    "section": "topic_3",
+    "topic_number": 3,
+    "start_ms": 53702,
+    "end_ms": 58042,
+    "duration_ms": 4340,
+    "text": "Creating a safe workplace is crucial for everyone, especially for women."
+  },
+  {
+    "index": 10,
+    "type": "topic",
+    "section": "topic_3",
+    "topic_number": 3,
+    "start_ms": 58042,
+    "end_ms": 62382,
+    "duration_ms": 4340,
+    "text": "One key measure is establishing Internal Complaints Committees, or ICCs."
+  },
+  {
+    "index": 11,
+    "type": "topic",
+    "section": "topic_3",
+    "topic_number": 3,
+    "start_ms": 62382,
+    "end_ms": 66188,
+    "duration_ms": 3806,
+    "text": "These committees help address sexual harassment complaints promptly."
+  },
+  {
+    "index": 12,
+    "type": "topic",
+    "section": "topic_3",
+    "topic_number": 3,
+    "start_ms": 66188,
+    "end_ms": 70923,
+    "duration_ms": 4735,
+    "text": "Next, it\u2019s essential to raise awareness about what constitutes sexual harassment."
+  },
+  {
+    "index": 13,
+    "type": "topic",
+    "section": "topic_3",
+    "topic_number": 3,
+    "start_ms": 70923,
+    "end_ms": 74532,
+    "duration_ms": 3609,
+    "text": "Education helps everyone understand unacceptable behaviors."
+  },
+  {
+    "index": 14,
+    "type": "topic",
+    "section": "topic_3",
+    "topic_number": 3,
+    "start_ms": 74532,
+    "end_ms": 78001,
+    "duration_ms": 3469,
+    "text": "Lastly, timely responses to safety concerns are vital."
+  },
+  {
+    "index": 15,
+    "type": "topic",
+    "section": "topic_3",
+    "topic_number": 3,
+    "start_ms": 78001,
+    "end_ms": 81018,
+    "duration_ms": 3017,
+    "text": "When issues are addressed quickly, it builds trust."
+  },
+  {
+    "index": 16,
+    "type": "topic",
+    "section": "topic_3",
+    "topic_number": 3,
+    "start_ms": 81018,
+    "end_ms": 83559,
+    "duration_ms": 2541,
+    "text": "This promotes a healthier workplace culture."
+  },
+  {
+    "index": 17,
+    "type": "topic",
+    "section": "topic_4",
+    "topic_number": 4,
+    "start_ms": 83559,
+    "end_ms": 87609,
+    "duration_ms": 4050,
+    "text": "Promoting women in leadership roles is essential for any organization."
+  },
+  {
+    "index": 18,
+    "type": "topic",
+    "section": "topic_4",
+    "topic_number": 4,
+    "start_ms": 87609,
+    "end_ms": 90869,
+    "duration_ms": 3260,
+    "text": "When women lead, we see a boost in diversity of thought."
+  },
+  {
+    "index": 19,
+    "type": "topic",
+    "section": "topic_4",
+    "topic_number": 4,
+    "start_ms": 90869,
+    "end_ms": 95314,
+    "duration_ms": 4445,
+    "text": "This means better ideas and solutions, making the workplace more innovative."
+  },
+  {
+    "index": 20,
+    "type": "topic",
+    "section": "topic_4",
+    "topic_number": 4,
+    "start_ms": 95314,
+    "end_ms": 98749,
+    "duration_ms": 3435,
+    "text": "Let\u2019s support women in management and leadership positions."
+  },
+  {
+    "index": 21,
+    "type": "topic",
+    "section": "topic_4",
+    "topic_number": 4,
+    "start_ms": 98749,
+    "end_ms": 102427,
+    "duration_ms": 3678,
+    "text": "Together, we can create a more balanced and effective workplace!"
+  },
+  {
+    "index": 22,
+    "type": "conclusion",
+    "section": "conclusion",
+    "topic_number": null,
+    "start_ms": 102427,
+    "end_ms": 110738,
+    "duration_ms": 8311,
+    "text": "In summary, empowering women through health rights, education, workplace safety, and leadership is vital for a balanced society. Let's take action together!"
+  }
+]
