@@ -1,127 +1,307 @@
-<table style="border-collapse: collapse; border: none;">
-  <tr>
-    <td><h1>AURA.ai</h1></td>
-    <td><img src="https://hackerx-winner.vercel.app/assets/logo-aura-IEnDMhwM.png" height="70px" width="50px" alt="Aura.ai"></td>
-  </tr>
-</table>
- 
----
+#  AI-Powered Text-to-Video Generation Pipeline
 
-AURA.ai is a cutting-edge AI driven platform designed to **Automate video creation** from text-based input documents such as brochures or PDFs. It seamlessly integrates **interactive quizzes** and provides detailed **analytics** to enhance user engagement. Perfect for **education, corporate training,** and **HR assessments**, AURA.ai offers **multilingual support** and real-time feedback, transforming the way content is delivered.
+An end-to-end automated system that transforms documents (PDF, DOCX, TXT) into engaging explainer videos with professional narration, synchronized subtitles, and AI-generated visuals.
 
----
+##  Table of Contents
 
-## **Key Features**
-
-- **Text to Video Creation**  
-   Convert text documents into dynamic videos with AI-driven summarization and voice-over.
-
-- **Quiz Integration**  
-   Automatically generate quizzes after videos to assess user comprehension.
-
-- **Analytics Dashboard**  
-   In-depth user engagement tracking with viewership data, quiz scores, and performance heatmaps and much more.
-
-- **Multilingual Support**  
-   Generate videos in **over 10 languages**, making your content globally accessible.
-
-- **Collaboration Tools & AURAbot**  
-   Seamlessly collaborate on content creation, ideal for corporate teams and educational institutions , and also ask our AURAbot for the lingering queries.
+- [Overview](#overview)
+- [Key Features](#key-features)
+- [Real-World Applications](#real-world-applications)
+- [Architecture](#architecture)
+- [How It Works](#how-it-works)
+- [Output Examples](#output-examples)
 
 ---
 
-## **Technologies Used**
+##  Overview
 
-### **Frontend:**
-- **React.Js**
-- **Recharts**  
-- **Tailwind CSS**
+This project automates the entire video creation pipeline using LangGraph and multiple AI services. Simply provide a document, and the system generates a complete 2-3 minute explainer video with:
 
-### **Backend:**
-- **Python**  
-- **FastAPI**  
-- **Node.Js**  
-- **Express.Js**
+- **Intelligent Content Analysis**: RAG-powered topic extraction
+- **Professional Narration**: High-quality text-to-speech audio
+- **AI-Generated Visuals**: Cartoon-style illustrations
+- **Synchronized Subtitles**: Accurate timestamped captions
+- **Animated Compositions**: Smooth transitions and effects
 
-### **Cloud Service Providers:**
-- **Firebase** - (real-time database and authentication)  
-- **DigitalOcean** - (server and database hosting)
-- **MongoDB Atlas** - (analytics storage)
+##  Key Features
 
-### **Hosting Platforms:**
-- **Vercel** - (Frontend deployment)  
-- **Railway** - (Backend hosting)
-- **Digital Ocean** -(Cloud Hosting)
+###  Intelligent Script Generation
+- **RAG-Based Analysis**: Uses ChromaDB vector store for semantic document understanding
+- **Structured Output**: Pydantic models ensure consistent, high-quality scripts
+- **Multi-Stage Processing**: Extracts topics → details → hook → conclusion
+- **LangSmith Integration**: Complete observability and tracing
 
-### **Industrial Add-Ons:**
-- **Husky** - (Enforces code quality pre-commit hooks)  
-- **Clarity** - (Error recording and monitoring)  
-- **Sentry** - (Real-time error detection and logging)  
-- **Playwright** - (End-to-end UI testing)
+###  Audio Production
+- **Multi-Language Support**: Text-to-speech in multiple languages (default: English-India)
+- **Natural Narration**: Uses Sarvam AI's Bulbul v2 engine
+- **Automatic Timing**: Generates precise timestamps for synchronization
+- **Whisper Subtitles**: Optional STT-based subtitle generation
 
-### **NLP & ML:**
-- **BART** - (Text summarization)  
-- **Stable Diffusion** - (Image generation)  
-- **Tesseract OCR** - (Optical Character Recognition)  
-- **Gemini 1.5 Flash**  
-- **TensorFlow** & **PyTorch** - (For AI model training)
+###  Visual Generation
+- **AI Image Creation**: Pollinations AI generates cartoon illustrations
+- **Smart Background Removal**: Automatic white background elimination
+- **Drop Shadows**: Professional image effects
+- **Context-Aware**: Images aligned with script content
 
-### **Tools & Others:**
-- **Postman** - (API testing)  
-- **Git/GitHub** - (Version control)  
-- **Kaggle** - (Datasets & model training)  
-- **CI/CD Pipelines** - (For automated deployments)  
-- **Pixaby** - (For media assets)  
-- **Transformers** - (For NLP tasks)  
-- **pdfplumber**, **pydub**, **moviepy** - (For PDF processing, audio, and video generation)
+###  Video Composition
+- **Smooth Animations**: Typing effects, fade-ins, slide transitions
+- **Professional Layout**: 1280x720 HD resolution
+- **Subtitle Overlay**: Animated, easy-to-read captions
+- **Multi-Section Structure**: Hook → Topics → Conclusion
 
 ---
 
-## **Getting Started with AURA.ai**
+##  Real-World Applications
 
-### **1. Clone the Repository:**
-```bash
-git clone [https://github.com/your-repo-url](https://github.com/happyrao78/Phosphenes-HackRx-5.0.git)
+### 1. **Educational Content Creation**
+- Convert textbooks, research papers, or lecture notes into engaging video lessons
+- Create MOOCs and online course materials at scale
+- Generate study guides with visual aids
+
+### 2. **Corporate Training**
+- Transform company policies, SOPs, and training manuals into digestible videos
+- Onboarding materials for new employees
+- Compliance and safety training videos
+
+### 3. **Marketing & Social Media**
+- Product documentation → promotional explainer videos
+- Blog posts → shareable social media content
+- White papers → lead generation videos
+
+### 4. **Healthcare & Medical**
+- Patient education materials from medical literature
+- Pharmaceutical drug information videos
+- Public health awareness campaigns
+
+### 5. **Legal & Financial**
+- Simplify complex legal documents into accessible formats
+- Financial literacy content
+- Investment strategy explainers
+
+### 6. **News & Media**
+- Rapid video production from breaking news articles
+- Documentary-style content from reports
+- Investigative journalism visualizations
+
+### 7. **Nonprofit & NGO**
+- Awareness campaigns from research reports
+- Donor education materials
+- Impact story videos
+
+---
+
+##  Architecture
+
+```mermaid
+graph TD
+    A[Document Input] --> B[Text Extraction]
+    B --> C[Vector Store Creation]
+    C --> D[LangGraph Workflow]
+    
+    D --> E[Step 1: Extract Key Topics]
+    E --> F[Step 2: Generate Topic Details]
+    F --> G[Step 3: Create Hook]
+    G --> H[Step 4: Generate Conclusion]
+    H --> I[Step 5: Assemble Script]
+    
+    I --> J[Audio Generation Node]
+    J --> K[Image Generation Node]
+    K --> L[Video Composition Node]
+    L --> M[Merge Audio/Video]
+    
+    M --> N[Final Video Output]
 ```
 
-### **2. Move to the Backend Directory:**
-```bash
-cd hackrx-backend
+### Technology Stack
+
+**Script Generation Pipeline:**
+- `LangGraph`: State machine orchestration
+- `LangChain`: LLM framework and RAG implementation
+- `ChromaDB`: Vector storage and retrieval
+- `Gemini 2.0 / GPT-4o-mini`: LLM for content generation
+- `HuggingFace Embeddings`: Text embeddings
+- `LangSmith`: Observability and debugging
+
+**Video Production Pipeline:**
+- `Sarvam AI`: Text-to-speech narration
+- `Pollinations AI`: Image generation
+- `Whisper`: Subtitle transcription
+- `Pillow (PIL)`: Image processing
+- `OpenCV`: Video composition
+- `FFmpeg`: Audio/video merging
+- `pydub`: Audio manipulation
+
+---
+
+##  How It Works
+
+### Phase 1: Script Generation (LangGraph)
+
+1. **Document Ingestion**
+   - Extracts text from PDF/DOCX/TXT
+   - Cleans and chunks content
+   - Creates ChromaDB vector store
+
+2. **Topic Extraction** (Node 1)
+   - RAG retrieval of relevant content
+   - LLM identifies 2-4 key topics
+   - Generates video title and metadata
+
+3. **Detail Generation** (Node 2)
+   - For each topic: retrieves context
+   - Creates narration script (30-50s each)
+   - Generates 2-3 key points
+   - Defines visual descriptions
+
+4. **Hook Creation** (Node 3)
+   - 10-second attention grabber
+   - Question or surprising statement
+   - Sets up video content
+
+5. **Conclusion Generation** (Node 4)
+   - 15-second wrap-up
+   - Summarizes key takeaways
+   - Call-to-action
+
+6. **Assembly** (Node 5)
+   - Combines all sections
+   - Generates SRT subtitles
+   - Creates image prompts list
+   - Saves JSON output
+
+### Phase 2: Video Production
+
+1. **Audio Generation** (Node 1)
+   - Converts script to speech segments
+   - Merges with pauses
+   - Generates precise timestamps
+   - Creates subtitles via Whisper STT
+
+2. **Image Generation** (Node 2)
+   - Generates images via Pollinations AI
+   - Removes white backgrounds
+   - Adds drop shadows
+   - Maps images to topics
+
+3. **Video Composition** (Node 3)
+   - Creates gradient backgrounds
+   - Animates text (typing effects)
+   - Slides in images
+   - Fades between sections
+   - Overlays subtitles
+
+4. **Merging** (Node 4)
+   - Combines video + audio with FFmpeg
+   - Exports final MP4
+
+---
+
+## 📺 Output Examples
+
+### Generated Files
+
+```
+output/
+├── complete_script.json          # Full structured script
+├── audio_script.txt              # Plain narration text
+├── subtitles.srt                 # Standard subtitle format
+├── image_prompts.txt             # Prompts for each visual
+├── narration.wav                 # 192kbps audio
+├── audio_timestamps.json         # Section timing data
+├── image_mapping.json            # Image-to-topic assignments
+├── images/
+│   ├── hook.png
+│   ├── topic_1_visual_0.png
+│   ├── topic_1_visual_1.png
+│   ├── topic_2_visual_0.png
+│   └── conclusion.png
+└── final_video.mp4               # 1280x720 @ 30fps
+```
+---
+
+##  Customization
+
+### Changing Visual Style
+
+**Image Prompts:**
+Modify system prompts in `generate_topic_details_node()`:
+
+```python
+Visual & Image Guidelines:
+- Use realistic photography style instead of cartoons
+- Add specific color schemes: "vibrant blue theme"
+- Change background: "gradient background" or "office setting"
 ```
 
-### **3. Setup the Environment Variables:**
-Create a `.env` file in the root directory and add your API keys.
-```env
-GEMINI_API_KEY=your_gemini_api_key
-IMG_API=your_api
+**Video Layout:**
+Edit `VideoConfig` for different positioning:
+
+```python
+# Move image to left side
+IMAGE_X = 60
+TEXT_AREA_WIDTH = 1120
+TEXT_MAX_X = 1200
 ```
 
-### **4. Set up Firebase:**
-- Create a Firebase project in the [Firebase Console](https://console.firebase.google.com/).
-- Enable Google authentication in the Firebase Authentication section.
-- Obtain the Firebase configuration settings (API key, Auth domain, Project ID, etc.)
+### Audio Customization
 
-### **5. Install Python Libraries & Run the Backend Server:**
-```bash
-pip install -r requirements.txt
-```
-```bash
-uvicorn server:app --reload
-```
+**Voice Selection:**
+In `generate_audio_from_descriptions()`:
 
-### **6. Move to the Frontend Directory:**
-```bash
-cd hackrx-frontend
+```python
+response = client.text_to_speech.convert(
+    target_language_code="hi-IN",  # Hindi
+    speaker="meera",                # Different voice
+    model="bulbul:v2"
+)
 ```
 
-### **7. Install Required Dependencies & Run the Script:**
-```bash
-npm i
-```
+**Language Options:**
+- `en-IN` - English (India)
+- `hi-IN` - Hindi
+- `ta-IN` - Tamil
+- `te-IN` - Telugu
+- `bn-IN` - Bengali
 
-### **8. Run the Development Server:**
-```bash
-npm run dev
+### LLM Selection
+
+Switch between models in pipeline files:
+
+```python
+# Use Gemini
+llm = ChatGoogleGenerativeAI(
+    model="gemini-2.0-flash-exp",
+    temperature=0.3
+)
+
+# Use OpenAI
+llm = ChatOpenAI(
+    model="gpt-4o-mini",
+    temperature=0.3
+)
 ```
 
 ---
+
+
+##  Roadmap
+
+### Version 2.0 (Planned)
+- [ ] Real-time video preview
+- [ ] Multi-speaker dialogues
+- [ ] Advanced animations (pan, zoom, ken burns)
+- [ ] Background music generation
+- [ ] Branding overlay (logos, watermarks)
+- [ ] Export presets (YouTube, Instagram, TikTok)
+- [ ] Human In Loop Approval
+
+### Version 3.0 (Future)
+- [ ] AI-powered video editing suggestions
+- [ ] Automatic B-roll insertion
+- [ ] Human avatar narrators
+- [ ] Interactive video elements
+- [ ] A/B testing for engagement
+
+---
+
+**Made with ❤️ using AI and Python**
